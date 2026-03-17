@@ -17,14 +17,14 @@
         "announcement_UR9c6T": {
           "type": "announcement",
           "settings": {
-            "text": "✨ AMAZING DEALS IN CLEARANCE! UP TO 60% OFF! ✨",
+            "text": "AMAZING DEALS IN CLEARANCE! UP TO 60% OFF!",
             "link": "shopify://collections/clearance"
           }
         },
         "announcement_XBgzzA": {
           "type": "announcement",
           "settings": {
-            "text": "FREE SHIPPING ON ORDERS $175+ (USD) USA 🇺🇸  •  $240+ (CAD) CANADA 🇨🇦",
+            "text": "FREE SHIPPING ON ORDERS $175+ (USD) USA /  $240+ (CAD) CANADA",
             "link": ""
           }
         }
