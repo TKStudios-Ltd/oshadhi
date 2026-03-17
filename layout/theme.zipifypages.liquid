@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%- render 'header-scripts.zipifypages', renderctx: 'lsctn' -%}{{ content_for_header }}
+
+  {% comment %} Cart Browser Back Fix {% endcomment %}
+
+      <script>
+      window.addEventListener('pageshow', (event) => {
+        setTimeout(function(){
+          fetch(window.location.pathname + "?sections=cart-icon-bubble,cart-drawer")
+            .then(response => {
+              return response.json();
+            })
+            .then(data => {
+              document.getElementById('cart-icon-bubble').innerHTML = data["cart-icon-bubble"];
+              document.querySelector('#CartDrawer .drawer__inner').innerHTML = data["cart-drawer"];
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+          }, 100)
+        });
+      </script> 
+    
+  </head>
+  <body>
+    {{ content_for_layout }} 
+    {%- render 'page-footer.zipifypages', renderctx: 'lsctn' -%}
+  </body>
+</html>
