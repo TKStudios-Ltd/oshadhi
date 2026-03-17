@@ -33,9 +33,7 @@
         "announcement_UR9c6T",
         "announcement_XBgzzA"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 425px) {.utility-bar {position: fixed; top: 0; height: auto; width: 100vw; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "accent-1",
         "show_line_separator": true,
