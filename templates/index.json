@@ -29,10 +29,29 @@
             "overlay_opacity": 25,
             "overlay_direction": "135deg"
           }
+        },
+        "slide_jkHnXG": {
+          "type": "slide",
+          "settings": {
+            "background_type": "video",
+            "background_video": "shopify://files/videos/OSH_Hero-Background.mp4",
+            "foreground_image": "shopify://shop_images/Oshadhi_Hero-Products.png",
+            "eyebrow": "Nature,",
+            "heading": "Perfectly Distilled",
+            "text": "<p>Carefully selected botanicals crafted with patience and tradition into pure, 100% natural essential oils.</p>",
+            "button_label": "Shop Essential Oils",
+            "button_link": "shopify://collections/singles",
+            "button_style_secondary": false,
+            "overlay_color_1": "#1d1d1d",
+            "overlay_color_2": "#c2ddd2",
+            "overlay_opacity": 25,
+            "overlay_direction": "135deg"
+          }
         }
       },
       "block_order": [
-        "slide_pF9LnY"
+        "slide_pF9LnY",
+        "slide_jkHnXG"
       ],
       "name": "Hero Slider",
       "settings": {
