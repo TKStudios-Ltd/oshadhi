@@ -2379,16 +2379,24 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
 @media screen and (max-width: 749px) {
   .header {
-    justify-content: flex-start !important;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .header__heading-logo-wrapper {
+    width: 44px;
   }
   .header--has-app {
     grid-template-columns: auto 1fr auto;
+  }
+}
+@media screen and (min-width: 750px) {
+  .header {
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }
 
