@@ -207,8 +207,12 @@ document.addEventListener('DOMContentLoaded', function () {
     flex-direction: column;
     justify-content: center;
     min-height: 600px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+}
+@media screen and (min-width: 750px) {
+    .custom-hero-slide__content-wrap {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 @media screen and (min-width: 990px) {
     .custom-hero-slide__content-wrap {
@@ -310,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .custom-hero-swiper .swiper-slide,
     .custom-hero-slide,
     .custom-hero-slide__content-wrap {
-        min-height: 989px0vh;
+        min-height: 75vh;
     }
 }
 </style>
