@@ -377,6 +377,7 @@ h6,
   font-family: "Gilroy-SemiBold";
   font-style: 600;
   font-size: 12px;
+  text-transform: uppercase;
 }
 
 blockquote {
