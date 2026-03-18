@@ -1228,8 +1228,8 @@ button.shopify-payment-button__button--unbranded,
 .shopify-challenge__button,
 .customer button,
 button.shopify-payment-button__button--unbranded {
-  min-width: calc(12rem + var(--buttons-border-width) * 2);
-  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+  min-width: calc(18rem + var(--buttons-border-width) * 2);
+  min-height: calc(4rem + var(--buttons-border-width) * 2);
 }
 
 .shopify-payment-button__button--branded {
@@ -1250,8 +1250,10 @@ button.shopify-payment-button__button--unbranded {
   border: 0;
   padding: 0 3rem;
   cursor: pointer;
-  font: inherit;
-  font-size: 1.5rem;
+  font-family: "Gilroy-SemiBold";
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.6px;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
