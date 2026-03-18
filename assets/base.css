@@ -2275,7 +2275,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   text-align: center;
   padding: 1rem 0;
   margin: 0;
-  letter-spacing: 0.1rem;
+  /* letter-spacing: 0.1rem; */
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
