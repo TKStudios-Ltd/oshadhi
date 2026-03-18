@@ -374,9 +374,9 @@ h5,
 
 h6,
 .h6 {
-  color: rgba(var(--color-foreground), 0.75);
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
+  font-family: "Gilroy-SemiBold";
+  font-style: 600;
+  font-size: 12px;
 }
 
 blockquote {
