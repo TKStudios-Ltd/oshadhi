@@ -148,10 +148,58 @@
         "padding_top": 100,
         "padding_bottom": 60
       }
+    },
+    "multicolum_cta_Fe3Tcr": {
+      "type": "multicolum-cta",
+      "blocks": {
+        "tile_4GJeRi": {
+          "type": "tile",
+          "settings": {
+            "subtitle": "Shop",
+            "title": "<em>Aroma</em>",
+            "title_size": "h1",
+            "link": "#",
+            "image": "shopify://shop_images/OSH_Shop-Aroma.jpg",
+            "image_layout": "half",
+            "content_vertical_position": "top",
+            "background_color": "#1c3160",
+            "text_color": "#ffffff",
+            "image_overlay_opacity": 0
+          }
+        },
+        "tile_RGRWWL": {
+          "type": "tile",
+          "settings": {
+            "subtitle": "Shop",
+            "title": "Aroma",
+            "title_size": "h1",
+            "link": "",
+            "image_layout": "full",
+            "content_vertical_position": "top",
+            "background_color": "#E8E5DE",
+            "text_color": "#111111",
+            "image_overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "tile_4GJeRi",
+        "tile_RGRWWL"
+      ],
+      "name": "CTA tiles",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "layout_style": "two_equal",
+        "color_scheme": "background-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "custom_hero_swiper_3mqtic",
-    "collection_list_h86QbL"
+    "collection_list_h86QbL",
+    "multicolum_cta_Fe3Tcr"
   ]
 }
