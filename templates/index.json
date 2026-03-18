@@ -68,19 +68,27 @@
         "featured_collection_rfn7ge": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "singles",
+            "custom_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card-Hover.png",
+            "border_color": "#455c9f",
+            "text_color": "#455c9f"
           }
         },
         "featured_collection_jDaLMx": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "",
+            "border_color": "#637ad8",
+            "text_color": "#637ad8"
           }
         },
         "featured_collection_bnwgHH": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "",
+            "border_color": "#637ad8",
+            "text_color": "#637ad8"
           }
         }
       },
@@ -93,12 +101,7 @@
       "settings": {
         "title": "<em>Explore</em> the Oshadhi collections",
         "heading_size": "h2",
-        "image_ratio": "square",
-        "columns_desktop": 3,
         "color_scheme": "background-2",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 100,
         "padding_bottom": 60
       }
