@@ -92,18 +92,18 @@
     }
   }
 
-  #CollectionListSwiper-{{ section.id }} .collection-list-swiper__card {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    border: 0.1rem solid var(--card-border-color, currentColor);
-    border-radius: 1.2rem;
-    aspect-ratio: 1 / 1;
-    background: transparent;
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    color: var(--card-text-color, rgb(var(--color-foreground)));
-  }
+#CollectionListSwiper-{{ section.id }} .collection-list-swiper__card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--card-border-color, currentColor);
+  border-radius: 6px;
+  aspect-ratio: 1 / 1;
+  background: transparent;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: var(--card-text-color, rgb(var(--color-foreground)));
+}
 
 #CollectionListSwiper-{{ section.id }} .collection-list-swiper__card:hover .collection-list-swiper__card-title {
   color: white;
