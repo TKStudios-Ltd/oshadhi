@@ -35,8 +35,8 @@
           "settings": {
             "background_type": "video",
             "foreground_image": "shopify://shop_images/Oshadhi_Hero-Products.png",
-            "eyebrow": "Nature,",
-            "heading": "Perfectly Distilled",
+            "eyebrow": "New",
+            "heading": "Slide Goes here",
             "text": "<p>Carefully selected botanicals crafted with patience and tradition into pure, 100% natural essential oils.</p>",
             "button_label": "Shop Essential Oils",
             "button_link": "shopify://collections/singles",
