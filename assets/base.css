@@ -2554,11 +2554,17 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 17px;
+  width: 16px;
   padding: 0;
   fill: none;
   vertical-align: middle;
+}
+
+.header__icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  padding: 0;
 }
 
 .header__icon--cart {
