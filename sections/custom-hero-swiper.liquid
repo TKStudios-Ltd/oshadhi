@@ -174,28 +174,36 @@ document.addEventListener('DOMContentLoaded', function () {
 .custom-hero-swiper .swiper-slide {
   position: relative;
   min-height: 75vh;
-  display: flex;
-  align-items: stretch;
 }
 
 .custom-hero-slide {
   position: relative;
   width: 100%;
   min-height: 75vh;
-  display: flex;
-  align-items: center;
-}
-
-.custom-hero-slide__media,
-.custom-hero-slide__overlay,
-.custom-hero-slide__inner {
-  position: absolute;
-  inset: 0;
+  overflow: hidden;
 }
 
 .custom-hero-slide__media {
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  overflow: hidden;
+}
+
+.custom-hero-slide__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.custom-hero-slide__inner {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  min-height: 75vh;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
 }
 
 .custom-hero-slide__bg-image,
@@ -207,13 +215,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 .custom-hero-slide__bg-image,
 .custom-hero-slide__bg-video video {
-  object-fit: cover;
   display: block;
-}
-
-.custom-hero-slide__overlay {
-  z-index: 2;
-  pointer-events: none;
+  object-fit: cover;
 }
 
 .custom-hero-slide__inner {
