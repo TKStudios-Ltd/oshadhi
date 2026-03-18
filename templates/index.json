@@ -24,8 +24,8 @@
             "button_label": "Shop Essential Oils",
             "button_link": "shopify://collections/singles",
             "button_style_secondary": false,
-            "overlay_color_1": "#c2ddd2",
-            "overlay_color_2": "#1d1d1d",
+            "overlay_color_1": "#1d1d1d",
+            "overlay_color_2": "#c2ddd2",
             "overlay_opacity": 20,
             "overlay_direction": "135deg"
           }
