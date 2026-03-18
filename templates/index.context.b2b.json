@@ -25,16 +25,9 @@
       },
       "blocks": {},
       "block_order": []
-    },
-    "ae077e02-5e4b-45f2-8020-4e3af214673d": {
-      "settings": {
-        "custom_liquid": "<div data-instabuy data-widget-id=\"96f1b26a-f372-4a97-ac6f-40918ca95700\"></div>"
-      },
-      "blocks": {}
     }
   },
   "order": [
-    "ae077e02-5e4b-45f2-8020-4e3af214673d",
     "custom_liquid_CJnWn"
   ]
 }
