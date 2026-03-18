@@ -36,7 +36,7 @@
       ],
       "name": "Hero Slider",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "autoplay": true,
         "autoplay_delay": 5000,
         "transition_speed": 900,

@@ -237,13 +237,13 @@
       },
       "inverse": {
         "settings": {
-          "background": "#2e2a39",
+          "background": "rgba(0,0,0,0)",
           "background_gradient": "",
-          "text": "#fdfbf7",
-          "button": "#fdfbf7",
-          "button_label": "#2e2a39",
-          "secondary_button_label": "#fdfbf7",
-          "shadow": "#2e2a39"
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#1c3160",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#1d1d1d"
         }
       },
       "accent-1": {
