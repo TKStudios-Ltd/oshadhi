@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "background_type": "video",
+            "background_video": "shopify://files/videos/OSH_Hero-Background.mp4",
             "foreground_image": "shopify://shop_images/Oshadhi_Hero-Products.png",
             "eyebrow": "Nature,",
             "heading": "Perfectly Distilled",
