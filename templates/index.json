@@ -69,6 +69,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "singles",
+            "collection_name_override": "Essential Oils",
             "custom_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card.png",
             "hover_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card-Hover.png",
             "border_color": "#455c9f",
@@ -78,24 +79,66 @@
         "featured_collection_jDaLMx": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "border_color": "#637ad8",
-            "text_color": "#637ad8"
+            "collection": "blends",
+            "collection_name_override": "Essential Oil Blends",
+            "custom_image": "shopify://shop_images/Oshadhi_Blend_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Blend_Card-Hover.png",
+            "border_color": "#588f51",
+            "text_color": "#588f51"
           }
         },
         "featured_collection_bnwgHH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "border_color": "#637ad8",
-            "text_color": "#637ad8"
+            "collection": "carrier-oils",
+            "collection_name_override": "",
+            "custom_image": "shopify://shop_images/Oshadhi_Carrier-Oil_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Carrier-Oil_Card-Hover.png",
+            "border_color": "#f25d34",
+            "text_color": "#f25d34"
+          }
+        },
+        "featured_collection_jwCFPT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "perfumes",
+            "collection_name_override": "",
+            "custom_image": "shopify://shop_images/Oshadhi_Perfume_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Perfume_Card-Hover.png",
+            "border_color": "#6a82c6",
+            "text_color": "#6a82c6"
+          }
+        },
+        "featured_collection_C8rHPe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "facial-oils",
+            "collection_name_override": "",
+            "custom_image": "shopify://shop_images/Oshadhi_Facial-Oil_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Facial-Oil_Card-Hover.png",
+            "border_color": "#71527c",
+            "text_color": "#71527c"
+          }
+        },
+        "featured_collection_T3KJHM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "room-sprays",
+            "collection_name_override": "",
+            "custom_image": "shopify://shop_images/Oshadhi_Roomspray_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Roomspray_Card-Hover.png",
+            "border_color": "#6d76c7",
+            "text_color": "#6d76c7"
           }
         }
       },
       "block_order": [
         "featured_collection_rfn7ge",
         "featured_collection_jDaLMx",
-        "featured_collection_bnwgHH"
+        "featured_collection_bnwgHH",
+        "featured_collection_jwCFPT",
+        "featured_collection_C8rHPe",
+        "featured_collection_T3KJHM"
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
