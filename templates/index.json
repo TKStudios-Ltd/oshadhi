@@ -61,9 +61,51 @@
         "loop_slides": true,
         "show_arrows": false
       }
+    },
+    "collection_list_h86QbL": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_rfn7ge": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_jDaLMx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_bnwgHH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_rfn7ge",
+        "featured_collection_jDaLMx",
+        "featured_collection_bnwgHH"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "<em>Explore</em> the Oshadhi collections",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
-    "custom_hero_swiper_3mqtic"
+    "custom_hero_swiper_3mqtic",
+    "collection_list_h86QbL"
   ]
 }
