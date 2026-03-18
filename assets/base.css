@@ -2387,7 +2387,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
     align-items: center;
   }
   .header__heading-logo-wrapper {
-    width: 44px;
+    width: 44px !important;
   }
   .header__icons {
     position: absolute;
