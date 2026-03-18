@@ -171,13 +171,14 @@
           "type": "tile",
           "settings": {
             "subtitle": "Shop",
-            "title": "Aroma",
+            "title": "<em>Use</em>",
             "title_size": "h1",
-            "link": "",
-            "image_layout": "full",
+            "link": "#",
+            "image": "shopify://shop_images/OSH_Shop-Use.jpg",
+            "image_layout": "half",
             "content_vertical_position": "top",
-            "background_color": "#E8E5DE",
-            "text_color": "#111111",
+            "background_color": "#ddd4c9",
+            "text_color": "#1d1d1d",
             "image_overlay_opacity": 0
           }
         }
