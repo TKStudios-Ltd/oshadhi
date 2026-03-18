@@ -264,6 +264,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   font-weight: var(--font-body-weight);
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 h1,
 h2,
 h3,
