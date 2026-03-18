@@ -18,14 +18,16 @@
           "type": "announcement",
           "settings": {
             "text": "AMAZING DEALS IN CLEARANCE! UP TO 60% OFF!",
+            "link_label": "Shop now",
             "link": "shopify://collections/clearance"
           }
         },
         "announcement_XBgzzA": {
           "type": "announcement",
           "settings": {
-            "text": "FREE SHIPPING ON ORDERS $175+ (USD) USA /  $240+ (CAD) CANADA",
-            "link": ""
+            "text": "FREE SHIPPING ON ORDERS $175+ USA",
+            "link_label": "Shop now",
+            "link": "shopify://collections/all"
           }
         }
       },
