@@ -50,14 +50,10 @@
             </div>
 
             <div
-              class="custom-hero-slide__overlay"
-              style="
-                background: linear-gradient({{ overlay_direction }},
-                  {{ block.settings.overlay_color_1 | color_modify: 'alpha', overlay_opacity }},
-                  {{ block.settings.overlay_color_2 | color_modify: 'alpha', overlay_opacity }}
-                );
-              "
-            ></div>
+                class="custom-hero-slide__overlay"
+                style="background: linear-gradient({{ overlay_direction }}, {{ block.settings.overlay_color_1 | color_modify: 'alpha', overlay_opacity }}, {{ block.settings.overlay_color_2 | color_modify: 'alpha', overlay_opacity }});"
+            >
+            </div>
 
             <div class="custom-hero-slide__inner page-width">
               <div class="custom-hero-slide__content-wrap">
@@ -215,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 .custom-hero-slide__bg-video {
-    transform: translateX(-100%);
+    transform: scaleX(-1);
 }
 
 .custom-hero-slide__bg-image,
