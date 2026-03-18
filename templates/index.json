@@ -9,20 +9,58 @@
  */
 {
   "sections": {
-    "ae077e02-5e4b-45f2-8020-4e3af214673d": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "div {background-color: #fff;}"
+    "custom_hero_swiper_3mqtic": {
+      "type": "custom-hero-swiper",
+      "blocks": {
+        "slide_pF9LnY": {
+          "type": "slide",
+          "settings": {
+            "background_type": "image",
+            "eyebrow": "Nature,",
+            "heading": "Perfectly Distilled",
+            "text": "<p>Carefully selected botanicals crafted with patience and tradition into pure, 100% natural essential oils.</p>",
+            "button_label": "Shop essential oils",
+            "button_link": "",
+            "button_style_secondary": false,
+            "overlay_color_1": "#09120d",
+            "overlay_color_2": "#c7d2b6",
+            "overlay_opacity": 35,
+            "overlay_direction": "90deg"
+          }
+        },
+        "slide_RMcnwr": {
+          "type": "slide",
+          "settings": {
+            "background_type": "image",
+            "eyebrow": "Nature,",
+            "heading": "Perfectly Distilled",
+            "text": "<p>Carefully selected botanicals crafted with patience and tradition into pure, 100% natural essential oils.</p>",
+            "button_label": "Shop essential oils",
+            "button_link": "",
+            "button_style_secondary": false,
+            "overlay_color_1": "#09120d",
+            "overlay_color_2": "#c7d2b6",
+            "overlay_opacity": 35,
+            "overlay_direction": "90deg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_pF9LnY",
+        "slide_RMcnwr"
       ],
+      "name": "Hero Slider",
       "settings": {
-        "custom_liquid": "",
         "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "autoplay": true,
+        "autoplay_delay": 5000,
+        "transition_speed": 900,
+        "loop_slides": true,
+        "show_arrows": false
       }
     }
   },
   "order": [
-    "ae077e02-5e4b-45f2-8020-4e3af214673d"
+    "custom_hero_swiper_3mqtic"
   ]
 }
