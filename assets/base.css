@@ -2389,6 +2389,10 @@ product-info .loading__spinner:not(.hidden) ~ *,
   .header__heading-logo-wrapper {
     width: 44px;
   }
+  .header__icons {
+    position: absolute;
+    right: 2rem;
+  }
   .header--has-app {
     grid-template-columns: auto 1fr auto;
   }
