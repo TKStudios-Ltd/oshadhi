@@ -257,19 +257,17 @@ document.addEventListener('DOMContentLoaded', function () {
 .custom-hero-slide__foreground {
   position: absolute;
   right: 0;
-  bottom: 0;
-  width: min(42vw, 680px);
+  bottom: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  z-index: 4;
-  pointer-events: none;
+  height: 100%;
 }
 
 .custom-hero-slide__foreground img {
   display: block;
-  width: 100%;
-  max-width: none;
+  max-width: 100%;
+  width: min(520px, 100%);
   height: auto;
 }
 
