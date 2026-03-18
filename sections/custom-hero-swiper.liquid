@@ -62,12 +62,16 @@
             <div class="custom-hero-slide__inner page-width">
               <div class="custom-hero-slide__content-wrap">
                 <div class="custom-hero-slide__content">
-                  {% if block.settings.eyebrow != blank %}
-                    <span class="custom-hero-slide__eyebrow">{{ block.settings.eyebrow }}</span>
-                  {% endif %}
 
                   {% if block.settings.heading != blank %}
-                    <h2 class="custom-hero-slide__heading">{{ block.settings.heading }}</h2>
+                    <h1 class="custom-hero-slide__heading">
+                        <em>
+                            {% if block.settings.eyebrow != blank %}
+                                {{ block.settings.eyebrow }}
+                            {% endif %}
+                        </em><br>
+                        {{ block.settings.heading }}
+                    </h1>
                   {% endif %}
 
                   {% if block.settings.text != blank %}
