@@ -148,11 +148,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "6097499278999377719": {
-        "type": "shopify://apps/globo-mega-menu/blocks/app-embed/7a00835e-fe40-45a5-a615-2eb4ab697b58",
-        "disabled": false,
-        "settings": {}
-      },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
@@ -206,13 +201,13 @@
         "disabled": false,
         "settings": {}
       },
-      "11434813149838796522": {
-        "type": "shopify://apps/pre-order-restock-notifier/blocks/app-embed/1fadf77e-ebd8-4e68-90cb-f24d97d07bde",
-        "disabled": false,
-        "settings": {}
-      },
       "10115289292966514107": {
         "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser-block/3f966edc-9a4a-465c-a4df-436d2a39160d",
+        "disabled": true,
+        "settings": {}
+      },
+      "6097499278999377719": {
+        "type": "shopify://apps/globo-mega-menu/blocks/app-embed/7a00835e-fe40-45a5-a615-2eb4ab697b58",
         "disabled": true,
         "settings": {}
       }
