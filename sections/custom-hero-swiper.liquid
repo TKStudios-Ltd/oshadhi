@@ -124,13 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const sectionId = slider.dataset.sectionId;
 
     new Swiper(slider, {
-      loop: slider.dataset.loop === 'true',
-      speed: Number(slider.dataset.speed) || 900,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true,
-      },
-      autoplay: slider.dataset.autoplay === 'true'
+        loop: slider.dataset.loop === 'true',
+        speed: Number(slider.dataset.speed) || 900,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: slider.dataset.autoplay === 'true'
         ? {
             delay: Number(slider.dataset.delay) || 5000,
             disableOnInteraction: false,
