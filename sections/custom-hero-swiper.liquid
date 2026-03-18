@@ -266,9 +266,17 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
 .custom-hero-swiper-section .swiper-pagination-bullets {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+@media screen and (min-width: 990px) {
+    .custom-hero-swiper-section .swiper-pagination-bullets {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 }
 
 .custom-hero-swiper-section .swiper-pagination-bullet {
