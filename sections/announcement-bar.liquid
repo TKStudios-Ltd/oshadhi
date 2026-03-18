@@ -6,9 +6,11 @@
   if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
     assign social_icons = false
   endif
+
   if section.settings.enable_country_selector or section.settings.enable_language_selector
     assign language_country_selector = true
   endif
+
   if section.blocks.size > 0
     assign announcement_bar = true
   endif
@@ -18,39 +20,104 @@
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
+<style>
+  .announcement-bar__message-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+  }
+
+  .announcement-bar__text {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  .announcement-bar__cta {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    white-space: nowrap;
+  }
+
+  .announcement-bar__cta,
+  .announcement-bar__cta:visited {
+    color: inherit;
+  }
+
+  .announcement-bar__link-group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .announcement-bar__announcement {
+    width: 100%;
+  }
+
+  .announcement-bar__message {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .announcement-bar__message-wrap {
+      gap: 1.2rem;
+    }
+
+    .announcement-bar__text,
+    .announcement-bar__cta {
+      font-size: 1.4rem;
+    }
+  }
+</style>
+
 <div
-  class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
-  {{ block.shopify_attributes }}
+  class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons %} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
 >
   <div class="page-width utility-bar__grid{% if announcement_bar and language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
     {%- if section.settings.show_social and social_icons -%}
       {%- render 'social-icons' -%}
     {%- endif -%}
+
     {%- if section.blocks.size == 1 -%}
       <div
         class="announcement-bar{% if section.settings.show_social %} announcement-bar--one-announcement{% endif %}"
         role="region"
         aria-label="{{ 'sections.header.announcement' | t }}"
-        {{ block.shopify_attributes }}
       >
         {%- if section.blocks.first.settings.text != blank -%}
-          {%- if section.blocks.first.settings.link != blank -%}
-            <a
-              href="{{ section.blocks.first.settings.link }}"
-              class="announcement-bar__link link link--text focus-inset animate-arrow"
-            >
-          {%- endif -%}
-          <p class="announcement-bar__message">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
-              {% render 'icon-arrow' %}
-            {%- endif -%}
-          </p>
-          {%- if section.blocks.first.settings.link != blank -%}
-            </a>
-          {%- endif -%}
+          <div class="announcement-bar__announcement" {{ section.blocks.first.shopify_attributes }}>
+            <p class="announcement-bar__message">
+              <span class="announcement-bar__message-wrap">
+                <span class="announcement-bar__text">{{ section.blocks.first.settings.text | escape }}</span>
+
+                {%- if section.blocks.first.settings.link != blank and section.blocks.first.settings.link_label != blank -%}
+                  <a
+                    href="{{ section.blocks.first.settings.link }}"
+                    class="announcement-bar__cta focus-inset"
+                  >
+                    {{ section.blocks.first.settings.link_label | escape }}
+                  </a>
+                {%- endif -%}
+              </span>
+            </p>
+          </div>
         {%- endif -%}
       </div>
+
     {%- elsif section.blocks.size > 1 -%}
       <slideshow-component
         class="announcement-bar"
@@ -68,6 +135,7 @@
           >
             {% render 'icon-caret' %}
           </button>
+
           <div
             class="grid grid--1-col slider slider--everywhere"
             id="Slider-{{ section.id }}"
@@ -90,29 +158,28 @@
                   class="announcement-bar__announcement"
                   role="region"
                   aria-label="{{ 'sections.header.announcement' | t }}"
-                  {{ block.shopify_attributes }}
                 >
                   {%- if block.settings.text != blank -%}
-                    {%- if block.settings.link != blank -%}
-                      <a
-                        href="{{ block.settings.link }}"
-                        class="announcement-bar__link link link--text focus-inset animate-arrow"
-                      >
-                    {%- endif -%}
                     <p class="announcement-bar__message">
-                      <span>{{ block.settings.text | escape }}</span>
-                      {%- if block.settings.link != blank -%}
-                        {% render 'icon-arrow' %}
-                      {%- endif -%}
+                      <span class="announcement-bar__message-wrap">
+                        <span class="announcement-bar__text">{{ block.settings.text | escape }}</span>
+
+                        {%- if block.settings.link != blank and block.settings.link_label != blank -%}
+                          <a
+                            href="{{ block.settings.link }}"
+                            class="announcement-bar__cta focus-inset"
+                          >
+                            {{ block.settings.link_label | escape }}
+                          </a>
+                        {%- endif -%}
+                      </span>
                     </p>
-                    {%- if block.settings.link != blank -%}
-                      </a>
-                    {%- endif -%}
                   {%- endif -%}
                 </div>
               </div>
             {%- endfor -%}
           </div>
+
           <button
             type="button"
             class="slider-button slider-button--next"
@@ -124,16 +191,17 @@
           </button>
         </div>
       </slideshow-component>
+
       {%- if request.design_mode -%}
         <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
         <style>
-          /* theme editor power preview fix */
           .announcement-bar-slider .slider__slide[aria-hidden='true'] {
             visibility: hidden;
           }
         </style>
       {%- endif -%}
     {%- endif -%}
+
     <div class="localization-wrapper">
       {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
         <noscript class="small-hide medium-hide">
@@ -154,8 +222,7 @@
                       selected
                     {% endif %}
                   >
-                    {{ country.name }} ({{ country.currency.iso_code }}
-                    {{ country.currency.symbol }})
+                    {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
                   </option>
                 {%- endfor -%}
               </select>
@@ -301,13 +368,19 @@
         {
           "type": "text",
           "id": "text",
-          "default": "Welcome to our store",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+          "default": "Clearance - 60% Off on Selected Items",
+          "label": "Announcement text"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "default": "Shop now",
+          "label": "Link text"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+          "label": "Link URL"
         }
       ]
     }
