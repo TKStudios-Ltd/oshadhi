@@ -26,8 +26,8 @@
             "button_style_secondary": false,
             "overlay_color_1": "#c2ddd2",
             "overlay_color_2": "#1d1d1d",
-            "overlay_opacity": 35,
-            "overlay_direction": "90deg"
+            "overlay_opacity": 100,
+            "overlay_direction": "135deg"
           }
         }
       },
