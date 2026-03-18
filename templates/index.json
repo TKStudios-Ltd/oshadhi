@@ -163,8 +163,7 @@
             "image_layout": "half",
             "content_vertical_position": "top",
             "background_color": "#1c3160",
-            "text_color": "#ffffff",
-            "image_overlay_opacity": 0
+            "text_color": "#ffffff"
           }
         },
         "tile_RGRWWL": {
@@ -178,8 +177,7 @@
             "image_layout": "half",
             "content_vertical_position": "top",
             "background_color": "#ddd4c9",
-            "text_color": "#1d1d1d",
-            "image_overlay_opacity": 0
+            "text_color": "#1d1d1d"
           }
         }
       },
@@ -196,11 +194,35 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "rich_text_b3QqmQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_rVNkCX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For more than 30 years, Oshadhi has been creating essential oils of exceptional purity. The name comes from Sanskrit and means “Carrier of Light”, reflecting the energy plants transform into aromatic essences.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_rVNkCX"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "right",
+        "content_alignment": "right",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "custom_hero_swiper_3mqtic",
     "collection_list_h86QbL",
-    "multicolum_cta_Fe3Tcr"
+    "multicolum_cta_Fe3Tcr",
+    "rich_text_b3QqmQ"
   ]
 }
