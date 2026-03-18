@@ -28,27 +28,10 @@
             "overlay_opacity": 35,
             "overlay_direction": "90deg"
           }
-        },
-        "slide_RMcnwr": {
-          "type": "slide",
-          "settings": {
-            "background_type": "image",
-            "eyebrow": "Nature,",
-            "heading": "Perfectly Distilled",
-            "text": "<p>Carefully selected botanicals crafted with patience and tradition into pure, 100% natural essential oils.</p>",
-            "button_label": "Shop essential oils",
-            "button_link": "",
-            "button_style_secondary": false,
-            "overlay_color_1": "#09120d",
-            "overlay_color_2": "#c7d2b6",
-            "overlay_opacity": 35,
-            "overlay_direction": "90deg"
-          }
         }
       },
       "block_order": [
-        "slide_pF9LnY",
-        "slide_RMcnwr"
+        "slide_pF9LnY"
       ],
       "name": "Hero Slider",
       "settings": {
