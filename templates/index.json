@@ -217,12 +217,72 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "multicolum_cta_aCcg8f": {
+      "type": "multicolum-cta",
+      "blocks": {
+        "tile_AfQrhi": {
+          "type": "tile",
+          "settings": {
+            "subtitle": "Shop",
+            "title": "<em>Diffusers</em>",
+            "title_size": "h1",
+            "link": "#",
+            "image": "shopify://shop_images/OSH_Shop-Diffusers_77320efb-e15f-4cd3-bea3-89562389e4f7.jpg",
+            "image_layout": "full",
+            "content_vertical_position": "top",
+            "background_color": "#1c3160",
+            "text_color": "#ffffff"
+          }
+        },
+        "tile_GFFkCA": {
+          "type": "tile",
+          "settings": {
+            "subtitle": "Shop",
+            "title": "<em>60% Off Sale</em>",
+            "title_size": "h2",
+            "link": "#",
+            "image_layout": "full",
+            "content_vertical_position": "top",
+            "background_color": "#f1f0ee",
+            "text_color": "#1d1d1d"
+          }
+        },
+        "tile_anCntH": {
+          "type": "tile",
+          "settings": {
+            "subtitle": "Shop",
+            "title": "<em>Clearance</em>",
+            "title_size": "h2",
+            "link": "#",
+            "image_layout": "full",
+            "content_vertical_position": "top",
+            "background_color": "#ddd4c9",
+            "text_color": "#1d1d1d"
+          }
+        }
+      },
+      "block_order": [
+        "tile_AfQrhi",
+        "tile_GFFkCA",
+        "tile_anCntH"
+      ],
+      "name": "CTA tiles",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "layout_style": "feature_stack",
+        "color_scheme": "background-1",
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "custom_hero_swiper_3mqtic",
     "collection_list_h86QbL",
     "multicolum_cta_Fe3Tcr",
-    "rich_text_b3QqmQ"
+    "rich_text_b3QqmQ",
+    "multicolum_cta_aCcg8f"
   ]
 }
