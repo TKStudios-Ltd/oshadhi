@@ -17,7 +17,6 @@
     assign title_width_class = 'cta-tile__heading--half'
   endif
 
-  assign overlay_alpha = block.settings.image_overlay_opacity | divided_by: 100.0
 -%}
 
 <a
@@ -42,10 +41,6 @@
       }}
     </div>
 
-    <div
-      class="cta-tile__overlay"
-      style="background: rgba(0,0,0,{{ overlay_alpha }});"
-    ></div>
   {%- endif -%}
 
   <div class="cta-tile__content {{ content_position_class }}">
