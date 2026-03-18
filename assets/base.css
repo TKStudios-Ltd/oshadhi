@@ -286,7 +286,7 @@ h5,
 
 .h0 em, h1 em, .h1 em, h2 em, .h2 em, h3 em, .h3 em {
   font-family: 'Newsreader';
-  font-weight: 300;
+  font-weight: 300 !important;
   font-style: italic;
 }
 
