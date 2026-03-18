@@ -113,8 +113,8 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .utility-bar__grid.page-width {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -2216,12 +2216,12 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .announcement-bar .slider-button--next {
-  margin-right: -32px;
+  margin-right: -22px;
   min-width: 44px;
 }
 
 .announcement-bar .slider-button--prev {
-  margin-left: -32px;
+  margin-left: -22px;
   min-width: 44px;
 }
 
