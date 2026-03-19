@@ -281,13 +281,13 @@
       },
       "scheme-fa1e395e-f5c0-4b7a-9e9f-bca2ab697e9f": {
         "settings": {
-          "background": "#fdfbf7",
-          "background_gradient": "linear-gradient(180deg, rgba(240, 242, 248, 1), rgba(255, 254, 255, 1) 100%)",
-          "text": "#2e2a39",
-          "button": "#9b046f",
-          "button_label": "#fdfbf7",
-          "secondary_button_label": "#2e2a39",
-          "shadow": "#2e2a39"
+          "background": "#f0f4f6",
+          "background_gradient": "",
+          "text": "#1d1d1d",
+          "button": "#1c3160",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#1c3160",
+          "shadow": "rgba(0,0,0,0)"
         }
       },
       "scheme-c729c5c5-71f2-48b9-9b36-f4f1b29e9421": {
