@@ -98,10 +98,21 @@
             "text_color": "#f25d34"
           }
         },
-        "featured_collection_jwCFPT": {
+        "featured_collection_pBfmkG": {
           "type": "featured_collection",
           "settings": {
             "collection": "perfumes",
+            "collection_name_override": "",
+            "custom_image": "shopify://shop_images/Oshadhi_Perfume_Card_1c2cdb23-0356-40ef-b63b-82bddb78f443.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Perfume_Card-Hover_366c36eb-0f68-4276-85d6-4bf0de1396e8.png",
+            "border_color": "#384c84",
+            "text_color": "#384c84"
+          }
+        },
+        "featured_collection_jwCFPT": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "roll-ons",
             "collection_name_override": "",
             "custom_image": "shopify://shop_images/Oshadhi_Perfume_Card.png",
             "hover_image": "shopify://shop_images/Oshadhi_Perfume_Card-Hover.png",
@@ -136,6 +147,7 @@
         "featured_collection_rfn7ge",
         "featured_collection_jDaLMx",
         "featured_collection_bnwgHH",
+        "featured_collection_pBfmkG",
         "featured_collection_jwCFPT",
         "featured_collection_C8rHPe",
         "featured_collection_T3KJHM"
