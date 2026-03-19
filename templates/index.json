@@ -325,6 +325,7 @@
       "settings": {
         "link": "shopify://collections/sets",
         "image": "shopify://shop_images/OSH_Gift-Set_Desktop_b6c42301-a504-4b7e-a5ab-7d1096336ae2.jpg",
+        "image_2": "shopify://shop_images/OSH_Gift-Set_Mobile.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
@@ -333,7 +334,7 @@
         "color_scheme": "scheme-fa1e395e-f5c0-4b7a-9e9f-bca2ab697e9f",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "multicolum_cta_aCcg8f": {
