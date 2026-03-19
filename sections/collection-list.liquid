@@ -60,32 +60,32 @@
   height: 1.4rem;
 }
 
-  #CollectionListSwiper-{{ section.id }} .collection-list-swiper {
-    overflow: visible;
-  }
+#CollectionListSwiper-{{ section.id }} .collection-list-swiper {
+  overflow: visible;
+}
 
-  #CollectionListSwiper-{{ section.id }} .swiper-wrapper {
-    align-items: stretch;
-  }
+#CollectionListSwiper-{{ section.id }} .swiper-wrapper {
+  align-items: stretch;
+}
 
-  #CollectionListSwiper-{{ section.id }} .swiper-slide {
-    height: auto;
-  }
+#CollectionListSwiper-{{ section.id }} .swiper-slide {
+  height: auto;
+}
 
+#CollectionListSwiper-{{ section.id }} .collection-list-swiper__track-wrap {
+  width: 100vw;
+  margin-left: 0;
+  padding-left: 2rem;
+  padding-right: 3.5rem;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 750px) {
   #CollectionListSwiper-{{ section.id }} .collection-list-swiper__track-wrap {
-    width: 100vw;
-    margin-left: 0;
-    padding-left: 2rem;
-    padding-right: 3.5rem;
-    box-sizing: border-box;
+    padding-left: max(5rem, calc((100vw - var(--page-width)) / 2 + 5rem));
+    padding-right: 5rem;
   }
-
-  @media screen and (min-width: 750px) {
-    #CollectionListSwiper-{{ section.id }} .collection-list-swiper__track-wrap {
-      padding-left: max(5rem, calc((100vw - var(--page-width)) / 2 + 5rem));
-      padding-right: 5rem;
-    }
-  }
+}
 
 #CollectionListSwiper-{{ section.id }} .collection-list-swiper__card {
   position: relative;
@@ -169,27 +169,28 @@
     }
   }
 
-  @media screen and (max-width: 749px) {
-    #CollectionListSwiper-{{ section.id }} .collection-list-swiper__header {
-      align-items: flex-start;
-    }
-
-    #CollectionListSwiper-{{ section.id }} .collection-list-swiper__nav {
-      gap: 0.8rem;
-    }
-
-    #CollectionListSwiper-{{ section.id }} .collection-list-swiper__arrow {
-      width: 4rem;
-      height: 4rem;
-      min-width: 4rem;
-    }
-
-    #CollectionListSwiper-{{ section.id }} .collection-list-swiper__card-title {
-      top: 1.4rem;
-      left: 1.4rem;
-      right: 1.4rem;
-    }
+@media screen and (max-width: 749px) {
+  #CollectionListSwiper-{{ section.id }} .collection-list-swiper__header {
+    align-items: flex-start;
   }
+  #CollectionListSwiper-{{ section.id }} .collection-list-swiper__nav {
+    gap: 0.8rem;
+  }
+  #CollectionListSwiper-{{ section.id }} .collection-list-swiper__title {
+    max-width: 265px;
+    line-height: 1.1;
+  }
+  #CollectionListSwiper-{{ section.id }} .collection-list-swiper__arrow {
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem;
+  }
+  #CollectionListSwiper-{{ section.id }} .collection-list-swiper__card-title {
+    top: 1.4rem;
+    left: 1.4rem;
+    right: 1.4rem;
+  }
+}
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
