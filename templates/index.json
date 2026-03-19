@@ -439,6 +439,9 @@
         "heading_6dedmB",
         "text_mPPJgB"
       ],
+      "custom_css": [
+        "img {border-radius: 6px;}"
+      ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/OSH_Promise-Feature.jpg",
