@@ -24,7 +24,7 @@
   }
 }
 
-.divider-top .divider-line {
+.divider-line {
   display: none;
   border-top: 1px solid #DBE0E9;
 }
@@ -257,6 +257,9 @@
     {% if section.settings.image_shape == 'arch' %}
       {% render 'mask-arch' %}
     {%- endif -%}
+  </div>
+  <div class="divider-bottom page-width">
+    <div class="divider-line"></div>
   </div>
 </div>
 
