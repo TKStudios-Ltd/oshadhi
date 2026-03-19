@@ -3538,7 +3538,7 @@ details-disclosure > details {
 .watermark {
   position: relative;
 }
-.watermark::before {
+.watermark:before {
   position: absolute;
   left: 0;
   top: 0;
