@@ -45,6 +45,7 @@
 }
 
 .rating-count {
+  font-size: 10px;
   display: inline-block;
   margin: 0;
 }
