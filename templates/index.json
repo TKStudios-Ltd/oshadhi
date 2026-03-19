@@ -430,23 +430,14 @@
         "text_mPPJgB": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>At Oshadhi, every essential oil begins with exceptional botanicals sourced from trusted growers around the world. From harvest and distillation to testing and bottling, each step requires patience, knowledge and skill to preserve the true character of the plant. </p><p>Guided by the expertise of founder Dr. Malte Hozzel, Oshadhi combines deep botanical knowledge with uncompromising natural standards to create essential oils of exceptional purity.</p>",
             "text_style": "body"
-          }
-        },
-        "button_Qz7px4": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_6dedmB",
-        "text_mPPJgB",
-        "button_Qz7px4"
+        "text_mPPJgB"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
