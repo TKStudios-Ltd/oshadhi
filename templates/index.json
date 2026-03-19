@@ -198,15 +198,17 @@
     "rich_text_b3QqmQ": {
       "type": "rich-text",
       "blocks": {
-        "text_rVNkCX": {
-          "type": "text",
+        "caption_mXd4Yc": {
+          "type": "caption",
           "settings": {
-            "text": "<p>For more than 30 years, Oshadhi has been creating essential oils of exceptional purity. The name comes from Sanskrit and means “Carrier of Light”, reflecting the energy plants transform into aromatic essences.</p>"
+            "caption": "For more than 30 years, Oshadhi has been creating essential oils of exceptional purity. The name comes from Sanskrit and means “Carrier of Light”, reflecting the energy plants transform into aromatic essences.",
+            "text_style": "subtitle",
+            "text_size": "large"
           }
         }
       },
       "block_order": [
-        "text_rVNkCX"
+        "caption_mXd4Yc"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
