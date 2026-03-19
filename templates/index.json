@@ -330,11 +330,10 @@
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "",
+        "color_scheme": "scheme-fa1e395e-f5c0-4b7a-9e9f-bca2ab697e9f",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "multicolum_cta_aCcg8f": {
