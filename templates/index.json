@@ -317,6 +317,9 @@
         "text_YPqMBa",
         "buttons_kj4gzX"
       ],
+      "custom_css": [
+        "p {max-width: 300px;}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "link": "shopify://collections/sets",
