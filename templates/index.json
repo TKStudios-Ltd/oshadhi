@@ -313,6 +313,7 @@
       "settings": {
         "link": "",
         "image": "shopify://shop_images/Group_99_2.jpg",
+        "image_2": "shopify://shop_images/Group_99_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
