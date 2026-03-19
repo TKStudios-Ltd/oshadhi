@@ -278,6 +278,13 @@
     "image_banner_9GMrFg": {
       "type": "image-banner",
       "blocks": {
+        "text_m4e6Le": {
+          "type": "text",
+          "settings": {
+            "text": "Find the Perfect",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
         "heading_Gnty6X": {
           "type": "heading",
           "settings": {
@@ -305,6 +312,7 @@
         }
       },
       "block_order": [
+        "text_m4e6Le",
         "heading_Gnty6X",
         "text_YPqMBa",
         "buttons_kj4gzX"
@@ -313,7 +321,6 @@
       "settings": {
         "link": "shopify://collections/sets",
         "image": "shopify://shop_images/Group_99_2.jpg",
-        "image_2": "shopify://shop_images/Group_99_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
