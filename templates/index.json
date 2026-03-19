@@ -311,7 +311,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "link": "",
+        "link": "shopify://collections/sets",
         "image": "shopify://shop_images/Group_99_2.jpg",
         "image_2": "shopify://shop_images/Group_99_1.jpg",
         "image_overlay_opacity": 0,
