@@ -318,9 +318,9 @@
         "buttons_kj4gzX"
       ],
       "custom_css": [
-        ".banner__box {padding: 7.5rem 3.5rem 4rem 0;}",
+        ".banner__box {padding: 7.5rem 4rem 4rem 0;}",
         "p {max-width: 300px;}",
-        "@media (min-width: 750px) {.button {margin-top: 4rem; }}"
+        "@media (min-width: 750px) {.banner__box {padding: 6rem 2rem 4rem; } .button {margin-top: 4rem; }}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
