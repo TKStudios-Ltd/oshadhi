@@ -248,7 +248,7 @@
       "custom_css": [
         ".divider-top .divider-line {display: block !important;}"
       ],
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Best Sellers",
       "settings": {
         "title": "Best Sellers",
         "heading_size": "h4",
@@ -326,6 +326,38 @@
         "show_text_below": false
       }
     },
+    "featured_collection_zL3fVy": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".divider-top .divider-line {display: block !important;}"
+      ],
+      "name": "Essential Oils",
+      "settings": {
+        "title": "Essential Oils",
+        "heading_size": "h4",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "singles",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
+    },
     "multicolum_cta_aCcg8f": {
       "type": "multicolum-cta",
       "blocks": {
@@ -394,6 +426,7 @@
     "rich_text_b3QqmQ",
     "featured_collection_PNRMMr",
     "image_banner_9GMrFg",
+    "featured_collection_zL3fVy",
     "multicolum_cta_aCcg8f"
   ]
 }
