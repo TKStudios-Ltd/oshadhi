@@ -388,7 +388,7 @@
     "featured_collection_zL3fVy": {
       "type": "featured-collection",
       "custom_css": [
-        ".divider-top .divider-line {display: block !important;}"
+        ".divider-bottom .divider-line {display: block !important;}"
       ],
       "name": "Essential Oils",
       "settings": {
@@ -416,6 +416,54 @@
         "padding_top": 100,
         "padding_bottom": 60
       }
+    },
+    "image_with_text_TVPAi3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6dedmB": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Oshadhi <em>Promise</em>",
+            "heading_size": "h2"
+          }
+        },
+        "text_mPPJgB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_Qz7px4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6dedmB",
+        "text_mPPJgB",
+        "button_Qz7px4"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/OSH_Promise-Feature.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -427,6 +475,7 @@
     "featured_collection_PNRMMr",
     "image_banner_9GMrFg",
     "multicolum_cta_aCcg8f",
-    "featured_collection_zL3fVy"
+    "featured_collection_zL3fVy",
+    "image_with_text_TVPAi3"
   ]
 }
