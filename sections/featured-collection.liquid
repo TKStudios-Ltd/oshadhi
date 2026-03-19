@@ -31,6 +31,7 @@
 
 #FeaturedCollectionSwiper-{{ section.id }} {
   position: relative;
+  overflow: hidden;
 }
 #FeaturedCollectionSwiper-{{ section.id }} .featured-collection-swiper__header {
   display: flex;
@@ -123,11 +124,12 @@
   width: 100%;
 }
 
-  #FeaturedCollectionSwiper-{{ section.id }} .grid__item {
-    height: 100%;
-  }
+#FeaturedCollectionSwiper-{{ section.id }} .grid__item {
+  height: 100%;
+  max-width: none;
+}
 
-  @media screen and (max-width: 749px) {
+@media screen and (max-width: 749px) {
     #FeaturedCollectionSwiper-{{ section.id }} .featured-collection-swiper__header {
       align-items: flex-start;
       gap: 1.2rem;
@@ -140,7 +142,10 @@
     #FeaturedCollectionSwiper-{{ section.id }} .featured-collection-swiper__shop-all {
       font-size: 1rem;
     }
+  #FeaturedCollectionSwiper-{{ section.id }} .featured-collection-swiper {
+    overflow: visible;
   }
+}
 {%- endstyle -%}
 
 {%- liquid
