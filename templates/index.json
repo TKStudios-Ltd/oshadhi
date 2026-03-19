@@ -281,24 +281,24 @@
         "heading_Gnty6X": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "heading": "Gift Sets",
+            "heading_size": "h2"
           }
         },
         "text_YPqMBa": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Discover curated collections of essential oils, diffusers and wellness bundles, perfect for gifting or exploring new favourites.",
             "text_style": "body"
           }
         },
         "buttons_kj4gzX": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "Shop Gift Sets",
+            "button_link_1": "shopify://collections/sets",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
