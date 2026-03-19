@@ -265,12 +265,12 @@
                     {%- if primary_image != blank -%}
                       {{
                         primary_image
-                        | image_url: width: 2000
+                        | image_url: width: 700
                         | image_tag:
                           class: 'collection-list-swiper__image collection-list-swiper__image--primary',
                           loading: 'lazy',
-                          widths: '400, 600, 800, 1000, 1400, 1800, 2000',
-                          sizes: '(min-width: 1200px) 18vw, (min-width: 750px) 25vw, 60vw',
+                          widths: '240, 320, 480, 640, 700',
+                          sizes: '(min-width: 990px) 16vw, (min-width: 750px) 22vw, 42vw',
                           alt: card_collection.title | escape
                       }}
                     {%- else -%}
@@ -280,12 +280,12 @@
                     {%- if hover_image != blank -%}
                       {{
                         hover_image
-                        | image_url: width: 2000
+                        | image_url: width: 700
                         | image_tag:
                           class: 'collection-list-swiper__image collection-list-swiper__image--hover',
                           loading: 'lazy',
-                          widths: '400, 600, 800, 1000, 1400, 1800, 2000',
-                          sizes: '(min-width: 1200px) 18vw, (min-width: 750px) 25vw, 60vw',
+                          widths: '240, 320, 480, 640, 700',
+                          sizes: '(min-width: 990px) 16vw, (min-width: 750px) 22vw, 42vw',
                           alt: card_collection.title | escape
                       }}
                     {%- endif -%}
