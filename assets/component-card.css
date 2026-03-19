@@ -373,8 +373,13 @@
   margin-top: 0.5rem;
 }
 
+.card-information_title {
+  width: 100%;
+  min-height: 60px;
+}
 .card-information {
   width: 100%;
+  min-height: 60px;
 }
 
 .card-information>* {
