@@ -3541,8 +3541,8 @@ details-disclosure > details {
 }
 .watermark::before {
   position: absolute;
-  left: -200px;
-  top: -12.5rem;
+  left: -140px;
+  top: -14rem;
   z-index: 1;
   content: url('https://cdn.shopify.com/s/files/1/0567/2563/5262/files/OSH_Watermark.png');
 }
