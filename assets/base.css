@@ -3538,8 +3538,18 @@ details-disclosure > details {
 .watermark {
   display: inherit !important;
   position: relative;
+  margin-top: -100px;
 }
-.watermark:before {
+.watermark::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: " ";
+  background: white;
+  height: 100px;
+  width: 100vw;
+}
+.watermark::after {
   position: absolute;
   left: 0;
   top: 0;
