@@ -24,9 +24,6 @@
   }
 }
 
-/* .divider-top {
-  display: none;
-} */
 .divider-top .divider-line {
   display: none;
   border-top: 1px solid #DBE0E9;
@@ -280,8 +277,8 @@
       if (slider.classList.contains('swiper-initialized')) return;
 
       new Swiper(slider, {
-        slidesPerView: 2.2,
-        spaceBetween: 16,
+        slidesPerView: 1.2,
+        spaceBetween: 15,
         speed: 700,
         watchOverflow: true,
         navigation: {
@@ -295,7 +292,7 @@
           },
           990: {
             slidesPerView: {{ section.settings.columns_desktop }},
-            spaceBetween: 24
+            spaceBetween: 20
           }
         }
       });
