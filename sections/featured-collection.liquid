@@ -208,10 +208,14 @@
       </div>
 
       <div
-        class="swiper featured-collection-swiper js-featured-collection-swiper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        data-section-id="{{ section.id }}"
-      >
-        <div class="swiper-wrapper" role="list" aria-label="{{ 'general.slider.name' | t }}">
+          class="swiper featured-collection-swiper js-featured-collection-swiper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          data-section-id="{{ section.id }}"
+        >
+          <div
+            class="swiper-wrapper product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}"
+            role="list"
+            aria-label="{{ 'general.slider.name' | t }}"
+          >
           {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
             <div
               class="swiper-slide"
@@ -235,14 +239,12 @@
             </div>
           {%- else -%}
             {%- for i in (1..4) -%}
-              <div class="swiper-slide">
-                <div class="grid__item">
-                  {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
-                  {% render 'card-product',
-                    show_vendor: section.settings.show_vendor,
-                    placeholder_image: placeholder_image
-                  %}
-                </div>
+              <div class="swiper-slide grid__item">
+                {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
+                {% render 'card-product',
+                  show_vendor: section.settings.show_vendor,
+                  placeholder_image: placeholder_image
+                %}
               </div>
             {%- endfor -%}
           {%- endfor -%}
