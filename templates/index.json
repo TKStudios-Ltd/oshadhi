@@ -197,6 +197,7 @@
         "tile_4GJeRi",
         "tile_RGRWWL"
       ],
+      "custom_css": [],
       "name": "CTA tiles",
       "settings": {
         "title": "",
@@ -213,7 +214,7 @@
       "settings": {
         "custom_liquid": "<div class=\"watermark\"></div>",
         "color_scheme": "",
-        "padding_top": 100,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
