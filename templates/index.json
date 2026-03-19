@@ -70,8 +70,8 @@
           "settings": {
             "collection": "singles",
             "collection_name_override": "Essential Oils",
-            "custom_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card-Hover.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card_d01a7f25-4dbe-47d5-ab9b-a062d9b8bece.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Essential-Oil_Card-Hover_a1d75e41-10cc-428a-ab17-2d86af5dc319.png",
             "border_color": "#455c9f",
             "text_color": "#455c9f"
           }
@@ -81,8 +81,8 @@
           "settings": {
             "collection": "blends",
             "collection_name_override": "Essential Oil Blends",
-            "custom_image": "shopify://shop_images/Oshadhi_Blend_Card.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Blend_Card-Hover.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Blend_Card_6b50d1b8-7eec-4a1f-8e67-9f06b3be65c2.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Blend_Card-Hover_05c295c1-c463-4eff-a0c7-acfb37459d11.png",
             "border_color": "#588f51",
             "text_color": "#588f51"
           }
@@ -92,8 +92,8 @@
           "settings": {
             "collection": "carrier-oils",
             "collection_name_override": "",
-            "custom_image": "shopify://shop_images/Oshadhi_Carrier-Oil_Card.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Carrier-Oil_Card-Hover.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Carrier-Oil_Card_d09a07ea-b1cd-447b-8fda-1193cb132f78.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Carrier-Oil_Card-Hover_52fd0c8a-7a79-46ea-a8a1-51623929570e.png",
             "border_color": "#f25d34",
             "text_color": "#f25d34"
           }
@@ -103,8 +103,8 @@
           "settings": {
             "collection": "perfumes",
             "collection_name_override": "",
-            "custom_image": "shopify://shop_images/Oshadhi_Perfume_Card_1c2cdb23-0356-40ef-b63b-82bddb78f443.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Perfume_Card-Hover_366c36eb-0f68-4276-85d6-4bf0de1396e8.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Perfume_Card_2da945ed-f415-48ae-b991-66685e7d4e01.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Perfume_Card-Hover_784015af-e4c3-46a6-9202-88978eb28a4e.png",
             "border_color": "#384c84",
             "text_color": "#384c84"
           }
@@ -114,8 +114,8 @@
           "settings": {
             "collection": "roll-ons",
             "collection_name_override": "",
-            "custom_image": "shopify://shop_images/Oshadhi_Perfume_Card.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Perfume_Card-Hover.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Roll-On_Card.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Roll-On_Card-Hover.png",
             "border_color": "#6a82c6",
             "text_color": "#6a82c6"
           }
@@ -125,8 +125,8 @@
           "settings": {
             "collection": "facial-oils",
             "collection_name_override": "",
-            "custom_image": "shopify://shop_images/Oshadhi_Facial-Oil_Card.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Facial-Oil_Card-Hover.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Facial-Oil_Card_678bf5c6-deb1-4635-864b-b5379ee03df9.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Facial-Oil_Card-Hover_553ee2b1-a366-4e53-a995-3fd28612a460.png",
             "border_color": "#71527c",
             "text_color": "#71527c"
           }
@@ -136,8 +136,8 @@
           "settings": {
             "collection": "room-sprays",
             "collection_name_override": "",
-            "custom_image": "shopify://shop_images/Oshadhi_Roomspray_Card.png",
-            "hover_image": "shopify://shop_images/Oshadhi_Roomspray_Card-Hover.png",
+            "custom_image": "shopify://shop_images/Oshadhi_Roomspray_Card_95447221-4e1c-4d1d-a1ac-f751f7f12756.png",
+            "hover_image": "shopify://shop_images/Oshadhi_Roomspray_Card-Hover_d5733725-79f2-435b-8f63-f8808dd2320e.png",
             "border_color": "#6d76c7",
             "text_color": "#6d76c7"
           }
