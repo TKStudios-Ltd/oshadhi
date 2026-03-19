@@ -3541,10 +3541,10 @@ details-disclosure > details {
 }
 .watermark::before {
   position: absolute;
-  left: -140px;
-  top: -18rem;
+  left: 0;
+  top: -12.5rem;
   z-index: 1;
-  content: url('https://cdn.shopify.com/s/files/1/0567/2563/5262/files/OSH_Watermark.png');
+  content: url('https://cdn.shopify.com/s/files/1/0567/2563/5262/files/OSH_Watermark-Cropped.png');
 }
 .cta-tiles::before {
   position: absolute;
