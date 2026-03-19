@@ -888,7 +888,7 @@ summary::-webkit-details-marker {
   font-family: "Gilroy-Regular";
   font-weight: 400;
   font-size: 3.2rem;
-  line-height: 1.2;
+  line-height: 1.35;
   letter-spacing: 0;
   color: rgba(var(--color-foreground), 1);
 }
