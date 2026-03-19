@@ -20,26 +20,30 @@
         display: block;
       }
     }
-
-    #Banner-{{ section.id }} .banner__media-mobile {
-      display: none;
-    }
-
-    @media screen and (max-width: 749px) {
-      #Banner-{{ section.id }} .banner__media-desktop {
-        display: none;
-      }
-
-      #Banner-{{ section.id }} .banner__media-mobile {
-        display: block;
-      }
-    }
   {%- endstyle -%}
 {%- endif -%}
 
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+
+  #Banner-{{ section.id }} .banner__media-desktop {
+    display: block;
+  }
+
+  #Banner-{{ section.id }} .banner__media-mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    #Banner-{{ section.id }} .banner__media-desktop {
+      display: none;
+    }
+
+    #Banner-{{ section.id }} .banner__media-mobile {
+      display: block;
+    }
   }
 {%- endstyle -%}
 
