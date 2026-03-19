@@ -24,6 +24,13 @@
   }
 }
 
+.divider-top {
+  display: none;
+}
+.divider-top .divider-line {
+  border-top: 1px solid #DBE0E9;
+}
+
 #FeaturedCollectionSwiper-{{ section.id }} {
   position: relative;
 }
@@ -148,6 +155,9 @@
 -%}
 
 <div class="color-{{ section.settings.color_scheme }} isolate gradient">
+  <div class="divider-top page-width">
+    <div class="divider-line"></div>
+  </div>
   <div
     id="FeaturedCollectionSwiper-{{ section.id }}"
     class="collection section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
