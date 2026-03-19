@@ -3536,6 +3536,7 @@ details-disclosure > details {
 
 
 .watermark {
+  display: inherit !important;
   position: relative;
 }
 .watermark:before {
