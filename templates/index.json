@@ -246,7 +246,7 @@
     "featured_collection_PNRMMr": {
       "type": "featured-collection",
       "custom_css": [
-        ".divider-top {display: block;}"
+        ".divider-top .divider-line {display: block !important;}"
       ],
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
