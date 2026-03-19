@@ -207,6 +207,16 @@
         "padding_bottom": 0
       }
     },
+    "custom_liquid_GyCXpw": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"watermark\"></div>",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
     "rich_text_b3QqmQ": {
       "type": "rich-text",
       "blocks": {
@@ -296,6 +306,7 @@
     "custom_hero_swiper_3mqtic",
     "collection_list_h86QbL",
     "multicolum_cta_Fe3Tcr",
+    "custom_liquid_GyCXpw",
     "rich_text_b3QqmQ",
     "multicolum_cta_aCcg8f"
   ]
