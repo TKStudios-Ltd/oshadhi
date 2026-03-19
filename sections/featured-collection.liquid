@@ -112,8 +112,15 @@
   }
 
   #FeaturedCollectionSwiper-{{ section.id }} .swiper-slide {
-    height: auto;
-  }
+  height: auto;
+  box-sizing: border-box;
+}
+
+#FeaturedCollectionSwiper-{{ section.id }} .card-wrapper,
+#FeaturedCollectionSwiper-{{ section.id }} .card,
+#FeaturedCollectionSwiper-{{ section.id }} .card__inner {
+  width: 100%;
+}
 
   #FeaturedCollectionSwiper-{{ section.id }} .grid__item {
     height: 100%;
