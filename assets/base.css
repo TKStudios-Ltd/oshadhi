@@ -3538,6 +3538,7 @@ details-disclosure > details {
 .watermark {
   display: inherit !important;
   position: relative;
+  margin-top: -100px;
 }
 .watermark::before {
   position: absolute;
@@ -3545,4 +3546,13 @@ details-disclosure > details {
   top: -12.5rem;
   z-index: 1;
   content: url('https://cdn.shopify.com/s/files/1/0567/2563/5262/files/OSH_Watermark.png');
+}
+.cta-tiles::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: " ";
+  background: white;
+  height: 12.5rem;
+  width: 100vw;
 }
