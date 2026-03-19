@@ -3533,3 +3533,14 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+
+.watermark {
+  position: relative;
+}
+.watermark::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: url('https://cdn.shopify.com/s/files/1/0567/2563/5262/files/OSH_Watermark.png');
+}
