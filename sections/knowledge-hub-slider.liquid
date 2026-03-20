@@ -1,0 +1,458 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider {
+    display: grid;
+    grid-template-columns: minmax(24rem, 32rem) minmax(0, 1fr);
+    gap: 5rem;
+    align-items: start;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 0.4rem;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__subtitle {
+    margin: 0 0 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__title {
+    margin: 0 0 2.4rem;
+    max-width: 24rem;
+    line-height: 0.95;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__text {
+    margin: 0 0 3.2rem;
+    max-width: 28rem;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__button {
+    margin-top: auto;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__slider-wrap {
+    min-width: 0;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__swiper {
+    overflow: visible;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .swiper-slide {
+    height: auto;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__image-wrap {
+    position: relative;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    aspect-ratio: 1.5 / 1;
+    margin-bottom: 1.4rem;
+    background: rgba(var(--color-foreground), 0.05);
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__card-title {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__pagination {
+    position: relative;
+    flex: 1 1 auto;
+    max-width: 14rem;
+    height: 0.2rem;
+    background: rgba(var(--color-foreground), 0.12);
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__pagination .swiper-pagination-progressbar-fill {
+    background: #1C3160;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__arrow {
+    width: 3.2rem;
+    height: 3.2rem;
+    min-width: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid #DBE0E9;
+    background: white;
+    color: #1C3160;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__arrow:hover {
+    transform: translateY(-0.1rem);
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__arrow.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: none;
+  }
+
+  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__arrow svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  @media screen and (max-width: 989px) {
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__title,
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__text {
+      max-width: none;
+    }
+
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__footer {
+      margin-top: 2.4rem;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__title {
+      margin-bottom: 1.8rem;
+    }
+
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__text {
+      margin-bottom: 2.4rem;
+    }
+
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__card-title {
+      font-size: 2rem;
+    }
+
+    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__image-wrap {
+      aspect-ratio: 1.35 / 1;
+    }
+  }
+{%- endstyle -%}
+
+<div id="KnowledgeHubSlider-{{ section.id }}" class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="knowledge-hub-slider">
+      <div class="knowledge-hub-slider__content">
+        {%- if section.settings.subtitle != blank -%}
+          <p class="knowledge-hub-slider__subtitle h6">{{ section.settings.subtitle }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.title != blank -%}
+          <h2 class="knowledge-hub-slider__title inline-richtext {{ section.settings.heading_size }}">
+            {{ section.settings.title }}
+          </h2>
+        {%- endif -%}
+
+        {%- if section.settings.text != blank -%}
+          <div class="knowledge-hub-slider__text rte">
+            {{ section.settings.text }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+          <a href="{{ section.settings.button_link }}" class="button knowledge-hub-slider__button">
+            {{ section.settings.button_label }}
+          </a>
+        {%- endif -%}
+      </div>
+
+      <div class="knowledge-hub-slider__slider-wrap">
+        <div
+          class="swiper knowledge-hub-slider__swiper js-knowledge-hub-slider"
+          data-section-id="{{ section.id }}"
+        >
+          <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+              <div class="swiper-slide" {{ block.shopify_attributes }}>
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" class="knowledge-hub-slider__card">
+                {%- else -%}
+                  <div class="knowledge-hub-slider__card">
+                {%- endif -%}
+
+                    <div class="knowledge-hub-slider__image-wrap">
+                      {%- if block.settings.image != blank -%}
+                        {{
+                          block.settings.image
+                          | image_url: width: 1800
+                          | image_tag:
+                            class: 'knowledge-hub-slider__image',
+                            loading: 'lazy',
+                            widths: '400, 600, 800, 1000, 1400, 1800',
+                            sizes: '(min-width: 990px) 28vw, (min-width: 750px) 42vw, 80vw',
+                            alt: block.settings.title | escape
+                        }}
+                      {%- endif -%}
+                    </div>
+
+                    {%- if block.settings.title != blank -%}
+                      <h3 class="knowledge-hub-slider__card-title h5">
+                        {{ block.settings.title }}
+                      </h3>
+                    {%- endif -%}
+
+                {%- if block.settings.link != blank -%}
+                  </a>
+                {%- else -%}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <div class="knowledge-hub-slider__footer">
+          <div class="swiper-pagination knowledge-hub-slider__pagination knowledge-hub-slider__pagination--{{ section.id }}"></div>
+
+          <div class="knowledge-hub-slider__nav no-js-hidden">
+            <button
+              type="button"
+              class="knowledge-hub-slider__arrow knowledge-hub-slider__arrow--prev knowledge-hub-slider__arrow--prev-{{ section.id }}"
+              aria-label="{{ 'general.slider.previous_slide' | t }}"
+            >
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M9.5 3.5L5 8l4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              class="knowledge-hub-slider__arrow knowledge-hub-slider__arrow--next knowledge-hub-slider__arrow--next-{{ section.id }}"
+              aria-label="{{ 'general.slider.next_slide' | t }}"
+            >
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6.5 3.5L11 8l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const sectionId = '{{ section.id }}';
+
+    function initKnowledgeHubSlider() {
+      const slider = document.querySelector('#KnowledgeHubSlider-' + sectionId + ' .js-knowledge-hub-slider');
+      if (!slider || typeof Swiper === 'undefined') return;
+      if (slider.classList.contains('swiper-initialized')) return;
+
+      new Swiper(slider, {
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+        speed: 700,
+        watchOverflow: true,
+        navigation: {
+          nextEl: '.knowledge-hub-slider__arrow--next-' + sectionId,
+          prevEl: '.knowledge-hub-slider__arrow--prev-' + sectionId
+        },
+        pagination: {
+          el: '.knowledge-hub-slider__pagination--' + sectionId,
+          type: 'progressbar'
+        },
+        breakpoints: {
+          750: {
+            slidesPerView: 2.1,
+            spaceBetween: 20
+          },
+          990: {
+            slidesPerView: 2.35,
+            spaceBetween: 20
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initKnowledgeHubSlider);
+    document.addEventListener('shopify:section:load', function(event) {
+      if (event.detail.sectionId === sectionId) {
+        initKnowledgeHubSlider();
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Knowledge hub slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Knowledge Hub"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title",
+      "default": "Learn the art of aromatherapy"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Title size",
+      "default": "h1",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Paragraph",
+      "default": "<p>From beginner guides to deeper aromatherapy knowledge, explore practical tips, expert insights, and inspiration to help you get the most from essential oils.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Explore the knowledge hub"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "How to use Essential Oils"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Knowledge hub slider",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
