@@ -202,7 +202,7 @@
 
               {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
 
-              {%- assign option_text = '' -%}
+              {% comment %} {%- assign option_text = '' -%}
               {%- if card_product.options_with_values.size > 0 -%}
                 {%- for option in card_product.options_with_values -%}
                   {%- if option.values.size > 1 -%}
@@ -216,7 +216,7 @@
                 <div class="card-product-options caption-large light">
                   {{ option_text }}
                 </div>
-              {%- endif -%}
+              {%- endif -%} {% endcomment %}
 
               {%- if card_product.quantity_price_breaks_configured? -%}
                 <div class="card__information-volume-pricing-note">
