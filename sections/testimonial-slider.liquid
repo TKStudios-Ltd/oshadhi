@@ -48,18 +48,18 @@
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
-  position: relative;
-  z-index: 3;
-  min-height: 25rem;
-  padding: 4rem 0 3.2rem;
-}
+    position: relative;
+    z-index: 3;
+    min-height: 25rem;
+    padding: 0;
+  }
 
-#TestimonialSlider-{{ section.id }} .testimonial-slider__inner .page-width {
-  min-height: 25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner .page-width {
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__top {
     display: flex;
@@ -91,6 +91,17 @@
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__swiper {
     overflow: hidden;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__meta-swiper {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__meta-swiper .swiper-slide {
+    width: 100%;
   }
 
   #TestimonialSlider-{{ section.id }} .swiper-slide {
@@ -130,32 +141,43 @@
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.8rem;
-  flex: 0 0 auto;
-}
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.8rem;
+    flex: 0 0 auto;
+  }
 
-#TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-bullet {
-  width: 2.6rem;
-  height: 0.2rem;
-  border-radius: 0;
-  margin: 0 !important;
-  background: rgba(46, 51, 64, 0.18);
-  opacity: 1;
-  transition: background 0.25s ease, width 0.25s ease;
-}
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-bullet {
+    width: 2.6rem;
+    height: 0.2rem;
+    border-radius: 0;
+    margin: 0 !important;
+    background: rgba(46, 51, 64, 0.18);
+    opacity: 1;
+    transition: background 0.25s ease, width 0.25s ease;
+  }
 
-#TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-bullet-active {
-  background: #2E3340;
-}
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-bullet-active {
+    background: #2E3340;
+  }
 
   @media screen and (max-width: 989px) {
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
+      min-height: 22rem;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__inner .page-width {
+      min-height: 22rem;
+    }
 
     #TestimonialSlider-{{ section.id }} .testimonial-slider__quote {
       max-width: none;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__bottom {
+      margin-top: 2.4rem;
     }
   }
 
@@ -163,23 +185,6 @@
     #TestimonialSlider-{{ section.id }} .testimonial-slider {
       min-height: 22rem;
     }
-
-    @media screen and (max-width: 989px) {
-  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
-    padding: 3.2rem 0 2.8rem;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
-    min-height: 22rem;
-    padding: 2.4rem 0;
-  }
-
-  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner .page-width {
-    min-height: 22rem;
-  }
-}
 
     #TestimonialSlider-{{ section.id }} .testimonial-slider__top {
       gap: 1.2rem;
@@ -199,8 +204,8 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-  <section id="TestimonialSlider-{{ section.id }}">
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <section id="TestimonialSlider-{{ section.id }}" class="section-{{ section.id }}-padding">
     <div class="testimonial-slider">
         <div class="testimonial-slider__media">
           {%- if section.settings.background_type == 'video' and section.settings.background_video != blank -%}
