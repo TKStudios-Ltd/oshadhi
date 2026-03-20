@@ -55,8 +55,23 @@
     flex: 0 0 auto;
   }
 
+  .image-with-text__accordion-group .accordion-arrow_container {
+    width: 3.2rem;
+    height: 3.2rem;
+    min-width: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid #DBE0E9;
+    background: white;
+    color: #1C3160;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
   .image-with-text__accordion-group .icon-caret {
     flex: 0 0 auto;
+    width: 1.4rem;
+    height: 1.4rem;
     transition: transform 0.2s ease;
   }
 
@@ -123,6 +138,7 @@
                   {{ block.settings.heading }}
                 </h5>
 
+                <span class="accordion-arrow_container">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -136,6 +152,7 @@
                     fill="currentColor"
                   ></path>
                 </svg>
+                </span>
               </summary>
 
               <div
