@@ -66,13 +66,10 @@
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-bottom: 2.4rem;
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__eyebrow {
     margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__stars {
@@ -110,8 +107,7 @@
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__quote {
     margin: 0;
-    max-width: 90rem;
-    line-height: 1.18;
+    max-width: 85rem;
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__bottom {
@@ -119,7 +115,6 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 2rem;
-    margin-top: 2.8rem;
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__meta {
@@ -239,7 +234,7 @@
             <div>
                 <div class="testimonial-slider__top">
                   {%- if section.settings.eyebrow != blank -%}
-                    <p class="testimonial-slider__eyebrow h6">{{ section.settings.eyebrow }}</p>
+                    <h6 class="testimonial-slider__eyebrow h6">{{ section.settings.eyebrow }}</h6>
                   {%- endif -%}
 
                   <div class="testimonial-slider__stars" aria-label="5 stars">
