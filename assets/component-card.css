@@ -57,7 +57,7 @@
   position: relative;
   box-sizing: border-box;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid #DBE0E9;
+  border: var(--border-width) solid rgba(219, 224, 233, var(--border-opacity));
 }
 
 .card--card:after,
