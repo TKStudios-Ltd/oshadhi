@@ -377,11 +377,11 @@
 
 .card-information_title {
   width: 100%;
-  min-height: 60px;
+  min-height: 64px;
 }
 .card-information {
   width: 100%;
-  min-height: 50px;
+  min-height: 44px;
 }
 
 .card-information>* {
