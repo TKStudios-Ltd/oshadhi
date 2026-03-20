@@ -266,22 +266,6 @@
                             {{ block.settings.quote }}
                           </p>
                         {%- endif -%}
-                      </div>
-                    </div>
-                  {%- endfor -%}
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-slider__bottom">
-              <div
-                class="swiper testimonial-slider__meta-swiper js-testimonial-meta-slider"
-                data-section-id="{{ section.id }}"
-              >
-                <div class="swiper-wrapper">
-                  {%- for block in section.blocks -%}
-                    <div class="swiper-slide">
-                      <div class="testimonial-slider__meta">
                         {%- if block.settings.customer != blank -%}
                           <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
                         {%- endif -%}
@@ -293,7 +277,10 @@
                   {%- endfor -%}
                 </div>
               </div>
+            </div>
 
+
+            <div class="testimonial-slider__bottom">
               <div class="swiper-pagination testimonial-slider__pagination testimonial-slider__pagination--{{ section.id }}"></div>
             </div>
           </div>
