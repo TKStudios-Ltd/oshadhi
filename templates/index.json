@@ -484,7 +484,8 @@
         "accordion_item_EQ7hKh"
       ],
       "custom_css": [
-        "img {border-radius: 6px;}"
+        "img {border-radius: 6px;}",
+        ".image-with-text__content {display: flex; justify-content: space-between;}"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
