@@ -17,31 +17,32 @@
   }
 
   #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider {
-    display: grid;
-    grid-template-columns: 32rem minmax(0, 1fr);
-    gap: 5rem;
-    align-items: start;
-  }
+  display: grid;
+  grid-template-columns: 36rem minmax(0, 1fr);
+  gap: 5rem;
+  align-items: start;
+}
 
-  #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__content {
-    position: relative;
-    z-index: 2;
-    min-width: 0;
-    }
+#KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
 
-    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__slider-wrap {
-    min-width: 0;
-    overflow: hidden;
-    }
+#KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__slider-wrap {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
 
-    #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__swiper {
-    width: 100%;
-    overflow: visible;
-    }
+#KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__swiper {
+  width: calc(100% + 24rem);
+  overflow: visible;
+}
 
-    #KnowledgeHubSlider-{{ section.id }} .swiper-slide {
-    min-width: 0;
-    }
+#KnowledgeHubSlider-{{ section.id }} .swiper-slide {
+  min-width: 0;
+}
 
   #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__content {
     display: flex;
