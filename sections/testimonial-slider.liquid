@@ -1,0 +1,465 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #TestimonialSlider-{{ section.id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.8rem;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider {
+    position: relative;
+    min-height: 25rem;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__media,
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__media {
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__media img,
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__media video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__overlay {
+    z-index: 2;
+    pointer-events: none;
+    background: rgba(255, 255, 255, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
+    position: relative;
+    z-index: 3;
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 6rem 3.2rem;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__top {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.4rem;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__stars svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    fill: currentColor;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__swiper {
+    overflow: hidden;
+  }
+
+  #TestimonialSlider-{{ section.id }} .swiper-slide {
+    height: auto;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__quote {
+    margin: 0;
+    max-width: 90rem;
+    line-height: 1.18;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: 2.8rem;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__meta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__customer,
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__product {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__product {
+    opacity: 0.55;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination {
+    position: relative;
+    width: 14rem;
+    height: 0.2rem;
+    flex: 0 0 auto;
+    background: rgba(0, 0, 0, 0.12);
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-progressbar-fill {
+    background: #2E3340;
+  }
+
+  @media screen and (max-width: 989px) {
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
+      padding: 3.2rem 3rem 2.8rem;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__quote {
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #TestimonialSlider-{{ section.id }} .testimonial-slider {
+      min-height: 22rem;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
+      min-height: 22rem;
+      padding: 2.4rem 2rem;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__top {
+      gap: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.6rem;
+      margin-top: 2.2rem;
+    }
+
+    #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination {
+      width: 10rem;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <section id="TestimonialSlider-{{ section.id }}">
+      <div class="testimonial-slider">
+        <div class="testimonial-slider__media">
+          {%- if section.settings.background_type == 'video' and section.settings.background_video != blank -%}
+            {{
+              section.settings.background_video
+              | video_tag:
+                autoplay: true,
+                loop: true,
+                muted: true,
+                controls: false,
+                playsinline: true,
+                image_size: '2000x'
+            }}
+          {%- elsif section.settings.background_image != blank -%}
+            {{
+              section.settings.background_image
+              | image_url: width: 2400
+              | image_tag:
+                loading: 'lazy',
+                widths: '750, 1100, 1500, 2000, 2400',
+                sizes: '100vw',
+                alt: section.settings.eyebrow | escape
+            }}
+          {%- endif -%}
+        </div>
+
+        <div class="testimonial-slider__overlay"></div>
+
+        <div class="testimonial-slider__inner">
+          <div>
+            <div class="testimonial-slider__top">
+              {%- if section.settings.eyebrow != blank -%}
+                <p class="testimonial-slider__eyebrow h6">{{ section.settings.eyebrow }}</p>
+              {%- endif -%}
+
+              <div class="testimonial-slider__stars" aria-label="5 stars">
+                {%- for i in (1..5) -%}
+                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="M10 1.7l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14l-4.8 2.6.9-5.4-3.9-3.8 5.4-.8L10 1.7z"/>
+                  </svg>
+                {%- endfor -%}
+              </div>
+            </div>
+
+            <div
+              class="swiper testimonial-slider__swiper js-testimonial-slider"
+              data-section-id="{{ section.id }}"
+              data-autoplay="{{ section.settings.autoplay }}"
+              data-delay="{{ section.settings.autoplay_delay }}"
+            >
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                  <div class="swiper-slide" {{ block.shopify_attributes }}>
+                    <div class="testimonial-slider__slide">
+                      {%- if block.settings.quote != blank -%}
+                        <blockquote class="testimonial-slider__quote {{ section.settings.quote_size }}">
+                          {{ block.settings.quote }}
+                        </blockquote>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slider__bottom">
+            <div
+              class="swiper testimonial-slider__meta-swiper js-testimonial-meta-slider"
+              data-section-id="{{ section.id }}"
+            >
+              <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                  <div class="swiper-slide">
+                    <div class="testimonial-slider__meta">
+                      {%- if block.settings.customer != blank -%}
+                        <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
+                      {%- endif -%}
+                      {%- if block.settings.product_name != blank -%}
+                        <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+
+            <div class="swiper-pagination testimonial-slider__pagination testimonial-slider__pagination--{{ section.id }}"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const sectionId = '{{ section.id }}';
+
+    function initTestimonialSlider() {
+      const quoteSlider = document.querySelector('#TestimonialSlider-' + sectionId + ' .js-testimonial-slider');
+      const metaSlider = document.querySelector('#TestimonialSlider-' + sectionId + ' .js-testimonial-meta-slider');
+
+      if (!quoteSlider || !metaSlider || typeof Swiper === 'undefined') return;
+      if (quoteSlider.classList.contains('swiper-initialized') || metaSlider.classList.contains('swiper-initialized')) return;
+
+      const metaSwiper = new Swiper(metaSlider, {
+        allowTouchMove: false,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        }
+      });
+
+      new Swiper(quoteSlider, {
+        slidesPerView: 1,
+        speed: 700,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoHeight: false,
+        autoplay: quoteSlider.dataset.autoplay === 'true'
+          ? {
+              delay: Number(quoteSlider.dataset.delay) || 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false
+            }
+          : false,
+        pagination: {
+          el: '.testimonial-slider__pagination--' + sectionId,
+          type: 'progressbar'
+        },
+        controller: {
+          control: metaSwiper
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initTestimonialSlider);
+    document.addEventListener('shopify:section:load', function(event) {
+      if (event.detail.sectionId === sectionId) {
+        initTestimonialSlider();
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonial slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "background-1"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "Background type",
+      "default": "image",
+      "options": [
+        { "value": "image", "label": "Image" },
+        { "value": "video", "label": "Video" }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "video",
+      "id": "background_video",
+      "label": "Background video"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Trusted by customers worldwide"
+    },
+    {
+      "type": "select",
+      "id": "quote_size",
+      "label": "Quote size",
+      "default": "h2",
+      "options": [
+        { "value": "h3", "label": "Small" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h1", "label": "Large" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Background overlay opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 20
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_delay",
+      "label": "Autoplay delay",
+      "min": 2000,
+      "max": 9000,
+      "step": 500,
+      "unit": "ms",
+      "default": 5000
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Testimonial text",
+          "default": "This is a favorite of mine. Woody, slightly camphorous, and pine-eucalyptic. But it's not harsh. As it dries down it gets a soft floral quality. Very nice."
+        },
+        {
+          "type": "text",
+          "id": "customer",
+          "label": "Customer",
+          "default": "Adam Tomlinson"
+        },
+        {
+          "type": "text",
+          "id": "product_name",
+          "label": "Product name",
+          "default": "Product Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial slider",
+      "blocks": [
+        { "type": "testimonial" },
+        { "type": "testimonial" },
+        { "type": "testimonial" }
+      ]
+    }
+  ]
+}
+{% endschema %}
