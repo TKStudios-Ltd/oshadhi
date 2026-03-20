@@ -506,6 +506,49 @@
         "padding_top": 100,
         "padding_bottom": 60
       }
+    },
+    "knowledge_hub_slider_mYgeVM": {
+      "type": "knowledge-hub-slider",
+      "blocks": {
+        "slide_x7cUfW": {
+          "type": "slide",
+          "settings": {
+            "title": "How to use Essential Oils",
+            "link": ""
+          }
+        },
+        "slide_bqmmpd": {
+          "type": "slide",
+          "settings": {
+            "title": "How to use Essential Oils",
+            "link": ""
+          }
+        },
+        "slide_QdJrji": {
+          "type": "slide",
+          "settings": {
+            "title": "How to use Essential Oils",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_x7cUfW",
+        "slide_bqmmpd",
+        "slide_QdJrji"
+      ],
+      "name": "Knowledge hub slider",
+      "settings": {
+        "color_scheme": "background-2",
+        "subtitle": "Knowledge Hub",
+        "title": "<em>Learn the art</em> of aromatherapy",
+        "heading_size": "h2",
+        "text": "<p>From beginner guides to deeper aromatherapy knowledge, explore practical tips, expert insights, and inspiration to help you get the most from essential oils.</p>",
+        "button_label": "Explore the knowledge hub",
+        "button_link": "shopify://pages/knowledge-hub",
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -518,6 +561,7 @@
     "image_banner_9GMrFg",
     "multicolum_cta_aCcg8f",
     "featured_collection_zL3fVy",
-    "image_with_text_TVPAi3"
+    "image_with_text_TVPAi3",
+    "knowledge_hub_slider_mYgeVM"
   ]
 }
