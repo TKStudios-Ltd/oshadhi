@@ -25,36 +25,17 @@
     overflow: hidden;
     background: #F1F0EE;
   }
-  .image-with-text__accordion summary {
+  .image-with-text__accordion-group .accordion details {
     list-style: none;
     cursor: pointer;
     position: relative;
-    padding: 1.6rem 5.2rem 1.6rem 1.8rem;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    color: rgb(var(--color-foreground));
+    padding: 2rem;
   }
   .image-with-text__accordion-group .accordion__title.inline-richtext.h5 {
+    color: rgb(var(--color-foreground));
     margin: 0;
   }
 
-  .image-with-text__accordion summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .image-with-text__accordion summary::after {
-    content: '+';
-    position: absolute;
-    right: 1.8rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    line-height: 1;
-  }
-
-  .image-with-text__accordion[open] summary::after {
-    content: '−';
-  }
 
   .image-with-text__accordion-content {
     padding: 0 1.8rem 1.8rem;
