@@ -68,6 +68,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: transform 0.2s ease;
   }
   .image-with-text__accordion-group .icon-caret {
     flex: 0 0 auto;
@@ -75,15 +76,14 @@
     height: 1.2rem;
     right: calc(50% - 0.6rem);
     top: calc(50% - 0.6rem);
-    transition: transform 0.2s ease;
   }
 
-  .image-with-text__accordion-group details[open] > summary .icon-caret {
+  .image-with-text__accordion-group details[open] > summary .accordion-arrow_container {
     transform: rotate(180deg);
   }
 
   .image-with-text__accordion-group .accordion__content {
-    padding: 0 2rem 1.8rem;
+    padding: 0 2rem 2rem;
   }
 
   .image-with-text__accordion-group .accordion__content > *:first-child {
