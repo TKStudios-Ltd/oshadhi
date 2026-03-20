@@ -381,7 +381,7 @@
 }
 .card-information {
   width: 100%;
-  min-height: 60px;
+  min-height: 50px;
 }
 
 .card-information>* {
@@ -512,6 +512,7 @@
 
 .card-information__right {
   flex: 0 0 auto;
+  margin-top: 0 !important;
 }
 
 .card-product-options {
