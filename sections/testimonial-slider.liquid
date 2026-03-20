@@ -261,12 +261,14 @@
                             {{ block.settings.quote }}
                           </p>
                         {%- endif -%}
-                        {%- if block.settings.customer != blank -%}
-                          <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
-                        {%- endif -%}
-                        {%- if block.settings.product_name != blank -%}
-                          <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
-                        {%- endif -%}
+                        <div class="testimonial-slider__meta">
+                          {%- if block.settings.customer != blank -%}
+                            <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
+                          {%- endif -%}
+                          {%- if block.settings.product_name != blank -%}
+                            <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
+                          {%- endif -%}
+                        </div>
                       </div>
                     </div>
                   {%- endfor -%}
