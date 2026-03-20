@@ -445,11 +445,43 @@
             "text": "<p>At Oshadhi, every essential oil begins with exceptional botanicals sourced from trusted growers around the world. From harvest and distillation to testing and bottling, each step requires patience, knowledge and skill to preserve the true character of the plant. </p><p>Guided by the expertise of founder Dr. Malte Hozzel, Oshadhi combines deep botanical knowledge with uncompromising natural standards to create essential oils of exceptional purity.</p>",
             "text_style": "body"
           }
+        },
+        "accordion_item_rJtN6d": {
+          "type": "accordion_item",
+          "settings": {
+            "heading": "100% Natural",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_item_bfmbqX": {
+          "type": "accordion_item",
+          "settings": {
+            "heading": "100% Natural",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_item_tmanCD": {
+          "type": "accordion_item",
+          "settings": {
+            "heading": "100% Natural",
+            "content": "<p>Add accordion content here.</p>"
+          }
+        },
+        "accordion_item_EQ7hKh": {
+          "type": "accordion_item",
+          "settings": {
+            "heading": "100% Natural",
+            "content": "<p>Add accordion content here.</p>"
+          }
         }
       },
       "block_order": [
         "heading_6dedmB",
-        "text_mPPJgB"
+        "text_mPPJgB",
+        "accordion_item_rJtN6d",
+        "accordion_item_bfmbqX",
+        "accordion_item_tmanCD",
+        "accordion_item_EQ7hKh"
       ],
       "custom_css": [
         "img {border-radius: 6px;}"
@@ -465,6 +497,8 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
+        "accordion_position": "bottom",
+        "open_first_accordion": false,
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 100,
