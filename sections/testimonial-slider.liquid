@@ -262,7 +262,7 @@
                     <div class="swiper-slide" {{ block.shopify_attributes }}>
                       <div class="testimonial-slider__slide">
                         {%- if block.settings.quote != blank -%}
-                          <p class="testimonial-slider__quote subtitle subtitle--large">
+                          <p class="testimonial-slider__quote subtitle subtitle--{{ section.settings.quote_size }}">
                             {{ block.settings.quote }}
                           </p>
                         {%- endif -%}
@@ -400,11 +400,11 @@
       "type": "select",
       "id": "quote_size",
       "label": "Quote size",
-      "default": "h2",
+      "default": "large",
       "options": [
-        { "value": "h3", "label": "Small" },
-        { "value": "h2", "label": "Medium" },
-        { "value": "h1", "label": "Large" }
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
       ]
     },
     {
