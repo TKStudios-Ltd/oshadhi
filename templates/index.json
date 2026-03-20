@@ -599,6 +599,7 @@
       "settings": {
         "color_scheme": "background-1",
         "background_type": "video",
+        "background_video": "shopify://files/videos/OSH_Testimonial-Background.mov",
         "eyebrow": "Trusted by customers worldwide",
         "quote_size": "h2",
         "overlay_opacity": 0,
