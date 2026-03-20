@@ -5,47 +5,74 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  #ImageWithText--{{ section.id }} {
+    position: relative;
+  }
+
   .image-with-text__accordion-group {
-    width: stretch;
+    width: 100%;
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    position: absolute;
-    bottom: 0;
   }
+
   .image-with-text__accordion-group .accordion {
     border-radius: 6px;
     overflow: hidden;
     background: #F1F0EE;
+    border: 0;
   }
-  .image-with-text__accordion-group .accordion details {
-    list-style: none;
+
+  .image-with-text__accordion-group .accordion summary {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.6rem 2rem;
     cursor: pointer;
-    position: relative;
-    padding: 2rem;
+    list-style: none;
   }
-  .image-with-text__accordion-group .accordion__title.inline-richtext.h5 {
-    color: rgb(var(--color-foreground));
+
+  .image-with-text__accordion-group .accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .image-with-text__accordion-group .accordion__title {
     margin: 0;
+    color: rgb(var(--color-foreground));
+    flex: 1;
   }
 
-
-  .image-with-text__accordion-content {
-    padding: 0 1.8rem 1.8rem;
+  .image-with-text__accordion-group .icon-accordion {
+    flex: 0 0 auto;
   }
 
-  .image-with-text__accordion-content > *:first-child {
+  .image-with-text__accordion-group .icon-caret {
+    flex: 0 0 auto;
+    transition: transform 0.2s ease;
+  }
+
+  .image-with-text__accordion-group details[open] > summary .icon-caret {
+    transform: rotate(180deg);
+  }
+
+  .image-with-text__accordion-group .accordion__content {
+    padding: 0 2rem 1.8rem;
+  }
+
+  .image-with-text__accordion-group .accordion__content > *:first-child {
     margin-top: 0;
   }
 
-  .image-with-text__accordion-content > *:last-child {
+  .image-with-text__accordion-group .accordion__content > *:last-child {
     margin-bottom: 0;
   }
 
