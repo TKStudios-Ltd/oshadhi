@@ -381,7 +381,7 @@
 }
 .card-information {
   width: 100%;
-  min-height: 40px;
+  min-height: 50px;
 }
 
 .card-information>* {
