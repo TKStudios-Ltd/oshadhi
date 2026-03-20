@@ -295,18 +295,9 @@
 
     function initTestimonialSlider() {
       const quoteSlider = document.querySelector('#TestimonialSlider-' + sectionId + ' .js-testimonial-slider');
-      const metaSlider = document.querySelector('#TestimonialSlider-' + sectionId + ' .js-testimonial-meta-slider');
 
-      if (!quoteSlider || !metaSlider || typeof Swiper === 'undefined') return;
-      if (quoteSlider.classList.contains('swiper-initialized') || metaSlider.classList.contains('swiper-initialized')) return;
-
-      const metaSwiper = new Swiper(metaSlider, {
-        allowTouchMove: false,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        }
-      });
+      if (!quoteSlider || typeof Swiper === 'undefined') return;
+      if (quoteSlider.classList.contains('swiper-initialized')) return;
 
       new Swiper(quoteSlider, {
         slidesPerView: 1,
@@ -326,9 +317,6 @@
         pagination: {
           el: '.testimonial-slider__pagination--' + sectionId,
           clickable: true
-        },
-        controller: {
-          control: metaSwiper
         }
       });
     }
