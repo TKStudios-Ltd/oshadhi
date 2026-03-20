@@ -601,12 +601,12 @@
         "background_type": "video",
         "background_video": "shopify://files/videos/OSH_Testimonial-Background.mov",
         "eyebrow": "Trusted by customers worldwide",
-        "quote_size": "h2",
+        "quote_size": "large",
         "overlay_opacity": 0,
         "autoplay": false,
         "autoplay_delay": 5000,
-        "padding_top": 100,
-        "padding_bottom": 60
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
