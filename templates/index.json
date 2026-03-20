@@ -533,12 +533,21 @@
             "title": "The Amazing Lavender",
             "link": "shopify://pages/lavender"
           }
+        },
+        "slide_VL84FE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/OSH_Plant-Videos.jpg",
+            "title": "Plant Videos",
+            "link": "shopify://pages/plant-videos"
+          }
         }
       },
       "block_order": [
         "slide_x7cUfW",
         "slide_bqmmpd",
-        "slide_QdJrji"
+        "slide_QdJrji",
+        "slide_VL84FE"
       ],
       "name": "Knowledge hub slider",
       "settings": {
