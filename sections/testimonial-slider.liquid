@@ -48,14 +48,18 @@
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
-    position: relative;
-    z-index: 3;
-    min-height: 25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 4rem 6rem 3.2rem;
-  }
+  position: relative;
+  z-index: 3;
+  min-height: 25rem;
+  padding: 4rem 0 3.2rem;
+}
+
+#TestimonialSlider-{{ section.id }} .testimonial-slider__inner .page-width {
+  min-height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__top {
     display: flex;
@@ -126,21 +130,29 @@
   }
 
   #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination {
-    position: relative;
-    width: 14rem;
-    height: 0.2rem;
-    flex: 0 0 auto;
-    background: rgba(0, 0, 0, 0.12);
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  flex: 0 0 auto;
+}
 
-  #TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-progressbar-fill {
-    background: #2E3340;
-  }
+#TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-bullet {
+  width: 2.6rem;
+  height: 0.2rem;
+  border-radius: 0;
+  margin: 0 !important;
+  background: rgba(46, 51, 64, 0.18);
+  opacity: 1;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+#TestimonialSlider-{{ section.id }} .testimonial-slider__pagination .swiper-pagination-bullet-active {
+  background: #2E3340;
+}
 
   @media screen and (max-width: 989px) {
-    #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
-      padding: 3.2rem 3rem 2.8rem;
-    }
 
     #TestimonialSlider-{{ section.id }} .testimonial-slider__quote {
       max-width: none;
@@ -152,10 +164,22 @@
       min-height: 22rem;
     }
 
-    #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
-      min-height: 22rem;
-      padding: 2.4rem 2rem;
-    }
+    @media screen and (max-width: 989px) {
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
+    padding: 3.2rem 0 2.8rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
+    min-height: 22rem;
+    padding: 2.4rem 0;
+  }
+
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__inner .page-width {
+    min-height: 22rem;
+  }
+}
 
     #TestimonialSlider-{{ section.id }} .testimonial-slider__top {
       gap: 1.2rem;
@@ -175,10 +199,9 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width section-{{ section.id }}-padding">
-    <section id="TestimonialSlider-{{ section.id }}">
-      <div class="testimonial-slider">
+<div class="color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <section id="TestimonialSlider-{{ section.id }}">
+    <div class="testimonial-slider">
         <div class="testimonial-slider__media">
           {%- if section.settings.background_type == 'video' and section.settings.background_video != blank -%}
             {{
@@ -207,70 +230,71 @@
         <div class="testimonial-slider__overlay"></div>
 
         <div class="testimonial-slider__inner">
-          <div>
-            <div class="testimonial-slider__top">
-              {%- if section.settings.eyebrow != blank -%}
-                <p class="testimonial-slider__eyebrow h6">{{ section.settings.eyebrow }}</p>
-              {%- endif -%}
+          <div class="page-width">
+            <div>
+                <div class="testimonial-slider__top">
+                  {%- if section.settings.eyebrow != blank -%}
+                    <p class="testimonial-slider__eyebrow h6">{{ section.settings.eyebrow }}</p>
+                  {%- endif -%}
 
-              <div class="testimonial-slider__stars" aria-label="5 stars">
-                {%- for i in (1..5) -%}
-                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-                    <path d="M10 1.7l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14l-4.8 2.6.9-5.4-3.9-3.8 5.4-.8L10 1.7z"/>
-                  </svg>
-                {%- endfor -%}
-              </div>
-            </div>
-
-            <div
-              class="swiper testimonial-slider__swiper js-testimonial-slider"
-              data-section-id="{{ section.id }}"
-              data-autoplay="{{ section.settings.autoplay }}"
-              data-delay="{{ section.settings.autoplay_delay }}"
-            >
-              <div class="swiper-wrapper">
-                {%- for block in section.blocks -%}
-                  <div class="swiper-slide" {{ block.shopify_attributes }}>
-                    <div class="testimonial-slider__slide">
-                      {%- if block.settings.quote != blank -%}
-                        <blockquote class="testimonial-slider__quote {{ section.settings.quote_size }}">
-                          {{ block.settings.quote }}
-                        </blockquote>
-                      {%- endif -%}
-                    </div>
+                  <div class="testimonial-slider__stars" aria-label="5 stars">
+                    {%- for i in (1..5) -%}
+                      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                        <path d="M10 1.7l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14l-4.8 2.6.9-5.4-3.9-3.8 5.4-.8L10 1.7z"/>
+                      </svg>
+                    {%- endfor -%}
                   </div>
-                {%- endfor -%}
-              </div>
-            </div>
-          </div>
+                </div>
 
-          <div class="testimonial-slider__bottom">
-            <div
-              class="swiper testimonial-slider__meta-swiper js-testimonial-meta-slider"
-              data-section-id="{{ section.id }}"
-            >
-              <div class="swiper-wrapper">
-                {%- for block in section.blocks -%}
-                  <div class="swiper-slide">
-                    <div class="testimonial-slider__meta">
-                      {%- if block.settings.customer != blank -%}
-                        <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
-                      {%- endif -%}
-                      {%- if block.settings.product_name != blank -%}
-                        <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
-                      {%- endif -%}
+              <div
+                class="swiper testimonial-slider__swiper js-testimonial-slider"
+                data-section-id="{{ section.id }}"
+                data-autoplay="{{ section.settings.autoplay }}"
+                data-delay="{{ section.settings.autoplay_delay }}"
+              >
+                <div class="swiper-wrapper">
+                  {%- for block in section.blocks -%}
+                    <div class="swiper-slide" {{ block.shopify_attributes }}>
+                      <div class="testimonial-slider__slide">
+                        {%- if block.settings.quote != blank -%}
+                          <blockquote class="testimonial-slider__quote {{ section.settings.quote_size }}">
+                            {{ block.settings.quote }}
+                          </blockquote>
+                        {%- endif -%}
+                      </div>
                     </div>
-                  </div>
-                {%- endfor -%}
+                  {%- endfor -%}
+                </div>
               </div>
             </div>
 
-            <div class="swiper-pagination testimonial-slider__pagination testimonial-slider__pagination--{{ section.id }}"></div>
+            <div class="testimonial-slider__bottom">
+              <div
+                class="swiper testimonial-slider__meta-swiper js-testimonial-meta-slider"
+                data-section-id="{{ section.id }}"
+              >
+                <div class="swiper-wrapper">
+                  {%- for block in section.blocks -%}
+                    <div class="swiper-slide">
+                      <div class="testimonial-slider__meta">
+                        {%- if block.settings.customer != blank -%}
+                          <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
+                        {%- endif -%}
+                        {%- if block.settings.product_name != blank -%}
+                          <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+
+              <div class="swiper-pagination testimonial-slider__pagination testimonial-slider__pagination--{{ section.id }}"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -309,7 +333,7 @@
           : false,
         pagination: {
           el: '.testimonial-slider__pagination--' + sectionId,
-          type: 'progressbar'
+          clickable: true
         },
         controller: {
           control: metaSwiper
