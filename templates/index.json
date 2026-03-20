@@ -561,6 +561,52 @@
         "padding_top": 100,
         "padding_bottom": 60
       }
+    },
+    "testimonial_slider_ej6pnE": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "testimonial_x67qY7": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "This is a favorite of mine. Woody, slightly camphorous, and pine-eucalyptic. But it's not harsh. As it dries down it gets a soft floral quality. Very nice.",
+            "customer": "Adam Tomlinson",
+            "product_name": "Product Name"
+          }
+        },
+        "testimonial_9jNgpV": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "This is a favorite of mine. Woody, slightly camphorous, and pine-eucalyptic. But it's not harsh. As it dries down it gets a soft floral quality. Very nice.",
+            "customer": "Adam Tomlinson",
+            "product_name": "Product Name"
+          }
+        },
+        "testimonial_FHMWpE": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "This is a favorite of mine. Woody, slightly camphorous, and pine-eucalyptic. But it's not harsh. As it dries down it gets a soft floral quality. Very nice.",
+            "customer": "Adam Tomlinson",
+            "product_name": "Product Name"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_x67qY7",
+        "testimonial_9jNgpV",
+        "testimonial_FHMWpE"
+      ],
+      "name": "Testimonial slider",
+      "settings": {
+        "color_scheme": "background-1",
+        "background_type": "video",
+        "eyebrow": "Trusted by customers worldwide",
+        "quote_size": "h2",
+        "overlay_opacity": 0,
+        "autoplay": false,
+        "autoplay_delay": 5000,
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -574,6 +620,7 @@
     "multicolum_cta_aCcg8f",
     "featured_collection_zL3fVy",
     "image_with_text_TVPAi3",
-    "knowledge_hub_slider_mYgeVM"
+    "knowledge_hub_slider_mYgeVM",
+    "testimonial_slider_ej6pnE"
   ]
 }
