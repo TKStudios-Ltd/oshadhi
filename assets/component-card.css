@@ -497,3 +497,66 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+.card-information--row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.card-information__left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.card-information__right {
+  flex: 0 0 auto;
+}
+
+.card-product-options {
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.card-information--row .price {
+  margin: 0;
+}
+
+.card-information--row .price dd {
+  margin: 0;
+}
+
+.card-information--row .quick-add {
+  margin: 0;
+}
+
+.card-information--row .quick-add__submit--icon {
+  min-width: 4.2rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 0;
+  border-radius: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-information--row .quick-add__submit--icon svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+@media screen and (max-width: 749px) {
+  .card-information--row {
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .card-information--row .quick-add__submit--icon {
+    min-width: 3.8rem;
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+}
