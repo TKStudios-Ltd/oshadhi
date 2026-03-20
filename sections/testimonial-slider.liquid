@@ -236,8 +236,9 @@
         <div class="testimonial-slider__overlay"></div>
 
         <div class="testimonial-slider__inner">
-          <div class="page-width">
-            <div>
+            <div class="page-width">
+              <div>
+
                 <div class="testimonial-slider__top">
                   {%- if section.settings.eyebrow != blank -%}
                     <h6 class="testimonial-slider__eyebrow h6">{{ section.settings.eyebrow }}</h6>
@@ -251,42 +252,39 @@
                     >
                   </div>
                 </div>
-
-              <div
-                class="swiper testimonial-slider__swiper js-testimonial-slider"
-                data-section-id="{{ section.id }}"
-                data-autoplay="{{ section.settings.autoplay }}"
-                data-delay="{{ section.settings.autoplay_delay }}"
-              >
-                <div class="swiper-wrapper">
-                  {%- for block in section.blocks -%}
-                    <div class="swiper-slide" {{ block.shopify_attributes }}>
-                      <div class="testimonial-slider__slide">
-                        {%- if block.settings.quote != blank -%}
-                          <p class="testimonial-slider__quote subtitle subtitle--{{ section.settings.quote_size }}">
-                            {{ block.settings.quote }}
-                          </p>
-                        {%- endif -%}
-                        <div class="testimonial-slider__meta">
-                          {%- if block.settings.customer != blank -%}
-                            <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
+                <div
+                  class="swiper testimonial-slider__swiper js-testimonial-slider"
+                  data-section-id="{{ section.id }}"
+                  data-autoplay="{{ section.settings.autoplay }}"
+                  data-delay="{{ section.settings.autoplay_delay }}"
+                >
+                  <div class="swiper-wrapper">
+                    {%- for block in section.blocks -%}
+                      <div class="swiper-slide" {{ block.shopify_attributes }}>
+                        <div class="testimonial-slider__slide">
+                          {%- if block.settings.quote != blank -%}
+                            <p class="testimonial-slider__quote subtitle subtitle--{{ section.settings.quote_size }}">
+                              {{ block.settings.quote }}
+                            </p>
                           {%- endif -%}
-                          {%- if block.settings.product_name != blank -%}
-                            <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
-                          {%- endif -%}
+                          <div class="testimonial-slider__meta">
+                            {%- if block.settings.customer != blank -%}
+                              <p class="testimonial-slider__customer">{{ block.settings.customer }}</p>
+                            {%- endif -%}
+                            {%- if block.settings.product_name != blank -%}
+                              <p class="testimonial-slider__product">{{ block.settings.product_name }}</p>
+                            {%- endif -%}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  {%- endfor -%}
+                    {%- endfor -%}
+                  </div>
+                </div>
+                <div class="testimonial-slider__bottom">
+                  <div class="swiper-pagination testimonial-slider__pagination testimonial-slider__pagination--{{ section.id }}"></div>
                 </div>
               </div>
             </div>
-
-
-            <div class="testimonial-slider__bottom">
-              <div class="swiper-pagination testimonial-slider__pagination testimonial-slider__pagination--{{ section.id }}"></div>
-            </div>
-          </div>
         </div>
     </div>
   </section>
