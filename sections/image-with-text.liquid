@@ -195,6 +195,7 @@
             id="ImageWithText--{{ section.id }}"
             class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} content-container{% unless remove_color_classes %} gradient color-{{ section.settings.color_scheme }}{% else %} background-transparent{% endunless %}"
           >
+            <div class="ImageWithText--InnerContent">
             {%- for block in section.blocks -%}
               {% case block.type %}
                 {%- when 'heading' -%}
@@ -219,9 +220,6 @@
                   </div>
 
                 {%- when 'button' -%}
-                  {%- if section.settings.accordion_position == 'above_button' -%}
-                    {{ accordion_markup }}
-                  {%- endif -%}
 
                   {%- if block.settings.button_label != blank -%}
                     <div class="image-with-text__button-wrapper">
@@ -239,11 +237,9 @@
                     </div>
                   {%- endif -%}
 
-                  {%- if section.settings.accordion_position == 'below_button' -%}
-                    {{ accordion_markup }}
-                  {%- endif -%}
               {%- endcase -%}
             {%- endfor -%}
+            </div>
 
             {%- if section.settings.accordion_position == 'bottom' -%}
               {{ accordion_markup }}
