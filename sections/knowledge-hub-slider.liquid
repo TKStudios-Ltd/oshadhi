@@ -84,7 +84,12 @@
     height: 100%;
     display: block;
     object-fit: cover;
-  }
+    transition: transform 1s ease;
+}
+
+#KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__card:hover .knowledge-hub-slider__image {
+  transform: scale(1.02);
+}
 
   #KnowledgeHubSlider-{{ section.id }} .knowledge-hub-slider__card-title {
     margin: 0;
