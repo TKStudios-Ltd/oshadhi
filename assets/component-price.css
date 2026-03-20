@@ -19,17 +19,19 @@
 }
 
 .price .price-item {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
   display: inline-block;
   margin: 0 1rem 0 0;
 }
 
 .price__regular .price-item--regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   margin-right: 0;
 }
 
 .price:not(.price--show-badge) .price-item--last:last-of-type {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -76,8 +78,8 @@
 }
 
 .price--on-sale .price__sale {
-  display: initial;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
