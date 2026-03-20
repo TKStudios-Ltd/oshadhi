@@ -14,18 +14,19 @@
   }
 
   .image-with-text__accordion-group {
-    width: 100%;
-    margin-top: 3.2rem;
+    width: auto;
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
   }
 
-  .image-with-text__accordion {
-    border-radius: 0.8rem;
+  .image-with-text__accordion-group .accordion {
+    border-radius: 6px;
     overflow: hidden;
-    background: rgb(var(--color-background));
-    border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    background: #F1F0EE;
   }
 
   .image-with-text__accordion summary {
