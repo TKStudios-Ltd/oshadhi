@@ -158,6 +158,12 @@
     background: #2E3340;
   }
 
+  #TestimonialSlider-{{ section.id }} .testimonial-slider__stars img {
+    height: 16px;
+    width: auto;
+    display: block;
+  }
+
   @media screen and (max-width: 989px) {
     #TestimonialSlider-{{ section.id }} .testimonial-slider__inner {
       min-height: 22rem;
@@ -238,11 +244,11 @@
                   {%- endif -%}
 
                   <div class="testimonial-slider__stars" aria-label="5 stars">
-                    {%- for i in (1..5) -%}
-                      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-                        <path d="M10 1.7l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14l-4.8 2.6.9-5.4-3.9-3.8 5.4-.8L10 1.7z"/>
-                      </svg>
-                    {%- endfor -%}
+                    <img 
+                      src="https://cdn.shopify.com/s/files/1/0567/2563/5262/files/OSH_5-Stars.svg" 
+                      alt="5 star rating"
+                      loading="lazy"
+                    >
                   </div>
                 </div>
 
