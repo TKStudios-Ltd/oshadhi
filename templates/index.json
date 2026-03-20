@@ -513,22 +513,25 @@
         "slide_x7cUfW": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/OSH_Essential-Oils-How.jpg",
             "title": "How to use Essential Oils",
-            "link": ""
+            "link": "shopify://pages/how-to-use-essential-oils"
           }
         },
         "slide_bqmmpd": {
           "type": "slide",
           "settings": {
-            "title": "How to use Essential Oils",
-            "link": ""
+            "image": "shopify://shop_images/OSH_Aromatherapy-Course.jpg",
+            "title": "Free Aromatherapy Course",
+            "link": "shopify://pages/seven-lessons"
           }
         },
         "slide_QdJrji": {
           "type": "slide",
           "settings": {
-            "title": "How to use Essential Oils",
-            "link": ""
+            "image": "shopify://shop_images/OSH_Lavendar-How.jpg",
+            "title": "The Amazing Lavender",
+            "link": "shopify://pages/lavender"
           }
         }
       },
@@ -542,7 +545,7 @@
         "color_scheme": "background-2",
         "subtitle": "Knowledge Hub",
         "title": "<em>Learn the art</em> of aromatherapy",
-        "heading_size": "h2",
+        "heading_size": "h3",
         "text": "<p>From beginner guides to deeper aromatherapy knowledge, explore practical tips, expert insights, and inspiration to help you get the most from essential oils.</p>",
         "button_label": "Explore the knowledge hub",
         "button_link": "shopify://pages/knowledge-hub",
