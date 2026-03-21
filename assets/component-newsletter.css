@@ -51,6 +51,7 @@
 .footer .newsletter-form__field-wrapper .field__input {
   border: 1px solid rgb(var(--color-foreground));
   border-radius: 6px;
+  min-height: calc(4.2rem + var(--buttons-border-width) * 2);
 }
 
 .footer .newsletter-form__field-wrapper .field,
