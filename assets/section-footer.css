@@ -14,8 +14,8 @@
 
 .footer__top-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 2fr);
-  column-gap: 8rem;
+  grid-template-columns: minmax(0, 420px) minmax(0, 2fr);
+  column-gap: 120px;
   row-gap: 4rem;
   align-items: start;
 }
