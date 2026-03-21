@@ -27,6 +27,9 @@
   z-index: 0;
 }
 
+.footer {
+  --inputs-border-opacity: 0;
+}
 .footer .field {
   border: none !important;
   box-shadow: none !important;
