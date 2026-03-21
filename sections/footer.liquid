@@ -98,7 +98,7 @@
 
                   {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                     <input type="hidden" name="contact[tags]" value="newsletter">
-                    <div class="newsletter-form__field-wrapper">
+                    {% comment %} <div class="newsletter-form__field-wrapper"> {% endcomment %}
                       <div class="field">
                         <input
                           id="NewsletterForm--{{ section.id }}"
@@ -124,9 +124,7 @@
                           Enter your email
                           {% comment %} {{ 'newsletter.label' | t }} {% endcomment %}
                         </label>
-                        
-                      </div>
-                      <button
+                        <button
                           type="submit"
                           class="button newsletter-form__button"
                           name="commit"
@@ -136,6 +134,7 @@
                           Sign Up
                           {% comment %} {% render 'icon-arrow' %} {% endcomment %}
                         </button>
+                      </div>
 
                       {%- if form.errors -%}
                         <small class="newsletter-form__message form__message" id="ContactFooter-error">
@@ -144,7 +143,7 @@
                           {{ form.errors.messages.email -}}
                         </small>
                       {%- endif -%}
-                    </div>
+                    {% comment %} </div> {% endcomment %}
 
                     {%- if form.posted_successfully? -%}
                       <h3
