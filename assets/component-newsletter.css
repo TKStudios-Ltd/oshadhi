@@ -26,6 +26,22 @@
 .newsletter-form__field-wrapper .field {
   z-index: 0;
 }
+
+.footer .field {
+  border: none;
+}
+.footer .field::before,
+.footer .field::after {
+  display: none;
+}
+.footer .field__input {
+  border: none;
+  box-shadow: none;
+}
+.footer .field__input:focus {
+  outline: none;
+  box-shadow: none;
+}
 /* .newsletter-form__field-wrapper .field:before,
 .newsletter-form__field-wrapper .field:after {
   display: none !important;
