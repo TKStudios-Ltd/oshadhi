@@ -1804,6 +1804,7 @@ details[open] > .share-button__fallback {
 .field__input::placeholder,
 .customer .field input::placeholder {
   opacity: 0.75;
+  color: rgb(var(--color-foreground));
 }
 
 .field__button {
