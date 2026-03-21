@@ -166,6 +166,8 @@
 
 .footer__bottom-right {
   justify-self: end;
+  display: flex;
+  align-items: center;
 }
 
 .footer__copyright {
