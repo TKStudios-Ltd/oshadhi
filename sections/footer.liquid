@@ -120,10 +120,10 @@
                           placeholder="Enter your email"
                           required
                         >
-                        <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                        {% comment %} <label class="field__label" for="NewsletterForm--{{ section.id }}">
                           Enter your email
                           {% comment %} {{ 'newsletter.label' | t }} {% endcomment %}
-                        </label>
+                        </label> {% endcomment %}
                         <button
                           type="submit"
                           class="button newsletter-form__button"
