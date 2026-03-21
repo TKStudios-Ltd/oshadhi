@@ -14,8 +14,8 @@
 
 .footer__top-grid {
   display: grid;
-  grid-template-columns: minmax(0, 420px) minmax(0, 2fr);
-  column-gap: 120px;
+  grid-template-columns: minmax(0, 42rem) minmax(0, 2fr);
+  column-gap: 12rem;
   row-gap: 4rem;
   align-items: start;
 }
@@ -146,9 +146,9 @@
 
 .footer__content-bottom {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: minmax(0, 42rem) auto minmax(0, 1fr);
   align-items: center;
-  column-gap: 4rem;
+  column-gap: 12rem;
   row-gap: 2rem;
   padding-top: 3rem;
   border-top: 0;
