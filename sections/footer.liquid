@@ -91,7 +91,7 @@
                   style="--animation-order: 1;"
                 {% endif %}
               >
-                <div class="footer-block__newsletter">
+                {% comment %} <div class="footer-block__newsletter"> {% endcomment %}
                   {%- if section.settings.newsletter_heading != blank -%}
                     <h5 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h5>
                   {%- endif -%}
@@ -157,7 +157,7 @@
                       </h3>
                     {%- endif -%}
                   {%- endform -%}
-                </div>
+                {% comment %} </div> {% endcomment %}
 
                 {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
                   <div class="footer__follow-on-shop">
