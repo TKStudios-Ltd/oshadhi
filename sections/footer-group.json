@@ -28,6 +28,13 @@
             "menu": "footer-information"
           }
         },
+        "link_list_K9iNAH": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Need Help?",
+            "menu": "footer-need-help"
+          }
+        },
         "image_JB6rDM": {
           "type": "image",
           "settings": {
@@ -40,6 +47,7 @@
       "block_order": [
         "b54e01e2-7251-4c38-baa8-63b586bea847",
         "ff46edbd-3cdf-4e80-9c54-3f0068c711f4",
+        "link_list_K9iNAH",
         "image_JB6rDM"
       ],
       "custom_css": [],
