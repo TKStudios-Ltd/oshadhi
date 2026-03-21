@@ -110,17 +110,14 @@
         "text_dHCcHj",
         "text_7weTGd"
       ],
-      "custom_css": [
-        ".footer {box-shadow: inset 0 -21px 120px -90px #000;}",
-        "li a {font-size: 16px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "accent-2",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_enable": true,
+        "newsletter_heading": "Sign up to our Newsletter for exclusive offers",
         "enable_follow_on_shop": false,
         "show_social": true,
-        "enable_country_selector": false,
+        "enable_country_selector": true,
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": false,
