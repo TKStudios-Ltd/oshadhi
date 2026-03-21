@@ -93,7 +93,7 @@
               >
                 <div class="footer-block__newsletter">
                   {%- if section.settings.newsletter_heading != blank -%}
-                    <h4 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h4>
+                    <h5 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h5>
                   {%- endif -%}
 
                   {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
@@ -179,7 +179,7 @@
                     {% endif %}
                   >
                     {%- if block.settings.heading != blank -%}
-                      <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                      <h5 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h5>
                     {%- endif -%}
 
                     {%- case block.type -%}
