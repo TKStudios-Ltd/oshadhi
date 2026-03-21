@@ -123,7 +123,7 @@
                         <label class="field__label" for="NewsletterForm--{{ section.id }}">
                           {{ 'newsletter.label' | t }}
                         </label>
-                        <button
+                      </div> <button
                           type="submit"
                           class="button newsletter-form__button field__button"
                           name="commit"
@@ -133,7 +133,6 @@
                           Sign Up
                           {% comment %} {% render 'icon-arrow' %} {% endcomment %}
                         </button>
-                      </div>
 
                       {%- if form.errors -%}
                         <small class="newsletter-form__message form__message" id="ContactFooter-error">
