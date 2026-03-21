@@ -48,6 +48,12 @@
   width: 130px;
 }
 
+.footer p.newsletter--disclaimer {
+  font-size: 9px;
+  line-height: 1.2;
+  opacity: 0.5;
+}
+
 .footer .newsletter-form__field-wrapper .field__input {
   border: 1px solid rgb(var(--color-foreground));
   border-radius: 6px;
