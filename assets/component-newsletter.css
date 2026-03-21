@@ -27,22 +27,27 @@
   z-index: 0;
 }
 
-.footer {
-  --inputs-border-opacity: 0;
-}
-.footer .field {
-  border: none !important;
+.footer .newsletter-form__field-wrapper .field,
+.footer .newsletter-form__field-wrapper .field::before,
+.footer .newsletter-form__field-wrapper .field::after,
+.footer .newsletter-form__field-wrapper .field__input,
+.footer .newsletter-form__field-wrapper .newsletter-form__button {
+  border: 0 !important;
   box-shadow: none !important;
+  outline: 0 !important;
 }
-.footer .field:before,
-.footer .field:after {
+
+.footer .newsletter-form__field-wrapper .field::before,
+.footer .newsletter-form__field-wrapper .field::after {
+  content: none !important;
   display: none !important;
-  box-shadow: none !important;
+  appearance: none !important;
 }
-.footer .field__input {
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
+
+.footer .newsletter-form__field-wrapper .field__input,
+.footer .newsletter-form__field-wrapper .newsletter-form__button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
 }
 
 .newsletter-form__message {
