@@ -14,25 +14,18 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "f296c38e-cc41-4583-8e2f-1b8af913e68a": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": "<p><strong>Oshadhi USA, Inc.</strong><br/>500 North 3rd Street<br/>Suite 210<br/>Fairfield, Iowa 52556<br/>USA<br/></p><p><strong>Oshadhi Headquarters</strong><br/>Ayus GmbH<br/>Am Dreschschopf 1<br/>77815 Bühl<br/>Germany<br/></p><p><a href=\"/pages/contact-us\" target=\"_blank\" title=\"Contact Us\">Contact Us</a></p>"
-          }
-        },
         "b54e01e2-7251-4c38-baa8-63b586bea847": {
           "type": "link_list",
           "settings": {
-            "heading": "",
-            "menu": "useful-links"
+            "heading": "Top Collections",
+            "menu": "footer-categories"
           }
         },
         "ff46edbd-3cdf-4e80-9c54-3f0068c711f4": {
           "type": "link_list",
           "settings": {
-            "heading": "",
-            "menu": "footer"
+            "heading": "Information",
+            "menu": "footer-information"
           }
         },
         "image_JB6rDM": {
@@ -42,73 +35,12 @@
             "image_width": 150,
             "alignment": ""
           }
-        },
-        "1583c2d4-a92e-4c95-8201-8754b0632d81": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "heading": "FOLLOW US",
-            "subtext": "<ul><li><a href=\"https://www.facebook.com/Oshadhi.USA.Inc\" target=\"_blank\" title=\"Facebook\">Facebook</a></li><li><a href=\"https://www.instagram.com/oshadhi.usa/\" target=\"_blank\" title=\"Instagram\">Instagram</a></li><li><a href=\"https://www.youtube.com/c/Oshadhi-aromatherapy\" target=\"_blank\" title=\"YouTube\">YouTube</a></li></ul>"
-          }
-        },
-        "4030a0e8-7616-49ad-a5b8-6fcc41a92eb5": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "ESSENTIAL OILS",
-            "menu": "main-menu"
-          }
-        },
-        "62051cc8-bfbe-4392-9fa1-2a5847d0baa5": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "Body Care",
-            "menu": "body-care"
-          }
-        },
-        "6db0a89c-bcee-44c7-93dc-520d7fb8326d": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "heading": "OSHADHI HEADQUARTERS",
-            "subtext": "<p>Ayus GmbH<br/>Am Dreschschopf 1<br/>77815 Bühl<br/>Germany<br/><a href=\"mailto:info@oshadhi.com\" title=\"mailto:info@oshadhi.com\">info@oshadhi.com</a></p>"
-          }
-        },
-        "text_3dVhH8": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": ""
-          }
-        },
-        "text_dHCcHj": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": ""
-          }
-        },
-        "text_7weTGd": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": ""
-          }
         }
       },
       "block_order": [
-        "f296c38e-cc41-4583-8e2f-1b8af913e68a",
         "b54e01e2-7251-4c38-baa8-63b586bea847",
         "ff46edbd-3cdf-4e80-9c54-3f0068c711f4",
-        "image_JB6rDM",
-        "1583c2d4-a92e-4c95-8201-8754b0632d81",
-        "4030a0e8-7616-49ad-a5b8-6fcc41a92eb5",
-        "62051cc8-bfbe-4392-9fa1-2a5847d0baa5",
-        "6db0a89c-bcee-44c7-93dc-520d7fb8326d",
-        "text_3dVhH8",
-        "text_dHCcHj",
-        "text_7weTGd"
+        "image_JB6rDM"
       ],
       "custom_css": [],
       "settings": {
