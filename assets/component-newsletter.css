@@ -49,9 +49,15 @@
 }
 
 .footer p.newsletter--disclaimer {
-  font-size: 9px;
+  margin-top: 2rem;
+  font-size: 10px;
   line-height: 1.2;
   opacity: 0.5;
+}
+.footer p.newsletter--disclaimer a {
+  color: rgb(var(--color-foreground));
+  text-decoration: underline;
+  text-underline-offset: 1px;
 }
 
 .footer .newsletter-form__field-wrapper .field__input {
