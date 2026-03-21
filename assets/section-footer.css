@@ -160,6 +160,8 @@
 
 .footer__bottom-center {
   justify-self: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer__bottom-right {
