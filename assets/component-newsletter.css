@@ -28,7 +28,7 @@
 }
 .newsletter-form__field-wrapper .field:before,
 .newsletter-form__field-wrapper .field:after {
-  display: none;
+  display: none !important;
 }
 
 .newsletter-form__message {
