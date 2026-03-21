@@ -48,11 +48,14 @@
   width: 130px;
 }
 
+.footer .newsletter-form__field-wrapper .field__input {
+  border: 1px solid rgb(var(--color-foreground));
+  border-radius: 6px;
+}
 
 .footer .newsletter-form__field-wrapper .field,
 .footer .newsletter-form__field-wrapper .field::before,
 .footer .newsletter-form__field-wrapper .field::after,
-.footer .newsletter-form__field-wrapper .field__input,
 .footer .newsletter-form__field-wrapper .field__label,
 .footer .newsletter-form__field-wrapper .newsletter-form__button,
 .footer .newsletter-form__field-wrapper .newsletter-form__button::before,
