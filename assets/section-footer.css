@@ -476,9 +476,11 @@
   }
 
   .footer .accordion-arrow_container .icon-caret {
+    flex: 0 0 auto;
     width: 1rem;
-    height: auto;
-    display: block;
+    height: 1rem;
+    right: calc(50% - 0.5rem);
+    top: calc(50% - 0.5rem);
   }
 
   .footer-menu-accordion[open] .accordion-arrow_container {
