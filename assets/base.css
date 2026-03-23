@@ -3696,9 +3696,10 @@ details-disclosure > details {
   #MegaMenu-aromatherapy-by-scent .mega-menu__link--level-2,
   #MegaMenu-aromatherapy-by-benefit .mega-menu__link--level-2 {
     font-size: 1.2rem;
+    line-height: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.8px;
     opacity: 0.5;
   }
 
