@@ -2845,13 +2845,13 @@ details[open] > .header__submenu {
   font-family: "Gilroy-Medium";
   font-size: 16px;
   font-weight: 500;
-  padding: 1.2rem 1.6rem 0.6rem;
+  padding: 1.2rem 2rem 0.6rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 1);
 }
 @media screen and (max-width: 1199px) and (min-width: 990px) {
   .header__menu-item {
-    padding: 1.2rem 2rem 0.6rem;
+    padding: 1.2rem 1.6rem 0.6rem;
   }
 }
 
