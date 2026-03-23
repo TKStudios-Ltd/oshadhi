@@ -3688,6 +3688,7 @@ details-disclosure > details {
     color: rgba(var(--color-foreground), 1);
     text-decoration: none;
     text-underline-offset: 0.3rem;
+    transition: all ease 0.2s;
   }
 
   .header .mega-menu__item > ul .mega-menu__link.link:hover {
