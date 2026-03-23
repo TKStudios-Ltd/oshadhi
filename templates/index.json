@@ -234,7 +234,7 @@
         "caption_mXd4Yc"
       ],
       "custom_css": [
-        "@media (max-width: 749px) {.rich-text__wrapper {margin: 0; width: 100%; }}"
+        "@media (max-width: 749px) {.rich-text__wrapper {margin: 0; width: 100%; padding-left: 4rem; }}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
