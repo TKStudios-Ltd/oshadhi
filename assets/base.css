@@ -3680,7 +3680,6 @@ details-disclosure > details {
   .header .mega-menu__item > ul > li + li {
     margin-top: 0.6rem;
   }
-
   .header .mega-menu__item > ul .mega-menu__link.link {
     font-size: 1.5rem;
     line-height: 1.4;
@@ -3690,10 +3689,16 @@ details-disclosure > details {
     text-underline-offset: 0.3rem;
     transition: all ease 0.2s;
   }
-
   .header .mega-menu__item > ul .mega-menu__link.link:hover {
     color: rgba(var(--color-foreground), 0.8);
     text-decoration: underline;
+  }
+  #MegaMenu-aromatherapy-by-scent .mega-menu__link--level-2,
+  #MegaMenu-aromatherapy-by-benefit .mega-menu__link--level-2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    opacity: 0.5;
   }
 
   /* Promo Area */
