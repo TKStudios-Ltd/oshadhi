@@ -63,15 +63,134 @@
                   class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                   tabindex="-1"
                 >
-                  <div class="mega-menu__wrapper page-width">
+                  <div
+                    class="mega-menu__wrapper page-width"
+                    id="MegaMenuWrapper-{{ link.title | handle }}"
+                    {% if promo_block != blank %}
+                      style="--mega-menu-columns: {{ promo_block.settings.menu_columns }};"
+                    {% endif %}
+                  >
                     <ul class="mega-menu__list list-unstyled" role="list">
+                    {%- assign current_menu_handle = link.title | handle -%}
+
+                    {%- if current_menu_handle == 'aromatherapy' -%}
                       {%- for child_link in link.links -%}
-                        <li 
+                        {%- assign child_handle = child_link.title | handle -%}
+
+                        {%- unless child_handle == 'plant-waters-extracts' -%}
+                          {%- if child_handle == 'carrier-oils' -%}
+                            <li
+                              class="mega-menu__item mega-menu__item--grouped mega-menu__item--{{ child_handle }}"
+                              id="MegaMenu-{{ current_menu_handle }}-{{ child_handle }}"
+                            >
+                              <div class="mega-menu__group-block">
+                                <h5
+                                  class="mega-menu__link mega-menu__link--level-2 h5{% if child_link.current %} mega-menu__link--active{% endif %}"
+                                  {% if child_link.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ child_link.title | escape }}
+                                </h5>
+
+                                {%- if child_link.links != blank -%}
+                                  <ul class="list-unstyled" role="list">
+                                    {%- for grandchild_link in child_link.links -%}
+                                      <li>
+                                        <a
+                                          href="{{ grandchild_link.url }}"
+                                          class="mega-menu__link link{% if grandchild_link.current %} mega-menu__link--active{% endif %}"
+                                          {% if grandchild_link.current %}
+                                            aria-current="page"
+                                          {% endif %}
+                                        >
+                                          {{ grandchild_link.title | escape }}
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                {%- endif -%}
+                              </div>
+
+                              {%- for grouped_link in link.links -%}
+                                {%- assign grouped_handle = grouped_link.title | handle -%}
+                                {%- if grouped_handle == 'plant-waters-extracts' -%}
+                                  <div
+                                    class="mega-menu__group-block mega-menu__group-block--secondary"
+                                    id="MegaMenu-{{ current_menu_handle }}-{{ grouped_handle }}"
+                                  >
+                                    <h5
+                                      class="mega-menu__link mega-menu__link--level-2 h5{% if grouped_link.current %} mega-menu__link--active{% endif %}"
+                                      {% if grouped_link.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                    >
+                                      {{ grouped_link.title | escape }}
+                                    </h5>
+
+                                    {%- if grouped_link.links != blank -%}
+                                      <ul class="list-unstyled" role="list">
+                                        {%- for grandchild_link in grouped_link.links -%}
+                                          <li>
+                                            <a
+                                              href="{{ grandchild_link.url }}"
+                                              class="mega-menu__link link{% if grandchild_link.current %} mega-menu__link--active{% endif %}"
+                                              {% if grandchild_link.current %}
+                                                aria-current="page"
+                                              {% endif %}
+                                            >
+                                              {{ grandchild_link.title | escape }}
+                                            </a>
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    {%- endif -%}
+                                  </div>
+                                {%- endif -%}
+                              {%- endfor -%}
+                            </li>
+                          {%- else -%}
+                            <li
+                              class="mega-menu__item mega-menu__item--{{ child_handle }}"
+                              id="MegaMenu-{{ current_menu_handle }}-{{ child_handle }}"
+                            >
+                              <h5
+                                class="mega-menu__link mega-menu__link--level-2 h5{% if child_link.current %} mega-menu__link--active{% endif %}"
+                                {% if child_link.current %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ child_link.title | escape }}
+                              </h5>
+
+                              {%- if child_link.links != blank -%}
+                                <ul class="list-unstyled" role="list">
+                                  {%- for grandchild_link in child_link.links -%}
+                                    <li>
+                                      <a
+                                        href="{{ grandchild_link.url }}"
+                                        class="mega-menu__link link{% if grandchild_link.current %} mega-menu__link--active{% endif %}"
+                                        {% if grandchild_link.current %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        {{ grandchild_link.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+                            </li>
+                          {%- endif -%}
+                        {%- endunless -%}
+                      {%- endfor -%}
+                    {%- else -%}
+                      {%- for child_link in link.links -%}
+                        <li
                           class="mega-menu__item mega-menu__item--{{ child_link.title | handle }}"
                           id="MegaMenu-{{ link.title | handle }}-{{ child_link.title | handle }}"
                         >
                           <h5
-                            {% comment %} href="{{ child_link.url }}" {% endcomment %}
                             class="mega-menu__link mega-menu__link--level-2 h5{% if child_link.current %} mega-menu__link--active{% endif %}"
                             {% if child_link.current %}
                               aria-current="page"
@@ -99,7 +218,8 @@
                           {%- endif -%}
                         </li>
                       {%- endfor -%}
-                    </ul>
+                    {%- endif -%}
+                  </ul>
 
                     {%- if promo_block != blank -%}
                       {%- if show_promo_1 or show_promo_2 -%}
