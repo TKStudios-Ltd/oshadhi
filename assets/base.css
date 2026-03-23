@@ -3696,15 +3696,15 @@ details-disclosure > details {
     text-decoration: underline;
   }
 
-  /* Promo area */
+  /* Promo Area */
+
   .header .mega-menu__promos {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 34rem));
+    display: flex;
     gap: 2rem;
     align-items: start;
   }
-
   .header .mega-menu__promo {
+    flex: 0 0 340px;
     min-width: 0;
     border-radius: 6px;
   }
