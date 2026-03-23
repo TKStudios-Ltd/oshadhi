@@ -3648,10 +3648,15 @@ details-disclosure > details {
 
   .header .mega-menu__list {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(var(--mega-menu-columns, 4), minmax(0, 1fr));
     gap: 3.2rem;
     margin: 0;
     padding: 0;
+  }
+  .header .mega-menu__item--grouped {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
   }
 
   .header .mega-menu__item {
@@ -3809,7 +3814,7 @@ details-disclosure > details {
   }
 
   .header .mega-menu__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
     gap: 2.4rem;
   }
 
