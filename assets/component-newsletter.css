@@ -40,6 +40,9 @@
   .newsletter-form__message {
     justify-content: flex-start;
   }
+  .footer p.newsletter--disclaimer {
+    font-size: 10px;
+  }
 }
 
 .newsletter-form__button {
@@ -50,7 +53,7 @@
 
 .footer p.newsletter--disclaimer {
   margin-top: 2rem;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 1.4;
   opacity: 0.5;
 }
