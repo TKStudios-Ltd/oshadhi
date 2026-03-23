@@ -574,7 +574,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       panel.style.display = 'block';
       panel.style.overflow = 'hidden';
       panel.style.transition = 'none';
-      panel.style.maxHeight = '0px';
       panel.style.opacity = '0';
       panel.style.transform = 'translateY(14px)';
 
@@ -582,7 +581,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
       menu._raf = requestAnimationFrame(() => {
         panel.style.transition =
-          'max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
+          'opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
         panel.style.maxHeight = targetHeight + 'px';
         panel.style.opacity = '1';
         panel.style.transform = 'translateY(0)';
