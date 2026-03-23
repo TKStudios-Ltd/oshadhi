@@ -531,7 +531,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         panel.style.transition =
           'opacity 220ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1)';
         panel.style.opacity = '0';
-        panel.style.transform = 'translateY(-10px)';
+        panel.style.transform = 'translateY(-20px)';
       });
 
       const onCloseEnd = function (event) {
@@ -550,7 +550,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
       panel.addEventListener('transitionend', onCloseEnd);
 
-      // fallback (prevents stuck menus)
       menu._closeFallback = setTimeout(() => {
         panel.removeEventListener('transitionend', onCloseEnd);
         menu.removeAttribute('open');
@@ -580,7 +579,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       panel.style.display = 'block';
       panel.style.transition = 'none';
       panel.style.opacity = '0';
-      panel.style.transform = 'translateY(-10px)';
+      panel.style.transform = 'translateY(-20px)';
 
       menu._raf = requestAnimationFrame(() => {
         panel.style.transition =
