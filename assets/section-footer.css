@@ -338,7 +338,7 @@
 
   .footer__top-blocks {
     grid-template-columns: 1fr;
-    row-gap: 3rem;
+    row-gap: 0;
   }
 
   .footer__top-newsletter .field {
@@ -442,6 +442,9 @@
     border-bottom: 1px solid rgba(var(--color-foreground), .15);
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+  .footer-block--top.footer-block--menu .footer-block__heading {
+    margin: 0;
   }
 
   .footer-menu-accordion__summary {
