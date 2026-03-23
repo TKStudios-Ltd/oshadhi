@@ -3603,17 +3603,34 @@ details-disclosure > details {
   }
   header-menu details > .mega-menu__content,
   header-menu details > .header__submenu {
-    display: none;
     opacity: 0;
-    transform: translateY(14px);
-    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-1.2rem);
+    transition:
+      opacity 0.28s ease,
+      transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 0.34s;
     will-change: opacity, transform;
-    backface-visibility: hidden;
   }
-
   header-menu details[open] > .mega-menu__content,
-  header-menu details[open] > .header__submenu {
-    display: block;
+  header-menu details[open] > .header__submenu,
+  header-menu details.is-closing > .mega-menu__content,
+  header-menu details.is-closing > .header__submenu {
+    display: block !important;
+  }
+  header-menu details.is-open > .mega-menu__content,
+  header-menu details.is-open > .header__submenu,
+  header-menu details.is-opening > .mega-menu__content,
+  header-menu details.is-opening > .header__submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition:
+      opacity 0.28s ease,
+      transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 0s;
   }
 }
 
