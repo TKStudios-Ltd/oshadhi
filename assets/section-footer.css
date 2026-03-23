@@ -439,7 +439,7 @@
 
 @media screen and (max-width: 749px) {
   .footer-block--top.footer-block--menu {
-    border-bottom: 1px solid rgba(var(--color-foreground), .15);
+    border-bottom: 1px solid #DBE0E9;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -467,8 +467,8 @@
     min-width: 3.2rem;
     border-radius: 50%;
     border: 1px solid #DBE0E9;
-    background: white;
-    color: #1C3160;
+    background: transparent;
+    color: #DBE0E9;
     display: inline-flex;
     align-items: center;
     justify-content: center;
