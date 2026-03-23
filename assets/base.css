@@ -3585,18 +3585,14 @@ details-disclosure > details {
   header-menu details {
     position: relative;
   }
-
   header-menu details > summary {
     position: relative;
     z-index: 5;
     list-style: none;
   }
-
   header-menu details > summary::-webkit-details-marker {
     display: none;
   }
-
-  /* hover bridge */
   header-menu details > summary::after {
     content: '';
     position: absolute;
@@ -3605,15 +3601,13 @@ details-disclosure > details {
     top: 100%;
     height: 2rem;
   }
-
-  /* force panels to be JS-animated on desktop */
   header-menu details > .mega-menu__content,
   header-menu details > .header__submenu {
     display: none;
     opacity: 0;
     transform: translateY(14px);
     overflow: hidden;
-    will-change: max-height, opacity, transform;
+    will-change: opacity, transform;
     backface-visibility: hidden;
   }
 
