@@ -523,20 +523,24 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       menu.classList.remove('is-opening', 'is-open');
       menu.classList.add('is-closing');
 
+      const startHeight = panel.offsetHeight;
+
       panel.style.display = 'block';
       panel.style.overflow = 'hidden';
       panel.style.opacity = '1';
       panel.style.transform = 'translateY(0)';
+      panel.style.maxHeight = startHeight + 'px';
 
       menu._raf = requestAnimationFrame(() => {
         panel.style.transition =
-          'opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1)';
+          'max-height 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1)';
+        panel.style.maxHeight = '0px';
         panel.style.opacity = '0';
-        panel.style.transform = 'translateY(-20px)';
+        panel.style.transform = 'translateY(14px)';
       });
 
       const onCloseEnd = function (event) {
-        if (event.target !== panel || event.propertyName !== 'transform') return;
+        if (event.target !== panel || event.propertyName !== 'max-height') return;
 
         panel.removeEventListener('transitionend', onCloseEnd);
 
@@ -544,6 +548,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         menu.classList.remove('is-closing');
 
         panel.style.transition = '';
+        panel.style.maxHeight = '';
         panel.style.opacity = '';
         panel.style.transform = '';
         panel.style.overflow = '';
@@ -552,6 +557,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
       panel.addEventListener('transitionend', onCloseEnd);
     }
+
     function openMenu(menu) {
       const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
       if (!panel) return;
@@ -568,18 +574,22 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       panel.style.display = 'block';
       panel.style.overflow = 'hidden';
       panel.style.transition = 'none';
+      panel.style.maxHeight = '0px';
       panel.style.opacity = '0';
-      panel.style.transform = 'translateY(-20px)';
+      panel.style.transform = 'translateY(14px)';
+
+      const targetHeight = panel.scrollHeight;
 
       menu._raf = requestAnimationFrame(() => {
         panel.style.transition =
-          'opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
+          'max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
+        panel.style.maxHeight = targetHeight + 'px';
         panel.style.opacity = '1';
         panel.style.transform = 'translateY(0)';
       });
 
       const onOpenEnd = function (event) {
-        if (event.target !== panel || event.propertyName !== 'transform') return;
+        if (event.target !== panel || event.propertyName !== 'max-height') return;
 
         panel.removeEventListener('transitionend', onOpenEnd);
 
@@ -587,11 +597,13 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         menu.classList.add('is-open');
 
         panel.style.transition = '';
+        panel.style.maxHeight = 'none';
         panel.style.overflow = 'visible';
       };
 
       panel.addEventListener('transitionend', onOpenEnd);
     }
+
     function resetDesktopStates() {
       menus.forEach((menu) => {
         const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
@@ -604,6 +616,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
         if (panel) {
           panel.style.transition = '';
+          panel.style.maxHeight = '';
           panel.style.opacity = '';
           panel.style.transform = '';
           panel.style.overflow = '';
@@ -611,6 +624,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         }
       });
     }
+
     menus.forEach((menu) => {
       menu.addEventListener('mouseenter', () => {
         if (window.innerWidth < breakpoint) return;
@@ -623,6 +637,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
         openMenu(menu);
       });
+
       menu.addEventListener('mouseleave', () => {
         if (window.innerWidth < breakpoint) return;
 
@@ -632,6 +647,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         }, 80);
       });
     });
+
     window.addEventListener('resize', () => {
       if (window.innerWidth < breakpoint) {
         resetDesktopStates();

@@ -3585,12 +3585,14 @@ details-disclosure > details {
   header-menu details {
     position: relative;
   }
-
   header-menu details > summary {
     position: relative;
-    z-index: 3;
+    z-index: 5;
+    list-style: none;
   }
-
+  header-menu details > summary::-webkit-details-marker {
+    display: none;
+  }
   header-menu details > summary::after {
     content: '';
     position: absolute;
@@ -3599,27 +3601,18 @@ details-disclosure > details {
     top: 100%;
     height: 2rem;
   }
-
   header-menu details > .mega-menu__content,
   header-menu details > .header__submenu {
     display: none;
     opacity: 0;
-    transform: translateY(-20px);
-    will-change: opacity, transform;
+    transform: translateY(-10px);
+    overflow: hidden;
+    will-change: max-height, opacity, transform;
     backface-visibility: hidden;
   }
-
   header-menu details[open] > .mega-menu__content,
   header-menu details[open] > .header__submenu {
     display: block;
-  }
-
-  header-menu summary {
-    list-style: none;
-  }
-
-  header-menu summary::-webkit-details-marker {
-    display: none;
   }
 }
 
