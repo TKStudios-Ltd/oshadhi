@@ -53,6 +53,7 @@
           "type": "mega_menu_promo",
           "settings": {
             "menu_item": "Fragrance",
+            "menu_columns": 4,
             "promo_image_1": "shopify://shop_images/OSH_Diffusers_Promo.jpg",
             "promo_title_1": "Shop Diffusers",
             "promo_link_1": "shopify://collections/diffuser-scent-stone",
@@ -65,6 +66,7 @@
           "type": "mega_menu_promo",
           "settings": {
             "menu_item": "Aromatherapy",
+            "menu_columns": 3,
             "promo_image_1": "shopify://shop_images/OSH_Essential-Oils_Promo.jpg",
             "promo_title_1": "Shop Essential Oils",
             "promo_link_1": "shopify://collections/singles",
