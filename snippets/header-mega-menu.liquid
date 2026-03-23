@@ -69,7 +69,7 @@
                         <li class="mega-menu__item">
                           <h5
                             {% comment %} href="{{ child_link.url }}" {% endcomment %}
-                            class="mega-menu__link mega-menu__link--level-2 h5 link{% if child_link.current %} mega-menu__link--active{% endif %}"
+                            class="mega-menu__link mega-menu__link--level-2 h5{% if child_link.current %} mega-menu__link--active{% endif %}"
                             {% if child_link.current %}
                               aria-current="page"
                             {% endif %}
