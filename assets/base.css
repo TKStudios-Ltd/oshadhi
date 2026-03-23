@@ -3735,18 +3735,16 @@ details-disclosure > details {
 
   .header .mega-menu__promo-title {
     position: absolute;
-    top: 1.6rem;
-    left: 1.6rem;
+    top: 1.4rem;
+    left: 1.4rem;
     z-index: 2;
   }
-
   .header .mega-menu__promo-title.button {
     min-height: auto;
     min-width: auto;
     padding: 1rem 1.6rem;
     line-height: 1;
   }
-
   .header .mega-menu__promo-link:hover .mega-menu__promo-image img {
     transform: scale(1.02);
   }
