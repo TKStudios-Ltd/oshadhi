@@ -49,6 +49,18 @@
     "header": {
       "type": "header",
       "blocks": {
+        "mega_menu_promo_9WUUtj": {
+          "type": "mega_menu_promo",
+          "settings": {
+            "menu_item": "Fragrance",
+            "promo_image_1": "shopify://shop_images/OSH_Diffusers_Promo.jpg",
+            "promo_title_1": "Shop Diffusers",
+            "promo_link_1": "shopify://collections/diffuser-scent-stone",
+            "promo_image_2": "shopify://shop_images/OSH_Roomspray_Promo.jpg",
+            "promo_title_2": "Shop Roomsprays",
+            "promo_link_2": "shopify://collections/room-sprays"
+          }
+        },
         "mega_menu_promo_BNRUmp": {
           "type": "mega_menu_promo",
           "settings": {
@@ -62,6 +74,7 @@
         }
       },
       "block_order": [
+        "mega_menu_promo_9WUUtj",
         "mega_menu_promo_BNRUmp"
       ],
       "custom_css": [],
