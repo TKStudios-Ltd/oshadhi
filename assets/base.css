@@ -3690,7 +3690,7 @@ details-disclosure > details {
     text-underline-offset: 0.3rem;
   }
 
-  .header .mega-menu__item > ul .mega-menu__link > .link:hover,
+  .header .mega-menu__link .link:hover,
   .header .mega-menu__link--active .link {
     color: rgba(var(--color-foreground), 0.8);
     text-decoration: underline;
