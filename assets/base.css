@@ -3686,12 +3686,14 @@ details-disclosure > details {
     line-height: 1.4;
     font-weight: 400;
     color: rgba(var(--color-foreground), 1);
+    text-decoration: none;
+    text-underline-offset: 0.3rem;
   }
 
   .header .mega-menu__link:hover,
   .header .mega-menu__link--active {
-    opacity: 1;
-    text-decoration: none;
+    color: rgba(var(--color-foreground), 0.8);
+    text-decoration: underline;
   }
 
   /* Promo area */
