@@ -636,10 +636,13 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       menu.addEventListener('mouseleave', () => {
         if (window.innerWidth < breakpoint) return;
 
+        const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+        const isMegaMenu = panel && panel.classList.contains('mega-menu__content');
+
         clearTimeout(menu._closeTimer);
         menu._closeTimer = setTimeout(() => {
           closeMenu(menu);
-        }, 80);
+        }, isMegaMenu ? 80 : 10);
       });
     });
 
