@@ -439,13 +439,9 @@
 
 @media screen and (max-width: 749px) {
   .footer-block--top.footer-block--menu {
-    border-top: 1px solid rgba(var(--color-foreground), 0.15);
-    padding-top: 1.6rem;
-    padding-bottom: 1.6rem;
-  }
-
-  .footer-block--top.footer-block--menu .footer-block__heading {
-    display: none;
+    border-bottom: 1px solid rgba(var(--color-foreground), .15);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .footer-menu-accordion__summary {
