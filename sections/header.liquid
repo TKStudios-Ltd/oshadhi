@@ -511,9 +511,15 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     const breakpoint = 990;
     const menus = document.querySelectorAll('header-menu details');
 
+    function isMegaMenu(panel) {
+      return panel.classList.contains('mega-menu__content');
+    }
+
     function closeMenu(menu) {
       const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
       if (!panel) return;
+
+      const mega = isMegaMenu(panel);
 
       clearTimeout(menu._closeTimer);
       cancelAnimationFrame(menu._raf);
@@ -523,24 +529,34 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       menu.classList.remove('is-opening', 'is-open');
       menu.classList.add('is-closing');
 
-      const startHeight = panel.offsetHeight;
-
       panel.style.display = 'block';
       panel.style.overflow = 'hidden';
       panel.style.opacity = '1';
       panel.style.transform = 'translateY(0)';
-      panel.style.maxHeight = startHeight + 'px';
 
-      menu._raf = requestAnimationFrame(() => {
-        panel.style.transition =
-          'max-height 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1)';
-        panel.style.maxHeight = '0px';
-        panel.style.opacity = '0';
-        panel.style.transform = 'translateY(-10px)';
-      });
+      if (mega) {
+        const startHeight = panel.offsetHeight;
+        panel.style.maxHeight = startHeight + 'px';
+
+        menu._raf = requestAnimationFrame(() => {
+          panel.style.transition =
+            'max-height 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1)';
+          panel.style.maxHeight = '0px';
+          panel.style.opacity = '0';
+          panel.style.transform = 'translateY(-10px)';
+        });
+      } else {
+        menu._raf = requestAnimationFrame(() => {
+          panel.style.transition =
+            'opacity 220ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1)';
+          panel.style.opacity = '0';
+          panel.style.transform = 'translateY(-10px)';
+        });
+      }
 
       const onCloseEnd = function (event) {
-        if (event.target !== panel || event.propertyName !== 'max-height') return;
+        const endProp = mega ? 'max-height' : 'transform';
+        if (event.target !== panel || event.propertyName !== endProp) return;
 
         panel.removeEventListener('transitionend', onCloseEnd);
 
@@ -562,6 +578,8 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
       if (!panel) return;
 
+      const mega = isMegaMenu(panel);
+
       clearTimeout(menu._closeTimer);
       cancelAnimationFrame(menu._raf);
 
@@ -574,22 +592,32 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       panel.style.display = 'block';
       panel.style.overflow = 'hidden';
       panel.style.transition = 'none';
-      panel.style.maxHeight = '0px';
       panel.style.opacity = '0';
       panel.style.transform = 'translateY(-10px)';
 
-      const targetHeight = panel.scrollHeight;
+      if (mega) {
+        panel.style.maxHeight = '0px';
+        const targetHeight = panel.scrollHeight;
 
-      menu._raf = requestAnimationFrame(() => {
-        panel.style.transition =
-          'max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
-        panel.style.maxHeight = targetHeight + 'px';
-        panel.style.opacity = '1';
-        panel.style.transform = 'translateY(0)';
-      });
+        menu._raf = requestAnimationFrame(() => {
+          panel.style.transition =
+            'max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
+          panel.style.maxHeight = targetHeight + 'px';
+          panel.style.opacity = '1';
+          panel.style.transform = 'translateY(0)';
+        });
+      } else {
+        menu._raf = requestAnimationFrame(() => {
+          panel.style.transition =
+            'opacity 220ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1)';
+          panel.style.opacity = '1';
+          panel.style.transform = 'translateY(0)';
+        });
+      }
 
       const onOpenEnd = function (event) {
-        if (event.target !== panel || event.propertyName !== 'max-height') return;
+        const endProp = mega ? 'max-height' : 'transform';
+        if (event.target !== panel || event.propertyName !== endProp) return;
 
         panel.removeEventListener('transitionend', onOpenEnd);
 
@@ -597,8 +625,11 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         menu.classList.add('is-open');
 
         panel.style.transition = '';
-        panel.style.maxHeight = 'none';
         panel.style.overflow = 'visible';
+
+        if (mega) {
+          panel.style.maxHeight = 'none';
+        }
       };
 
       panel.addEventListener('transitionend', onOpenEnd);
