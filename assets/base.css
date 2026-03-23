@@ -3707,6 +3707,9 @@ details-disclosure > details {
     font-size: 1.4rem;
     line-height: 1.6;
   }
+  #MegaMenu-aromatherapy-plant-waters-extracts {
+    grid-column: 4;
+  }
 
   /* Promo Area */
 
