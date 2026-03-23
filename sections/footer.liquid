@@ -460,6 +460,27 @@
   {%- endunless -%}
 </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const footerAccordions = document.querySelectorAll('.footer-menu-accordion');
+
+    function setFooterAccordionState() {
+      if (window.innerWidth <= 749) {
+        footerAccordions.forEach((accordion) => {
+          accordion.removeAttribute('open');
+        });
+      } else {
+        footerAccordions.forEach((accordion) => {
+          accordion.setAttribute('open', 'open');
+        });
+      }
+    }
+
+    setFooterAccordionState();
+    window.addEventListener('resize', setFooterAccordionState);
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.footer.name",
