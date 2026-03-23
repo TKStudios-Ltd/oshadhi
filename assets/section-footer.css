@@ -358,7 +358,7 @@
   }
 
   .footer__middle-brand {
-    align-items: flex-start;
+    display: none;
   }
 
   .footer__copyright {
