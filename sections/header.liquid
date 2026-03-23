@@ -508,39 +508,38 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const desktopBreakpoint = 990;
+    const breakpoint = 990;
     const menus = document.querySelectorAll('header-menu details');
-    function enableHoverMenus() {
-      if (window.innerWidth >= desktopBreakpoint) {
-        menus.forEach(menu => {
 
-          menu.addEventListener('mouseenter', () => {
-            menu.setAttribute('open', 'open');
-          });
+    menus.forEach((menu) => {
+      let closeTimer;
 
-          menu.addEventListener('mouseleave', () => {
+      menu.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= breakpoint) {
+          clearTimeout(closeTimer);
+          menu.setAttribute('open', 'open');
+        }
+      });
+
+      menu.addEventListener('mouseleave', () => {
+        if (window.innerWidth >= breakpoint) {
+          closeTimer = setTimeout(() => {
             menu.removeAttribute('open');
-          });
+          }, 180);
+        }
+      });
+    });
 
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < breakpoint) {
+        menus.forEach((menu) => {
+          menu.removeAttribute('open');
         });
       }
-    }
-    function resetMenus() {
-      menus.forEach(menu => {
-        menu.removeAttribute('open');
-      });
-    }
-    function handleResize() {
-      if (window.innerWidth >= desktopBreakpoint) {
-        enableHoverMenus();
-      } else {
-        resetMenus();
-      }
-    }
-    handleResize();
-    window.addEventListener('resize', handleResize);
+    });
   });
 </script>
+
 
 {% schema %}
 {
