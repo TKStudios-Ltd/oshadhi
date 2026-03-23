@@ -255,6 +255,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   background-color: rgba(var(--color-foreground), 0.2);
 }
 
+.body--main {
+  overflow-x
+}
+
 .text-body {
   font-size: 14px;
   letter-spacing: 0;
