@@ -363,6 +363,9 @@
   .footer__middle-brand {
     display: none;
   }
+  .footer__mobile-logo {
+    display: flex;
+  }
 
   .footer__copyright {
     display: flex;
