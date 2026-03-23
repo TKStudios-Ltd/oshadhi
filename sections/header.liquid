@@ -511,32 +511,16 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     const breakpoint = 990;
     const menus = document.querySelectorAll('header-menu details');
 
-    function closeMenu(menu) {
-      clearTimeout(menu._closeTimer);
-
-      if (!menu.hasAttribute('open')) return;
-
-      menu.classList.remove('is-opening', 'is-open');
-      menu.classList.add('is-closing');
-
-      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
-      if (!panel) return;
-
-      const onCloseEnd = function (event) {
-        if (event.target !== panel || event.propertyName !== 'transform') return;
-
-        panel.removeEventListener('transitionend', onCloseEnd);
-        menu.removeAttribute('open');
-        menu.classList.remove('is-closing');
-      };
-
-      panel.addEventListener('transitionend', onCloseEnd);
+    function getPanel(menu) {
+      return menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
     }
 
     function openMenu(menu) {
+      if (window.innerWidth < breakpoint) return;
+
       clearTimeout(menu._closeTimer);
 
-      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+      const panel = getPanel(menu);
       if (!panel) return;
 
       if (!menu.hasAttribute('open')) {
@@ -552,6 +536,28 @@ You can learn more about this (and learn how to cleanly revert these changes) at
           menu.classList.remove('is-opening');
         });
       });
+    }
+
+    function closeMenu(menu) {
+      if (window.innerWidth < breakpoint) return;
+
+      clearTimeout(menu._closeTimer);
+
+      const panel = getPanel(menu);
+      if (!panel || !menu.hasAttribute('open')) return;
+
+      menu.classList.remove('is-opening', 'is-open');
+      menu.classList.add('is-closing');
+
+      const onCloseEnd = function (event) {
+        if (event.target !== panel || event.propertyName !== 'transform') return;
+
+        panel.removeEventListener('transitionend', onCloseEnd);
+        menu.removeAttribute('open');
+        menu.classList.remove('is-closing');
+      };
+
+      panel.addEventListener('transitionend', onCloseEnd);
     }
 
     function resetMenus() {
