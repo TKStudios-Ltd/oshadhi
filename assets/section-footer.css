@@ -411,6 +411,12 @@
   .footer-menu-accordion {
     display: block;
   }
+  .footer-menu-accordion > .footer-menu-accordion__content {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
 
   .footer-menu-accordion__summary {
     pointer-events: none;
