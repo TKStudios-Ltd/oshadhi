@@ -171,6 +171,30 @@
               </div>
             {%- endif -%}
 
+          <div class="footer__mobile-logo">
+            {%- if settings.brand_image != blank -%}
+              {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
+              <div
+                class="footer-block__image-wrapper footer__brand-image"
+                style="max-width: min(100%, {{ settings.brand_image_width }}px);"
+              >
+                {{
+                  settings.brand_image
+                  | image_url: width: 1100
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
+                    height: brand_image_height,
+                    width: settings.brand_image_width
+                }}
+              </div>
+            {%- elsif settings.brand_headline != blank -%}
+              <h2 class="footer__brand-text">{{ settings.brand_headline }}</h2>
+            {%- else -%}
+              <img src="https://cdn.shopify.com/s/files/1/0567/2563/5262/files/Oshadhi_Mob.png">
+            {%- endif -%}
+          </div>
+
             {%- if section.blocks.size > 0 -%}
               <div class="footer__top-blocks">
                 {%- for block in section.blocks -%}
