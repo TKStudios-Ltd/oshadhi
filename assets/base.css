@@ -3705,7 +3705,7 @@ details-disclosure > details {
   #MegaMenu-aromatherapy-by-scent .mega-menu__link.link,
   #MegaMenu-aromatherapy-by-benefit .mega-menu__link.link {
     font-size: 1.4rem;
-    line-height: 1.6rem;
+    line-height: 1.6;
   }
 
   /* Promo Area */
