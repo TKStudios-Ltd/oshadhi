@@ -511,49 +511,150 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     const breakpoint = 990;
     const menus = document.querySelectorAll('header-menu details');
 
-    menus.forEach((menu) => {
-      let closeTimer;
+    function closeMenu(menu) {
+      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+      if (!panel) return;
 
+      clearTimeout(menu._closeTimer);
+      cancelAnimationFrame(menu._raf);
+
+      if (!menu.hasAttribute('open')) return;
+
+      menu.classList.remove('is-opening', 'is-open');
+      menu.classList.add('is-closing');
+
+      const startHeight = panel.offsetHeight;
+
+      panel.style.display = 'block';
+      panel.style.overflow = 'hidden';
+      panel.style.opacity = '1';
+      panel.style.transform = 'translateY(0)';
+      panel.style.maxHeight = startHeight + 'px';
+
+      menu._raf = requestAnimationFrame(() => {
+        panel.style.transition =
+          'max-height 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1)';
+        panel.style.maxHeight = '0px';
+        panel.style.opacity = '0';
+        panel.style.transform = 'translateY(14px)';
+      });
+
+      const onCloseEnd = function (event) {
+        if (event.target !== panel || event.propertyName !== 'max-height') return;
+
+        panel.removeEventListener('transitionend', onCloseEnd);
+
+        menu.removeAttribute('open');
+        menu.classList.remove('is-closing');
+
+        panel.style.transition = '';
+        panel.style.maxHeight = '';
+        panel.style.opacity = '';
+        panel.style.transform = '';
+        panel.style.overflow = '';
+        panel.style.display = '';
+      };
+
+      panel.addEventListener('transitionend', onCloseEnd);
+    }
+
+    function openMenu(menu) {
+      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+      if (!panel) return;
+
+      clearTimeout(menu._closeTimer);
+      cancelAnimationFrame(menu._raf);
+
+      if (menu.classList.contains('is-open') && menu.hasAttribute('open')) return;
+
+      menu.setAttribute('open', 'open');
+      menu.classList.remove('is-closing');
+      menu.classList.add('is-opening');
+
+      panel.style.display = 'block';
+      panel.style.overflow = 'hidden';
+      panel.style.transition = 'none';
+      panel.style.maxHeight = '0px';
+      panel.style.opacity = '0';
+      panel.style.transform = 'translateY(14px)';
+
+      const targetHeight = panel.scrollHeight;
+
+      menu._raf = requestAnimationFrame(() => {
+        panel.style.transition =
+          'max-height 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
+        panel.style.maxHeight = targetHeight + 'px';
+        panel.style.opacity = '1';
+        panel.style.transform = 'translateY(0)';
+      });
+
+      const onOpenEnd = function (event) {
+        if (event.target !== panel || event.propertyName !== 'max-height') return;
+
+        panel.removeEventListener('transitionend', onOpenEnd);
+
+        menu.classList.remove('is-opening');
+        menu.classList.add('is-open');
+
+        panel.style.transition = '';
+        panel.style.maxHeight = 'none';
+        panel.style.overflow = 'visible';
+      };
+
+      panel.addEventListener('transitionend', onOpenEnd);
+    }
+
+    function resetDesktopStates() {
+      menus.forEach((menu) => {
+        const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+
+        clearTimeout(menu._closeTimer);
+        cancelAnimationFrame(menu._raf);
+
+        menu.removeAttribute('open');
+        menu.classList.remove('is-opening', 'is-open', 'is-closing');
+
+        if (panel) {
+          panel.style.transition = '';
+          panel.style.maxHeight = '';
+          panel.style.opacity = '';
+          panel.style.transform = '';
+          panel.style.overflow = '';
+          panel.style.display = '';
+        }
+      });
+    }
+
+    menus.forEach((menu) => {
       menu.addEventListener('mouseenter', () => {
         if (window.innerWidth < breakpoint) return;
 
-        clearTimeout(closeTimer);
-        menu.classList.add('is-opening');
-        menu.classList.remove('is-closing');
-        menu.setAttribute('open', 'open');
-
-        requestAnimationFrame(() => {
-          menu.classList.add('is-open');
+        menus.forEach((otherMenu) => {
+          if (otherMenu !== menu) {
+            closeMenu(otherMenu);
+          }
         });
+
+        openMenu(menu);
       });
 
       menu.addEventListener('mouseleave', () => {
         if (window.innerWidth < breakpoint) return;
 
-        clearTimeout(closeTimer);
-
-        menu.classList.remove('is-opening');
-        menu.classList.add('is-closing');
-        menu.classList.remove('is-open');
-
-        closeTimer = setTimeout(() => {
-          menu.removeAttribute('open');
-          menu.classList.remove('is-closing');
-        }, 280);
+        clearTimeout(menu._closeTimer);
+        menu._closeTimer = setTimeout(() => {
+          closeMenu(menu);
+        }, 80);
       });
     });
 
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', () => {
       if (window.innerWidth < breakpoint) {
-        menus.forEach((menu) => {
-          menu.removeAttribute('open');
-          menu.classList.remove('is-open', 'is-opening', 'is-closing');
-        });
+        resetDesktopStates();
       }
     });
   });
 </script>
-
 
 {% schema %}
 {
