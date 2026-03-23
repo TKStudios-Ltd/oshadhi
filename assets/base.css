@@ -3618,7 +3618,6 @@ details-disclosure > details {
     will-change: opacity, transform;
   }
 
-  /* open state (hover + JS open) */
   header-menu details[open] > .mega-menu__content,
   header-menu details[open] > .header__submenu,
   header-menu details:hover > .mega-menu__content,

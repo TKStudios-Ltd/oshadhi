@@ -515,18 +515,31 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       let closeTimer;
 
       menu.addEventListener('mouseenter', () => {
-        if (window.innerWidth >= breakpoint) {
-          clearTimeout(closeTimer);
-          menu.setAttribute('open', 'open');
-        }
+        if (window.innerWidth < breakpoint) return;
+
+        clearTimeout(closeTimer);
+        menu.classList.add('is-opening');
+        menu.classList.remove('is-closing');
+        menu.setAttribute('open', 'open');
+
+        requestAnimationFrame(() => {
+          menu.classList.add('is-open');
+        });
       });
 
       menu.addEventListener('mouseleave', () => {
-        if (window.innerWidth >= breakpoint) {
-          closeTimer = setTimeout(() => {
-            menu.removeAttribute('open');
-          }, 180);
-        }
+        if (window.innerWidth < breakpoint) return;
+
+        clearTimeout(closeTimer);
+
+        menu.classList.remove('is-opening');
+        menu.classList.add('is-closing');
+        menu.classList.remove('is-open');
+
+        closeTimer = setTimeout(() => {
+          menu.removeAttribute('open');
+          menu.classList.remove('is-closing');
+        }, 280);
       });
     });
 
@@ -534,6 +547,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       if (window.innerWidth < breakpoint) {
         menus.forEach((menu) => {
           menu.removeAttribute('open');
+          menu.classList.remove('is-open', 'is-opening', 'is-closing');
         });
       }
     });
