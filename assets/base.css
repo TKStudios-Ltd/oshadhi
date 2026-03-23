@@ -3601,13 +3601,20 @@ details-disclosure > details {
     top: 100%;
     height: 2rem;
   }
-  header-menu details > .mega-menu__content,
-  header-menu details > .header__submenu {
+  header-menu details > .mega-menu__content {
     display: none;
     opacity: 0;
     transform: translateY(-10px);
     overflow: hidden;
     will-change: max-height, opacity, transform;
+    backface-visibility: hidden;
+  }
+  header-menu details > .header__submenu {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    overflow: hidden;
+    will-change: opacity, transform;
     backface-visibility: hidden;
   }
   header-menu details[open] > .mega-menu__content,
