@@ -446,7 +446,9 @@
   .footer-block--top.footer-block--menu .footer-block__heading {
     margin: 0;
   }
-
+  .footer-block__details-content .list-menu__item--link {
+    padding: 0 !important;
+  }
   .footer-menu-accordion__summary {
     display: flex;
     align-items: center;
@@ -455,11 +457,9 @@
     cursor: pointer;
     margin: 0;
   }
-
   .footer-menu-accordion__summary span:first-child {
     display: block;
   }
-
   .footer .accordion-arrow_container {
     position: relative;
     width: 3.2rem;
@@ -474,7 +474,6 @@
     justify-content: center;
     transition: transform 0.2s ease;
   }
-
   .footer .accordion-arrow_container .icon-caret {
     flex: 0 0 auto;
     width: 1rem;
@@ -482,13 +481,11 @@
     right: calc(50% - 0.5rem);
     top: calc(50% - 0.5rem);
   }
-
   .footer-menu-accordion[open] .accordion-arrow_container {
     transform: rotate(180deg);
   }
-
   .footer-menu-accordion__content {
-    padding-top: 1.2rem;
+    padding: 1.2rem 0;
   }
 
   .footer-menu-accordion .footer-block__details-content {
