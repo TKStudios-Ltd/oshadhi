@@ -411,29 +411,21 @@
   .footer-menu-accordion {
     display: block;
   }
-  .footer-menu-accordion > .footer-menu-accordion__content {
-    display: block !important;
-    height: auto !important;
-    opacity: 1 !important;
-    overflow: visible !important;
-  }
-
-  .footer-menu-accordion__summary {
+  .footer-menu-accordion > summary {
     pointer-events: none;
     cursor: default;
     margin: 0 0 2rem;
+    list-style: none;
   }
-
-  .footer-menu-accordion__summary span:first-child {
-    display: block;
+  .footer-menu-accordion > summary::-webkit-details-marker {
+    display: none;
   }
-
-  .footer-menu-accordion__content {
+  .footer-menu-accordion:not([open]) > .footer-menu-accordion__content,
+  .footer-menu-accordion[open] > .footer-menu-accordion__content {
     display: block !important;
   }
-
   .footer .accordion-arrow_container {
-    display: none;
+    display: none !important;
   }
 }
 
