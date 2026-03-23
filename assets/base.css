@@ -3746,6 +3746,10 @@ details-disclosure > details {
     padding: 1rem 1.6rem;
     line-height: 1;
   }
+  .header .mega-menu__promo-title.button::before,
+  .header .mega-menu__promo-title.button::after {
+    display: none;
+  }
   .header .mega-menu__promo-link:hover .mega-menu__promo-image img {
     transform: scale(1.02);
   }
