@@ -3752,17 +3752,15 @@ details-disclosure > details {
 
   .header .header-dropdown-menu > .header__submenu {
     min-width: 22rem;
-    padding: 2rem 2.4rem;
+    padding: 4rem 2.4rem 2.4rem;
     border: 0;
     border-bottom: 1px solid #DBE0E9 !important;
     background: rgb(var(--color-background));
     border-radius: 0 0 6px 6px;
   }
-
   .header .header-dropdown-menu .header__menu-item.list-menu__item {
     text-decoration: none;
   }
-
   .header .header-dropdown-menu .header__submenu .list-menu__item {
     padding: 0;
     font-size: 1.5rem;
