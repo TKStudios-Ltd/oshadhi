@@ -210,7 +210,7 @@
                             {%- endfor -%}
                           </ul>
                           {%- if block.settings.menu_image != blank -%}
-                            <div class="">
+                            <div class="footer-block__menu-image">
                               <img
                                     srcset="{{ block.settings.menu_image | image_url: width: 760 }}, {{ block.settings.menu_image | image_url: width: image_size_2x }} 2x"
                                     src="{{ block.settings.menu_image | image_url: width: 760 }}"
