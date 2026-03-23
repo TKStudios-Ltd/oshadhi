@@ -3575,3 +3575,39 @@ details-disclosure > details {
   position: relative;
   z-index: 2;
 }
+
+
+/* DESKTOP HOVER MENU */
+
+@media screen and (min-width: 990px) {
+
+  header-menu details {
+    position: relative;
+  }
+
+  /* hide by default */
+  header-menu details > .mega-menu__content,
+  header-menu details > .header__submenu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+  /* show on hover */
+  header-menu details:hover > .mega-menu__content,
+  header-menu details:hover > .header__submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* remove default arrow */
+  header-menu summary {
+    list-style: none;
+  }
+
+  header-menu summary::-webkit-details-marker {
+    display: none;
+  }
+}
