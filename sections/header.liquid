@@ -505,6 +505,43 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 {%- endif -%}
 {%- endif -%}
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const desktopBreakpoint = 990;
+    const menus = document.querySelectorAll('header-menu details');
+    function enableHoverMenus() {
+      if (window.innerWidth >= desktopBreakpoint) {
+        menus.forEach(menu => {
+
+          menu.addEventListener('mouseenter', () => {
+            menu.setAttribute('open', 'open');
+          });
+
+          menu.addEventListener('mouseleave', () => {
+            menu.removeAttribute('open');
+          });
+
+        });
+      }
+    }
+    function resetMenus() {
+      menus.forEach(menu => {
+        menu.removeAttribute('open');
+      });
+    }
+    function handleResize() {
+      if (window.innerWidth >= desktopBreakpoint) {
+        enableHoverMenus();
+      } else {
+        resetMenus();
+      }
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.header.name",
