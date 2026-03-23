@@ -437,7 +437,7 @@
 }
 
 @media screen and (max-width: 749px) {
-  .footer-block--top.footer-block--menu {
+  .footer-block--top.footer-block--menu .footer-menu-accordion {
     border-bottom: 1px solid #DBE0E9;
     padding-top: 1rem;
     padding-bottom: 1rem;
