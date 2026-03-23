@@ -511,63 +511,106 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     const breakpoint = 990;
     const menus = document.querySelectorAll('header-menu details');
 
-    function getPanel(menu) {
-      return menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
-    }
-
-    function openMenu(menu) {
-      if (window.innerWidth < breakpoint) return;
-
-      clearTimeout(menu._closeTimer);
-
-      const panel = getPanel(menu);
+    function closeMenu(menu) {
+      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
       if (!panel) return;
 
-      if (!menu.hasAttribute('open')) {
-        menu.setAttribute('open', 'open');
-      }
-
-      menu.classList.remove('is-closing');
-      menu.classList.add('is-opening');
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          menu.classList.add('is-open');
-          menu.classList.remove('is-opening');
-        });
-      });
-    }
-
-    function closeMenu(menu) {
-      if (window.innerWidth < breakpoint) return;
-
       clearTimeout(menu._closeTimer);
+      cancelAnimationFrame(menu._raf);
 
-      const panel = getPanel(menu);
-      if (!panel || !menu.hasAttribute('open')) return;
+      if (!menu.hasAttribute('open')) return;
 
       menu.classList.remove('is-opening', 'is-open');
       menu.classList.add('is-closing');
+
+      panel.style.display = 'block';
+      panel.style.overflow = 'hidden';
+      panel.style.opacity = '1';
+      panel.style.transform = 'translateY(0)';
+
+      menu._raf = requestAnimationFrame(() => {
+        panel.style.transition =
+          'opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1)';
+        panel.style.opacity = '0';
+        panel.style.transform = 'translateY(14px)';
+      });
 
       const onCloseEnd = function (event) {
         if (event.target !== panel || event.propertyName !== 'transform') return;
 
         panel.removeEventListener('transitionend', onCloseEnd);
+
         menu.removeAttribute('open');
         menu.classList.remove('is-closing');
+
+        panel.style.transition = '';
+        panel.style.opacity = '';
+        panel.style.transform = '';
+        panel.style.overflow = '';
+        panel.style.display = '';
       };
 
       panel.addEventListener('transitionend', onCloseEnd);
     }
+    function openMenu(menu) {
+      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+      if (!panel) return;
 
-    function resetMenus() {
+      clearTimeout(menu._closeTimer);
+      cancelAnimationFrame(menu._raf);
+
+      if (menu.classList.contains('is-open') && menu.hasAttribute('open')) return;
+
+      menu.setAttribute('open', 'open');
+      menu.classList.remove('is-closing');
+      menu.classList.add('is-opening');
+
+      panel.style.display = 'block';
+      panel.style.overflow = 'hidden';
+      panel.style.transition = 'none';
+      panel.style.opacity = '0';
+      panel.style.transform = 'translateY(-14px)';
+
+      menu._raf = requestAnimationFrame(() => {
+        panel.style.transition =
+          'opacity 280ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1)';
+        panel.style.opacity = '1';
+        panel.style.transform = 'translateY(0)';
+      });
+
+      const onOpenEnd = function (event) {
+        if (event.target !== panel || event.propertyName !== 'transform') return;
+
+        panel.removeEventListener('transitionend', onOpenEnd);
+
+        menu.classList.remove('is-opening');
+        menu.classList.add('is-open');
+
+        panel.style.transition = '';
+        panel.style.overflow = 'visible';
+      };
+
+      panel.addEventListener('transitionend', onOpenEnd);
+    }
+    function resetDesktopStates() {
       menus.forEach((menu) => {
+        const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
+
         clearTimeout(menu._closeTimer);
+        cancelAnimationFrame(menu._raf);
+
         menu.removeAttribute('open');
         menu.classList.remove('is-opening', 'is-open', 'is-closing');
+
+        if (panel) {
+          panel.style.transition = '';
+          panel.style.opacity = '';
+          panel.style.transform = '';
+          panel.style.overflow = '';
+          panel.style.display = '';
+        }
       });
     }
-
     menus.forEach((menu) => {
       menu.addEventListener('mouseenter', () => {
         if (window.innerWidth < breakpoint) return;
@@ -580,19 +623,18 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
         openMenu(menu);
       });
-
       menu.addEventListener('mouseleave', () => {
         if (window.innerWidth < breakpoint) return;
 
+        clearTimeout(menu._closeTimer);
         menu._closeTimer = setTimeout(() => {
           closeMenu(menu);
-        }, 120);
+        }, 80);
       });
     });
-
     window.addEventListener('resize', () => {
       if (window.innerWidth < breakpoint) {
-        resetMenus();
+        resetDesktopStates();
       }
     });
   });
