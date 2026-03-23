@@ -32,23 +32,15 @@
           "type": "link_list",
           "settings": {
             "heading": "Need Help?",
-            "menu": "footer-need-help"
-          }
-        },
-        "image_JB6rDM": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/NAHABusinessMemberSealF.png",
-            "image_width": 150,
-            "alignment": ""
+            "menu": "footer-need-help",
+            "menu_image": "shopify://shop_images/NAHABusinessMemberSealF.png"
           }
         }
       },
       "block_order": [
         "b54e01e2-7251-4c38-baa8-63b586bea847",
         "ff46edbd-3cdf-4e80-9c54-3f0068c711f4",
-        "link_list_K9iNAH",
-        "image_JB6rDM"
+        "link_list_K9iNAH"
       ],
       "custom_css": [],
       "settings": {
