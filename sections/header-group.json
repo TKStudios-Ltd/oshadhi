@@ -48,13 +48,29 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "mega_menu_promo_BNRUmp": {
+          "type": "mega_menu_promo",
+          "settings": {
+            "menu_item": "Aromatherapy",
+            "promo_image_1": "shopify://shop_images/OSH_Essential-Oils_Promo.jpg",
+            "promo_title_1": "Shop Essential Oils",
+            "promo_link_1": "shopify://collections/singles",
+            "promo_title_2": "",
+            "promo_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_promo_BNRUmp"
+      ],
       "custom_css": [],
       "settings": {
         "logo_position": "top-left",
         "menu": "main-menu-2026",
         "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "color_scheme": "scheme-06cc86e4-c52a-418f-8e44-2af643f3c2b6",
         "menu_color_scheme": "scheme-06cc86e4-c52a-418f-8e44-2af643f3c2b6",
         "enable_country_selector": false,
