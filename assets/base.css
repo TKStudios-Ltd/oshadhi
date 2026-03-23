@@ -3629,7 +3629,6 @@ details-disclosure > details {
     left: 0;
     right: 0;
     width: 100%;
-    border-top: 1px solid #dbe0e9;
     border-bottom: 1px solid #dbe0e9;
     background: rgb(var(--color-background));
     color: rgb(var(--color-foreground));
