@@ -246,8 +246,10 @@
                                   </li>
                                 {%- endfor -%}
                               </ul>
+                            </div>
+                          </details>
 
-                              {%- if block.settings.menu_image != blank -%}
+                            {%- if block.settings.menu_image != blank -%}
                                 {%- assign image_size_2x = 1520 -%}
                                 <div class="footer-block__menu-image">
                                   <img
@@ -259,9 +261,8 @@
                                     height="{{ block.settings.menu_image.height }}"
                                   >
                                 </div>
-                              {%- endif -%}
-                            </div>
-                          </details>
+                            {%- endif -%}
+                            
                         {%- endif -%}
 
                       {%- when 'brand_information' -%}
