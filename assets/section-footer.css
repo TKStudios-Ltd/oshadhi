@@ -302,8 +302,9 @@
   }
 
   .footer__content-bottom {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
   }
 
   .footer__bottom-left,
@@ -321,6 +322,11 @@
 @media screen and (max-width: 749px) {
   .footer__content-top {
     padding: 0;
+  }
+
+  .footer__bottom-center {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .footer__top-grid {
