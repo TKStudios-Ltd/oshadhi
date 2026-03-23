@@ -3672,17 +3672,17 @@ details-disclosure > details {
     margin: 0 0 2rem;
   }
 
-  .header .mega-menu__item > ul {
+  .header .mega-menu__item ul {
     margin: 0;
     padding: 0;
   }
 
-  .header .mega-menu__item > ul > li {
+  .header .mega-menu__item ul > li {
     margin: 0;
     padding: 0;
   }
 
-  .header .mega-menu__item > ul > li + li {
+  .header .mega-menu__item ul > li + li {
     margin-top: 0.6rem;
   }
   .header .mega-menu__item ul .mega-menu__link.link {
