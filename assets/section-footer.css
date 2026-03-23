@@ -474,7 +474,8 @@
     flex: 0 0 auto;
     width: 1rem;
     height: 1rem;
-    display: block;
+    right: calc(50% - 0.5rem);
+    top: calc(50% - 0.5rem);
   }
 
   .footer-menu-accordion[open] .accordion-arrow_container {
