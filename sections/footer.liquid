@@ -182,9 +182,11 @@
                       style="--animation-order: {{ forloop.index | plus: 1 }};"
                     {% endif %}
                   >
-                    {%- if block.settings.heading != blank -%}
-                      <h5 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h5>
-                    {%- endif -%}
+                    {%- unless block.type == 'link_list' -%}
+                      {%- if block.settings.heading != blank -%}
+                        <h5 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h5>
+                      {%- endif -%}
+                    {%- endunless -%}
 
                     {%- case block.type -%}
                       {%- when '@app' -%}
@@ -197,30 +199,41 @@
 
                       {%- when 'link_list' -%}
                         {%- if block.settings.menu != blank -%}
-                          <ul class="footer-block__details-content list-unstyled">
-                            {%- for link in block.settings.menu.links -%}
-                              <li>
-                                <a
-                                  href="{{ link.url }}"
-                                  class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
-                                >
-                                  {{ link.title }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
-                          {%- if block.settings.menu_image != blank -%}
-                            <div class="footer-block__menu-image">
-                              <img
+                          <details class="footer-menu-accordion" {% if forloop.first %}open{% endif %}>
+                            <summary class="footer-menu-accordion__summary">
+                              <span>{{ block.settings.heading }}</span>
+                              <span class="footer-menu-accordion__icon"></span>
+                            </summary>
+
+                            <div class="footer-menu-accordion__content">
+                              <ul class="footer-block__details-content list-unstyled">
+                                {%- for link in block.settings.menu.links -%}
+                                  <li>
+                                    <a
+                                      href="{{ link.url }}"
+                                      class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                                    >
+                                      {{ link.title }}
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+
+                              {%- if block.settings.menu_image != blank -%}
+                                {%- assign image_size_2x = 1520 -%}
+                                <div class="footer-block__menu-image">
+                                  <img
                                     srcset="{{ block.settings.menu_image | image_url: width: 760 }}, {{ block.settings.menu_image | image_url: width: image_size_2x }} 2x"
                                     src="{{ block.settings.menu_image | image_url: width: 760 }}"
                                     alt="{{ block.settings.menu_image.alt | escape }}"
                                     loading="lazy"
                                     width="{{ block.settings.menu_image.width }}"
                                     height="{{ block.settings.menu_image.height }}"
-                              >
+                                  >
+                                </div>
+                              {%- endif -%}
                             </div>
-                          {%- endif -%}
+                          </details>
                         {%- endif -%}
 
                       {%- when 'brand_information' -%}
