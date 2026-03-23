@@ -118,6 +118,9 @@
   align-items: flex-end;
   min-width: 0;
 }
+.footer__mobile-logo {
+  display: none;
+}
 
 .footer__brand-image,
 .footer__middle-brand .footer-block__image-wrapper {
