@@ -3580,12 +3580,21 @@ details-disclosure > details {
 /* DESKTOP HOVER MENU */
 
 @media screen and (min-width: 990px) {
-
   header-menu details {
     position: relative;
   }
-
-  /* hide by default */
+  header-menu details > summary {
+    position: relative;
+    z-index: 3;
+  }
+  header-menu details > summary::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 2rem;
+  }
   header-menu details > .mega-menu__content,
   header-menu details > .header__submenu {
     opacity: 0;
@@ -3593,20 +3602,15 @@ details-disclosure > details {
     pointer-events: none;
     transition: opacity 0.2s ease;
   }
-
-  /* show on hover */
   header-menu details:hover > .mega-menu__content,
   header-menu details:hover > .header__submenu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
-
-  /* remove default arrow */
   header-menu summary {
     list-style: none;
   }
-
   header-menu summary::-webkit-details-marker {
     display: none;
   }
