@@ -233,6 +233,9 @@
       "block_order": [
         "caption_mXd4Yc"
       ],
+      "custom_css": [
+        "@media (max-width: 749px) {.rich-text__wrapper {margin: 0; width: 100%; }}"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "right",
