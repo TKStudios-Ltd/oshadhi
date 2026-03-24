@@ -82,7 +82,7 @@
 
 @media screen and (min-width: 750px) {
   #CollectionListSwiper-{{ section.id }} .collection-list-swiper__track-wrap {
-    padding-left: max(5rem, calc((100vw - var(--page-width)) / 2 + 5rem));
+    padding-left: max(5rem, calc((100vw - var(--page-width)) / 2 + 4rem));
     padding-right: 5rem;
   }
 }
@@ -326,8 +326,8 @@
       if (slider.classList.contains('swiper-initialized')) return;
 
       new Swiper(slider, {
-        slidesPerView: 2.2,
-        spaceBetween: 16,
+        slidesPerView: 1.5,
+        spaceBetween: 15,
         speed: 700,
         watchOverflow: true,
         navigation: {
