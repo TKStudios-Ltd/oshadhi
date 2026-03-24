@@ -3622,10 +3622,6 @@ details-disclosure > details {
   }
 }
 
-/* =========================
-   MEGA MENU
-========================= */
-
 @media screen and (min-width: 990px) {
   .header .mega-menu {
     position: static;
@@ -3647,6 +3643,8 @@ details-disclosure > details {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 4.8rem;
     align-items: start;
+    width: 100%;
+    min-width: 0;
   }
 
   .header .mega-menu__list {
@@ -3655,30 +3653,42 @@ details-disclosure > details {
     margin: 0;
     padding: 0;
     width: 100%;
+    min-width: 0;
+    align-items: start;
   }
+
   .header .mega-menu__list--cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(18rem, 1fr));
   }
+
   .header .mega-menu__list--cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(18rem, 1fr));
   }
 
   .header .mega-menu__list--cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(18rem, 1fr));
   }
+
+  .header .mega-menu__item,
+  .header .mega-menu__item--grouped,
+  .header .mega-menu__group-block {
+    min-width: 0;
+    width: 100%;
+  }
+
   .header .mega-menu__item--grouped {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
   }
 
-  .header .mega-menu__item {
-    min-width: 0;
-  }
-
   .header .mega-menu__link {
     display: block;
     text-decoration: none;
+    min-width: 0;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .header .mega-menu__link--level-2 {
@@ -3688,16 +3698,19 @@ details-disclosure > details {
   .header .mega-menu__item ul {
     margin: 0;
     padding: 0;
+    min-width: 0;
   }
 
   .header .mega-menu__item ul > li {
     margin: 0;
     padding: 0;
+    min-width: 0;
   }
 
   .header .mega-menu__item ul > li + li {
     margin-top: 0.6rem;
   }
+
   .header .mega-menu__item ul .mega-menu__link.link {
     font-size: 1.5rem;
     line-height: 1.4;
@@ -3707,10 +3720,12 @@ details-disclosure > details {
     text-underline-offset: 0.3rem;
     transition: all ease 0.2s;
   }
+
   .header .mega-menu__item ul .mega-menu__link.link:hover {
     color: rgba(var(--color-foreground), 0.8);
     text-decoration: underline;
   }
+
   #MegaMenu-aromatherapy-by-scent .mega-menu__link--level-2,
   #MegaMenu-aromatherapy-by-benefit .mega-menu__link--level-2 {
     font-size: 1.2rem;
@@ -3720,22 +3735,22 @@ details-disclosure > details {
     letter-spacing: 0.8px;
     opacity: 0.5;
   }
+
   #MegaMenu-aromatherapy-by-scent .mega-menu__link.link,
   #MegaMenu-aromatherapy-by-benefit .mega-menu__link.link {
     font-size: 1.4rem;
     line-height: 1.6;
   }
-  #MegaMenu-aromatherapy-plant-waters-extracts {
-    grid-column: 4;
-  }
 
   /* Promo Area */
-
   .header .mega-menu__promos {
     display: flex;
     gap: 2rem;
     align-items: start;
+    flex: 0 0 auto;
+    min-width: 0;
   }
+
   .header .mega-menu__promo {
     flex: 0 0 340px;
     min-width: 0;
@@ -3770,16 +3785,19 @@ details-disclosure > details {
     left: 1.4rem;
     z-index: 2;
   }
+
   .header .mega-menu__promo-title.button {
     min-height: auto;
     min-width: auto;
     padding: 1rem 1.6rem;
     line-height: 1;
   }
+
   .header .mega-menu__promo-title.button::before,
   .header .mega-menu__promo-title.button::after {
     display: none;
   }
+
   .header .mega-menu__promo-link:hover .mega-menu__promo-image img {
     transform: scale(1.02);
   }
@@ -3827,12 +3845,15 @@ details-disclosure > details {
   }
 
   .header .mega-menu__list {
-    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
     gap: 2.4rem;
   }
 
   .header .mega-menu__promos {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     width: 22rem;
+  }
+
+  .header .mega-menu__promo {
+    flex: 0 0 auto;
   }
 }
