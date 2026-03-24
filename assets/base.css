@@ -3603,15 +3603,13 @@ details-disclosure > details {
     top: 100%;
     height: 2rem;
   }
-  header-menu details > .mega-menu__content,
-  header-menu details > .header__submenu {
+  header-menu details > .mega-menu__content {
     display: none;
     opacity: 0;
     transform: translateY(-20px);
     will-change: opacity, transform;
   }
-  header-menu details[open] > .mega-menu__content,
-  header-menu details[open] > .header__submenu {
+  header-menu details[open] > .mega-menu__content {
     display: block;
   }
   header-menu summary {
