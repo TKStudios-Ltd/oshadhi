@@ -70,7 +70,10 @@
                       style="--mega-menu-columns: {{ promo_block.settings.menu_columns }};"
                     {% endif %}
                   >
-                    <ul class="mega-menu__list list-unstyled" role="list">
+                    <ul
+                      class="mega-menu__list mega-menu__list--cols-{% if promo_block != blank %}{{ promo_block.settings.menu_columns }}{% else %}4{% endif %} list-unstyled"
+                      role="list"
+                    >
                     {%- assign current_menu_handle = link.title | handle -%}
 
                     {%- if current_menu_handle == 'aromatherapy' -%}

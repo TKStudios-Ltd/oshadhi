@@ -3651,10 +3651,19 @@ details-disclosure > details {
 
   .header .mega-menu__list {
     display: grid;
-    grid-template-columns: repeat(var(--mega-menu-columns, 4), minmax(0, 1fr));
     gap: 3.2rem;
     margin: 0;
     padding: 0;
+    width: 100%;
+  }
+  .header .mega-menu__list--cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .header .mega-menu__list--cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .header .mega-menu__list--cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .header .mega-menu__item--grouped {
     display: flex;
