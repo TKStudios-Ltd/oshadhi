@@ -512,7 +512,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     const menus = document.querySelectorAll('header-menu details');
 
     function closeMenu(menu) {
-      const panel = menu.querySelector(':scope > .mega-menu__content');
+      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
       if (!panel) return;
 
       clearTimeout(menu._closeTimer);
@@ -563,7 +563,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     }
 
     function openMenu(menu) {
-      const panel = menu.querySelector(':scope > .mega-menu__content');
+      const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
       if (!panel) return;
 
       clearTimeout(menu._closeTimer);
@@ -604,7 +604,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
 
     function resetMenus() {
       menus.forEach((menu) => {
-        const panel = menu.querySelector(':scope > .mega-menu__content');
+        const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
 
         clearTimeout(menu._closeTimer);
         clearTimeout(menu._closeFallback);
@@ -636,7 +636,7 @@ You can learn more about this (and learn how to cleanly revert these changes) at
       menu.addEventListener('mouseleave', () => {
         if (window.innerWidth < breakpoint) return;
 
-        const panel = menu.querySelector(':scope > .mega-menu__content');
+        const panel = menu.querySelector(':scope > .mega-menu__content, :scope > .header__submenu');
         const isMegaMenu = panel && panel.classList.contains('mega-menu__content');
 
         clearTimeout(menu._closeTimer);
