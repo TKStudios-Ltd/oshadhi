@@ -576,6 +576,7 @@
       "blocks": {
         "testimonial_x67qY7": {
           "type": "testimonial",
+          "disabled": true,
           "settings": {
             "quote": "This is a favorite of mine. Woody, slightly camphorous, and pine-eucalyptic. But it's not harsh. As it dries down it gets a soft floral quality. Very nice.",
             "customer": "Adam Tomlinson",
