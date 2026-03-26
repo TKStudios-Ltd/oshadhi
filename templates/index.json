@@ -153,6 +153,9 @@
         "featured_collection_C8rHPe",
         "featured_collection_T3KJHM"
       ],
+      "custom_css": [
+        ".gradient {overflow: hidden; z-index: 2; position: relative;}"
+      ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "title": "<em>Explore</em> the Oshadhi collections",
@@ -198,6 +201,7 @@
         "tile_4GJeRi",
         "tile_RGRWWL"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "CTA tiles",
       "settings": {
@@ -211,6 +215,7 @@
     },
     "custom_liquid_GyCXpw": {
       "type": "custom-liquid",
+      "custom_css": [],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"watermark\"></div>",
