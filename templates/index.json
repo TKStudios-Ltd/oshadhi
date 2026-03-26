@@ -32,6 +32,7 @@
         },
         "slide_jkHnXG": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "background_type": "video",
             "foreground_image": "shopify://shop_images/Oshadhi_Hero-Products.png",
