@@ -597,12 +597,21 @@
             "customer": "Roxan Thorne",
             "product_name": "Essential Oils"
           }
+        },
+        "testimonial_CCnkE4": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Sweet, earthy, and incredibly cooling - this Helichrysum hydrosol has been my summer favorite. I keep it chilled for an instant, soothing mist on hot days.",
+            "customer": "Elizabeth Watson",
+            "product_name": "Helichrysum Water (Organic Hydrosol)"
+          }
         }
       },
       "block_order": [
         "testimonial_x67qY7",
         "testimonial_9jNgpV",
-        "testimonial_FHMWpE"
+        "testimonial_FHMWpE",
+        "testimonial_CCnkE4"
       ],
       "name": "Testimonial slider",
       "settings": {
