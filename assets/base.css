@@ -1247,7 +1247,7 @@ button.shopify-payment-button__button--unbranded,
 .shopify-challenge__button,
 .customer button,
 button.shopify-payment-button__button--unbranded {
-  min-width: calc(20rem + var(--buttons-border-width) * 2);
+  min-width: calc(22rem + var(--buttons-border-width) * 2);
   min-height: calc(4.2rem + var(--buttons-border-width) * 2);
 }
 
