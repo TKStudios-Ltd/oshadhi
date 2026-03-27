@@ -1,6 +1,175 @@
+{% doc %}
+  @prompt
+    Add a PayPal payment button to the cart page. The button should appear below or alongside the existing checkout button. It should link to a PayPal checkout URL or PayPal.me link (with a placeholder URL that can be easily updated). Style it to match PayPal's branding (yellow button with PayPal logo) and ensure it's responsive.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-paypal-button-container-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    margin-top: {{ block.settings.spacing_top }}px;
+  }
+
+  .ai-paypal-button-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: {{ block.settings.button_color }};
+    border: none;
+    border-radius: {{ block.settings.border_radius }}px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .ai-paypal-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+    transform: translateY(-1px);
+  }
+
+  .ai-paypal-button-{{ ai_gen_id }}:active {
+    transform: translateY(0);
+  }
+
+  .ai-paypal-logo-{{ ai_gen_id }} {
+    height: 24px;
+    width: auto;
+    display: block;
+  }
+
+  .ai-paypal-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-paypal-button-{{ ai_gen_id }} {
+      padding: 12px 20px;
+      font-size: 15px;
+    }
+
+    .ai-paypal-logo-{{ ai_gen_id }} {
+      height: 20px;
+    }
+
+    .ai-paypal-text-{{ ai_gen_id }} {
+      font-size: 15px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-paypal-button-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <a
+    href="{{ block.settings.paypal_url }}"
+    class="ai-paypal-button-{{ ai_gen_id }}"
+    {% if block.settings.open_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+  >
+    {% if block.settings.show_logo %}
+      <svg class="ai-paypal-logo-{{ ai_gen_id }}" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#003087" d="M12.237 2.8H4.437c-.522 0-.968.378-1.05.89L.029 25.31c-.062.37.229.705.61.705h4.034c.522 0 .968-.378 1.05-.89l.93-5.564c.082-.512.528-.89 1.05-.89h2.425c5.046 0 7.964-2.44 8.724-7.28.343-2.116.015-3.78-.975-4.945C17.116 3.7 15.034 2.8 12.237 2.8zm1.245 7.17c-.417 2.73-2.51 2.73-4.535 2.73h-1.15l.807-5.11c.049-.307.307-.534.63-.534h.53c1.382 0 2.687 0 3.36.788.402.47.52 1.17.358 2.126z"/>
+        <path fill="#009cde" d="M35.118 9.9h-4.048c-.323 0-.581.227-.63.534l-.162 1.027-.257-.373c-.798-1.156-2.573-1.542-4.347-1.542-4.067 0-7.54 3.083-8.213 7.405-.35 2.162.15 4.226 1.37 5.66 1.12 1.318 2.717 1.866 4.62 1.866 3.267 0 5.08-2.1 5.08-2.1l-.164 1.02c-.062.37.229.705.61.705h3.645c.522 0 .968-.378 1.05-.89l1.98-12.53c.062-.37-.229-.705-.61-.705zm-5.64 7.14c-.353 2.09-2.03 3.495-4.177 3.495-1.073 0-1.933-.344-2.487-1-.55-.65-.757-1.577-.583-2.61.336-2.07 2.048-3.527 4.163-3.527 1.05 0 1.903.346 2.467 1 .568.66.792 1.595.617 2.642z"/>
+        <path fill="#003087" d="M55.342 9.9h-4.062c-.355 0-.685.174-.887.465l-5.12 7.542-2.17-7.25c-.136-.453-.555-.757-1.028-.757h-3.99c-.418 0-.714.405-.58.793l4.09 12.003-3.846 5.425c-.286.403.003.96.5.96h4.06c.352 0 .68-.17.884-.457L55.84 10.86c.282-.402-.005-.96-.498-.96z"/>
+        <path fill="#009cde" d="M67.408 2.8h-7.8c-.522 0-.968.378-1.05.89l-3.358 21.62c-.062.37.229.705.61.705h4.292c.365 0 .675-.264.732-.622l.958-6.07c.082-.512.528-.89 1.05-.89h2.425c5.046 0 7.964-2.44 8.724-7.28.343-2.116.015-3.78-.975-4.945-.76-1.245-2.842-2.145-5.64-2.145zm1.245 7.17c-.417 2.73-2.51 2.73-4.535 2.73h-1.15l.807-5.11c.049-.307.307-.534.63-.534h.53c1.382 0 2.687 0 3.36.788.402.47.52 1.17.358 2.126z"/>
+        <path fill="#012169" d="M90.29 9.9h-4.048c-.323 0-.581.227-.63.534l-.162 1.027-.257-.373c-.798-1.156-2.573-1.542-4.347-1.542-4.067 0-7.54 3.083-8.213 7.405-.35 2.162.15 4.226 1.37 5.66 1.12 1.318 2.717 1.866 4.62 1.866 3.267 0 5.08-2.1 5.08-2.1l-.164 1.02c-.062.37.229.705.61.705h3.645c.522 0 .968-.378 1.05-.89l1.98-12.53c.062-.37-.229-.705-.61-.705zm-5.64 7.14c-.353 2.09-2.03 3.495-4.177 3.495-1.073 0-1.933-.344-2.487-1-.55-.65-.757-1.577-.583-2.61.336-2.07 2.048-3.527 4.163-3.527 1.05 0 1.903.346 2.467 1 .568.66.792 1.595.617 2.642z"/>
+        <path fill="#012169" d="M95.65 3.2l-3.407 21.62c-.062.37.229.705.61.705h3.458c.522 0 .968-.378 1.05-.89L100.72 3.01c.062-.37-.229-.705-.61-.705h-3.83c-.323 0-.581.227-.63.534z"/>
+      </svg>
+    {% endif %}
+    {% if block.settings.button_text != blank %}
+      <span class="ai-paypal-text-{{ ai_gen_id }}">{{ block.settings.button_text }}</span>
+    {% endif %}
+  </a>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "PayPal button",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button settings"
+    },
+    {
+      "type": "url",
+      "id": "paypal_url",
+      "label": "PayPal URL"
+    },
+    {
+      "type": "paragraph",
+      "content": "Enter your PayPal.me link (e.g., https://paypal.me/yourname) or PayPal checkout URL"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Checkout with"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "label": "Show PayPal logo",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "open_new_tab",
+      "label": "Open in new tab",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#FFC439"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Hover color",
+      "default": "#F7B731"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#111111"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Spacing above button",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "PayPal button"
+    }
+  ]
+}
 {% endschema %}
