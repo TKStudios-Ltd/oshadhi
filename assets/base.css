@@ -2677,7 +2677,8 @@ menu-drawer + .header__search {
   }
   .header__search .search-modal {
     position: fixed !important;
-    top: 0 !important;
+    top: 65px !important;
+    bottom: auto;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
