@@ -2667,6 +2667,45 @@ menu-drawer + .header__search {
   display: inline-flex;
 }
 
+@media screen and (max-width: 989px) {
+  .header__search {
+    position: static;
+  }
+  .header__search details {
+    position: static;
+  }
+  .search-modal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: auto;
+    min-height: auto;
+    z-index: 30;
+    background: rgb(var(--color-background));
+  }
+  .search-modal__content {
+    height: auto;
+    padding: 1rem 4.5rem 1rem 1.5rem;
+    align-items: center;
+  }
+  .search-modal__form,
+  .search-modal .search,
+  .search-modal .field,
+  .search-modal .field__input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .search-modal__close-button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 @media screen and (min-width: 990px) {
   .header:not(.header--top-center) * > .header__search,
   .header--top-center > .header__search {
