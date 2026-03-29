@@ -2668,13 +2668,18 @@ menu-drawer + .header__search {
 }
 
 @media screen and (max-width: 989px) {
+  .header-wrapper,
+  .section-header,
+  .shopify-section-header-sticky,
   .header {
     position: relative;
   }
-  .header__search {
+  .header__search,
+  .header__search details,
+  .header__search summary {
     position: static;
   }
-  .header__search details {
+  .header__icons {
     position: static;
   }
   .search-modal {
@@ -2683,23 +2688,20 @@ menu-drawer + .header__search {
     left: 0;
     right: 0;
     width: 100%;
-    min-height: auto;
     height: auto;
-    z-index: 20;
+    min-height: auto;
     background: rgb(var(--color-background));
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    z-index: 30;
   }
   .search-modal__content {
+    position: relative;
     height: auto;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
-  .search-modal__form {
-    width: 100%;
-    max-width: 100%;
-  }
+  .search-modal__form,
   .search-modal .search,
   .search-modal .field,
   .search-modal .field__input {
@@ -2708,7 +2710,10 @@ menu-drawer + .header__search {
     min-width: 0;
   }
   .search-modal__close-button {
-    display: none;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
   details[open] .modal-overlay,
   details[open] .modal-overlay::after {
