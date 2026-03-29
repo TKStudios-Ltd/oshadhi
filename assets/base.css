@@ -2668,53 +2668,52 @@ menu-drawer + .header__search {
 }
 
 @media screen and (max-width: 989px) {
-  .shopify-section-header-sticky,
-  .section-header,
-  .header-wrapper,
-  .header {
-    position: relative !important;
-  }
-  details-modal.header__search,
-  details-modal.header__search details,
-  details-modal.header__search summary {
+  .header__search {
     position: static !important;
   }
-  details-modal.header__search > details[open] > .search-modal {
-    position: absolute !important;
-    top: 100% !important;
+  .header__search details,
+  .header__search summary {
+    position: static !important;
+  }
+  .header__search .search-modal {
+    position: fixed !important;
+    top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
     height: auto !important;
-    min-height: auto !important;
-    margin: 0 !important;
+    min-height: 0 !important;
+    opacity: 1 !important;
     background: rgb(var(--color-background)) !important;
     border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08) !important;
-    z-index: 99 !important;
+    z-index: 999 !important;
   }
-  details-modal.header__search > details[open] > .search-modal .search-modal__content {
+  .header__search .search-modal__content {
     position: relative !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: center !important;
     height: auto !important;
-    padding: 1rem 1.5rem !important;
+    padding: 1.6rem 5.5rem 1.6rem 1.6rem !important;
+    background: rgb(var(--color-background)) !important;
   }
-  details-modal.header__search > details[open] > .search-modal .search-modal__form,
-  details-modal.header__search > details[open] > .search-modal .search,
-  details-modal.header__search > details[open] > .search-modal .field,
-  details-modal.header__search > details[open] > .search-modal .field__input {
+  .header__search .search-modal__form,
+  .header__search .search,
+  .header__search .field,
+  .header__search .field__input {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
   }
-  details-modal.header__search > details[open] > .search-modal .search-modal__close-button {
+  .header__search .search-modal__close-button {
     position: absolute !important;
-    right: 1.2rem !important;
+    right: 1.6rem !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
+    margin: 0 !important;
   }
-  details-modal.header__search > details[open] .modal-overlay,
-  details-modal.header__search > details[open] .modal-overlay::after {
+  .header__search .modal-overlay,
+  .header__search .modal-overlay::after {
     display: none !important;
   }
 }
