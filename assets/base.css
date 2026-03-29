@@ -2679,9 +2679,6 @@ menu-drawer + .header__search {
   .header__search summary {
     position: static;
   }
-  .header__icons {
-    position: static;
-  }
   .search-modal {
     position: absolute;
     top: 100%;
