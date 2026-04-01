@@ -71,6 +71,10 @@
             "show_gift_card_recipient": true
           }
         },
+        "wiser_ai_upsell_cross_sell_wiser_fbt_ceGkC8": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        },
         "fd1c9543-0d4a-4efe-9687-1c8ef29be64c": {
           "type": "custom_liquid",
           "settings": {
@@ -99,6 +103,7 @@
         "37b28327-a30a-4aec-aa35-64657f488017",
         "custom_liquid_iKrjBt",
         "buy_buttons",
+        "wiser_ai_upsell_cross_sell_wiser_fbt_ceGkC8",
         "fd1c9543-0d4a-4efe-9687-1c8ef29be64c",
         "15cc9398-2757-4d2a-baf5-bbea9a81b647"
       ],
@@ -134,13 +139,18 @@
     "17745216890e8a1bd0": {
       "type": "apps",
       "blocks": {
-        "wiser_ai_upsell_cross_sell_wiser_fbt_cbiAgR": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
+        "wiser_ai_upsell_cross_sell_wiser_related_giCm6e": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_related/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        },
+        "wiser_ai_upsell_cross_sell_wiser_browsing_UWhchf": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_browsing/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
       "block_order": [
-        "wiser_ai_upsell_cross_sell_wiser_fbt_cbiAgR"
+        "wiser_ai_upsell_cross_sell_wiser_related_giCm6e",
+        "wiser_ai_upsell_cross_sell_wiser_browsing_UWhchf"
       ],
       "settings": {
         "include_margins": true
