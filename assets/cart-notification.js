@@ -11,8 +11,10 @@ class CartNotification extends HTMLElement {
       closeButton.addEventListener('click', this.close.bind(this))
     );
   }
-
   open() {
+    if (window.wiserHandle && typeof window.wiserHandle.cartAction === 'function') {
+              window.wiserHandle.cartAction();
+          } else {
     this.notification.classList.add('animate', 'active');
 
     this.notification.addEventListener(
@@ -26,7 +28,7 @@ class CartNotification extends HTMLElement {
 
     document.body.addEventListener('click', this.onBodyClick);
   }
-
+  }
   close() {
     this.notification.classList.remove('active');
     document.body.removeEventListener('click', this.onBodyClick);
@@ -44,7 +46,11 @@ class CartNotification extends HTMLElement {
     });
 
     if (this.header) this.header.reveal();
-    this.open();
+    if (window.wiserHandle && typeof window.wiserHandle.cartAction === 'function') {
+              window.wiserHandle.cartAction();
+          } else {
+                   this.open();
+          }
   }
 
   getSectionsToRender() {
