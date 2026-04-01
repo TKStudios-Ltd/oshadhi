@@ -343,84 +343,6 @@ You can learn more about this (and learn how to cleanly revert these changes) at
         });
       </script> 
     
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% comment %}
   Nicht Ranken
@@ -445,7 +367,35 @@ You can learn more about this (and learn how to cleanly revert these changes) at
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+      <script>
+        const pathname = window.location.pathname;
+                // :white_check_mark: Correct logic for custom search results page
+                const settingpage = window.__smartSearchSettings?.search_results_page?.trim()
+                  ? "/" + window.__smartSearchSettings.search_results_page.trim()
+                  : "/search";
 
+                // :white_check_mark: Fallback for result page settings
+                const resultPageSettings = typeof window.__resultkViewSettings !== 'undefined'
+                  ? window.__resultkViewSettings
+                  : {};
+
+                // :white_check_mark: Check if result page is disabled
+                const isResultPageDisabled = resultPageSettings.result_page_enabled === "true";
+
+                // :white_check_mark: If we are on the search results page and the feature is enabled
+                if (pathname === settingpage || typeof window.__resultkViewSettings === 'undefined') {
+                  if (isResultPageDisabled) {
+                    const MainContent =  document.getElementById("MainContent")
+
+                    if (MainContent) {
+                      //MainContent.innerHTML = '<div class="ws_loader" ><div class="spinner"></div><p>Loading results...</p> </div>';
+                      document.title = `Search-result`;
+                      MainContent.innerHTML ='';
+                      resultPageSetting();
+                    }
+                  }
+                }
+      </script>
     {% sections 'footer-group' %}
 
     <ul hidden>
