@@ -25,6 +25,7 @@
         },
         "announcement_XBgzzA": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "WE ARE WORKING TO RESOLVE THE PAYMENT ISSUES. AFTERPAY AND MANUAL PAYMENTS ARE ACTIVE. THANK YOU FOR YOUR PATIENCE.",
             "link_label": "Shop now",
