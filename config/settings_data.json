@@ -193,16 +193,6 @@
         "disabled": true,
         "settings": {}
       },
-      "1967102994182284862": {
-        "type": "shopify://apps/paypal-pay-later-messaging/blocks/messaging/7f4cb7b9-066b-479a-a35c-56c0fddabee5",
-        "disabled": false,
-        "settings": {
-          "advanced_settings": false,
-          "product_locator": "",
-          "cart_locator": "",
-          "cart_drawer_locator": ""
-        }
-      },
       "10115289292966514107": {
         "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser-block/3f966edc-9a4a-465c-a4df-436d2a39160d",
         "disabled": false,
@@ -215,6 +205,11 @@
       },
       "15729382579364669683": {
         "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser-search/3f966edc-9a4a-465c-a4df-436d2a39160d",
+        "disabled": false,
+        "settings": {}
+      },
+      "10436698916776057164": {
+        "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-helper/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
         "disabled": false,
         "settings": {}
       }
