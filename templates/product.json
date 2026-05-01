@@ -226,6 +226,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -251,6 +252,7 @@
       "blocks": {
         "wiser_ai_upsell_cross_sell_wiser_fbt_qTPxma": {
           "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "disabled": true,
           "settings": {}
         }
       },
