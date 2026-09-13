@@ -14,6 +14,14 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_NJP7pJ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Shipping may be slower than normal due to staff shortages - thank you for your patience whilst we work on it!",
+            "link_label": "Shop now",
+            "link": ""
+          }
+        },
         "announcement_UR9c6T": {
           "type": "announcement",
           "disabled": true,
@@ -34,6 +42,7 @@
         }
       },
       "block_order": [
+        "announcement_NJP7pJ",
         "announcement_UR9c6T",
         "announcement_XBgzzA"
       ],
