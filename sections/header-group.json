@@ -16,6 +16,7 @@
       "blocks": {
         "announcement_NJP7pJ": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Shipping may be slower than normal due to staff shortages - thank you for your patience whilst we work on it!",
             "link_label": "Shop now",
@@ -24,7 +25,6 @@
         },
         "announcement_UR9c6T": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "AMAZING DEALS IN CLEARANCE! UP TO 60% OFF!",
             "link_label": "Shop now",
